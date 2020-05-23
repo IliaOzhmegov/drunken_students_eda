@@ -1,10 +1,10 @@
 
 get_math_df <- function(){
-  math_df = read.csv2("student-mat.csv", sep = ',')
+  math_df = read.csv2("data/student-mat.csv", sep = ',')
 }
 
 get_port_df <- function(){
-  port_df = read.csv2("student-por.csv", sep = ',')
+  port_df = read.csv2("data/student-por.csv", sep = ',')
 }
 
 get_full_df <- function(){
@@ -19,5 +19,5 @@ get_full_df <- function(){
 }
 
 math_df <- get_math_df()
-port_df <- get_math_df()
-full_df <- get_math_df()
+port_df <- get_port_df()
+full_df <- get_full_df()
