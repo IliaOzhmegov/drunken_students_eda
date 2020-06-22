@@ -4,9 +4,9 @@ author: Ilia Ozhmegov, Olena Horyn
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   pdf_document:
+    latex_engine: xelatex
     df_print: kable
     highlight: pygments
-    fontsize: 11pt
     number_section: true
     toc: yes
     fig_caption: true
@@ -24,7 +24,8 @@ output:
 
 ```{r Setting template options, include=FALSE}
 
-knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
+# knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, echo = TRUE)
 knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
 
 ```
