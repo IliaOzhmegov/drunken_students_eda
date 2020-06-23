@@ -15,13 +15,19 @@ get_port_df <- function(){
   df <- get_df("data/student-por.csv")
 }
 
-get_full_df <- function(){
+get_join_df <- function(){
   chunk1 <- get_math_df()
   chunk2 <- get_port_df()
   
-  full_df = merge(chunk1, chunk2,
-                  by=c("school","sex","age","address","famsize","Pstatus","Medu",
-                      "Fedu","Mjob","Fjob","reason","nursery","internet"),
+  join_df = merge(chunk1, chunk2,
+                  by=c("school",	    "sex",	      "age",	      "address",	
+                       "famsize",    	"Pstatus",  	"Medu",	      "Fedu",	
+                       "Mjob",	      "Fjob",	      "reason",	    "guardian",	
+                       "traveltime",	"studytime",	"failures",	  "schoolsup",	
+                       "famsup",	    "paid",	      "activities",	"nursery",	
+                       "higher",	    "internet",	  "romantic",	  "famrel",	
+                       "freetime",	  "goout",	    "Dalc",	      "Walc",	
+                       "health",	    "absences"),
                   suffixes = c(".math",".port")
                  )
 }
@@ -30,4 +36,5 @@ get_full_df <- function(){
 
 math_df <- get_math_df()
 port_df <- get_port_df()
-full_df <- get_full_df()
+join_df <- get_join_df()
+full_df <- rbind(math_df, port_df)
