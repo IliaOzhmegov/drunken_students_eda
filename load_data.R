@@ -1,7 +1,22 @@
+# import some libraries --------------------------------------------------------
+library(tidyverse)
+library(dplyr)
+library(magrittr)
+library(plyr)
+
 # Some useful functions --------------------------------------------------------
 get_df <- function(path){
   if (!is.numeric(path)){
-    df = read.csv2(path, sep = ',')
+    read.csv2(path, sep = ',') %>% 
+    mutate_at(vars(c("Dalc", "Walc", "famrel", "freetime", "goout", "health")), 
+              ~mapvalues(.x %>% as.factor(), from=1:5, 
+                         to=c("Very Low", "Low", "Medium", "High", "Very High"))) %>% 
+    mutate_at(vars(ends_with("edu")),
+              ~mapvalues(.x %>% as.factor(), from=0:4,
+                         to=c("none", "primary education (4th grade)", 
+                              "5th to 9th grade", "secondary education", 
+                              "higher education"))
+              )
   }else{
     stop("Path variable must be a string!")
   }
@@ -38,3 +53,17 @@ math_df <- get_math_df()
 port_df <- get_port_df()
 join_df <- get_join_df()
 full_df <- rbind(math_df, port_df)
+
+# removing functions -----------------------------------------------------------
+rm(get_df)
+rm(get_math_df)
+rm(get_port_df)
+rm(get_join_df)
+
+
+
+
+
+
+
+
