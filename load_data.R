@@ -5,8 +5,10 @@ library(magrittr)
 library(plyr)
 
 # Some useful functions --------------------------------------------------------
-get_df <- function(path){
+get_df <- function(path, subject_name){
   if (!is.numeric(path)){
+    grades <- c("A", "B", "C", "D", "F")
+    
     read.csv2(path, sep = ',') %>% 
     mutate_at(vars(c("Dalc", "Walc", "famrel", "freetime", "goout", "health")), 
               ~mapvalues(.x %>% as.factor(), from=1:5, 
@@ -16,18 +18,29 @@ get_df <- function(path){
                          to=c("none", "primary education (4th grade)", 
                               "5th to 9th grade", "secondary education", 
                               "higher education"))
-              )
+              ) %>% 
+      mutate(subject=subject_name) %>% 
+      mutate_at(vars(G1, G2, G3), 
+                ~case_when(
+                  .x >= 16 ~ grades[1],
+                  .x >= 14 & .x < 16 ~ grades[2],
+                  .x >= 12 & .x < 14 ~ grades[3],
+                  .x >= 10 & .x < 12 ~ grades[4],
+                  .x < 10 ~ grades[5]
+                )
+      )
+    
   }else{
     stop("Path variable must be a string!")
   }
 }
 
 get_math_df <- function(path=NULL){
-  df <- get_df("data/student-mat.csv")
+  df <- get_df("data/student-mat.csv", subject_name = "math")
 }
 
 get_port_df <- function(){
-  df <- get_df("data/student-por.csv")
+  df <- get_df("data/student-por.csv", subject_name = "port")
 }
 
 get_join_df <- function(){
