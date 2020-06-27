@@ -37,7 +37,7 @@ library(aider)
 library(tidyverse)
 
 # source("load_data.R")
-df <- read_csv("data/student-full.csv")
+df <- readRDS("data/student-full.rds")
 ```
 
 Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text. 
