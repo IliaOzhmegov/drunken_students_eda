@@ -81,8 +81,9 @@ rm(get_math_df)
 rm(get_port_df)
 rm(get_join_df)
 
+# creating CSV file ------------------------------------------------------------
 
-
+write.csv(full_df,"data/student-full.csv", row.names = FALSE)
 
 
 

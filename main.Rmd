@@ -36,8 +36,8 @@ knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
 library(aider)
 library(tidyverse)
 
-source("load_data.R")
-
+# source("load_data.R")
+df <- read_csv("data/student-full.csv")
 ```
 
 Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text. 
