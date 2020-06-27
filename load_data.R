@@ -10,25 +10,33 @@ get_df <- function(path, subject_name){
     grades <- c("A", "B", "C", "D", "F")
     
     read.csv2(path, sep = ',') %>% 
+      
+    # Changing variables to a more meaningful values
     mutate_at(vars(c("Dalc", "Walc", "famrel", "freetime", "goout", "health")), 
               ~mapvalues(.x %>% as.factor(), from=1:5, 
                          to=c("Very Low", "Low", "Medium", "High", "Very High"))) %>% 
+      
+    # Changing variables to a more meaningful values
     mutate_at(vars(ends_with("edu")),
               ~mapvalues(.x %>% as.factor(), from=0:4,
                          to=c("none", "primary education (4th grade)", 
                               "5th to 9th grade", "secondary education", 
                               "higher education"))
               ) %>% 
-      mutate(subject=subject_name) %>% 
-      mutate_at(vars(G1, G2, G3), 
-                ~case_when(
-                  .x >= 16 ~ grades[1],
-                  .x >= 14 & .x < 16 ~ grades[2],
-                  .x >= 12 & .x < 14 ~ grades[3],
-                  .x >= 10 & .x < 12 ~ grades[4],
-                  .x < 10 ~ grades[5]
-                )
-      )
+      
+    # Adding another variable that correspond to name of the subject
+    mutate(subject=subject_name) %>% 
+     
+    # Changing variables to a more meaningful values
+    mutate_at(vars(G1, G2, G3), 
+              ~case_when(
+                         .x >= 16 ~ grades[1],
+                         .x >= 14 & .x < 16 ~ grades[2],
+                         .x >= 12 & .x < 14 ~ grades[3],
+                         .x >= 10 & .x < 12 ~ grades[4],
+                         .x < 10 ~ grades[5]
+              )
+    )
     
   }else{
     stop("Path variable must be a string!")
@@ -48,14 +56,14 @@ get_join_df <- function(){
   chunk2 <- get_port_df()
   
   join_df = merge(chunk1, chunk2,
-                  by=c("school",	    "sex",	      "age",	      "address",	
-                       "famsize",    	"Pstatus",  	"Medu",	      "Fedu",	
-                       "Mjob",	      "Fjob",	      "reason",	    "guardian",	
-                       "traveltime",	"studytime",	"failures",	  "schoolsup",	
-                       "famsup",	    "paid",	      "activities",	"nursery",	
-                       "higher",	    "internet",	  "romantic",	  "famrel",	
-                       "freetime",	  "goout",	    "Dalc",	      "Walc",	
-                       "health",	    "absences"),
+                  by=c("school",     "sex",	      "age",        "address",	
+                       "famsize",    "Pstatus",   "Medu",       "Fedu",	
+                       "Mjob",       "Fjob",      "reason",     "guardian",	
+                       "traveltime", "studytime", "failures",   "schoolsup",	
+                       "famsup",     "paid",      "activities",	"nursery",	
+                       "higher",     "internet",  "romantic",   "famrel",	
+                       "freetime",   "goout",     "Dalc",       "Walc",	
+                       "health",     "absences"),
                   suffixes = c(".math",".port")
                  )
 }
