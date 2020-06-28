@@ -90,9 +90,10 @@ rm(get_math_df)
 rm(get_port_df)
 rm(get_join_df)
 
-# creating CSV file ------------------------------------------------------------
+# saving CSV and Rds files -----------------------------------------------------
 
-write_rds(full_df,"data/student-full.rds")
+write_csv(full_df, "data/srudent-full.csv")
+write_rds(full_df, "data/student-full.rds")
 
 
 
