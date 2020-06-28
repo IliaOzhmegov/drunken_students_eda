@@ -92,7 +92,7 @@ rm(get_join_df)
 
 # saving CSV and Rds files -----------------------------------------------------
 
-write_csv(full_df, "data/srudent-full.csv")
+write_csv(full_df, "data/student-full.csv")
 write_rds(full_df, "data/student-full.rds")
 
 
