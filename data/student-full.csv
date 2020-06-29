@@ -1,0 +1,1045 @@
+school,gender,age,address,famsize,Pstatus,Medu,Fedu,Mjob,Fjob,reason,guardian,traveltime,studytime,failures,schoolsup,famsup,paid,activities,nursery,higher,internet,romantic,famrel,freetime,goout,Dalc,Walc,health,absences,G1,G2,G3,Salc,subject,G3_d
+GP,F,18,U,GT3,A,higher education,higher education,at_home,teacher,course,mother,2,2,0,yes,no,no,no,yes,yes,no,no,High,Medium,High,Very Low,Very Low,Medium,6,5,6,6,Extremely Low,math,F
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,father,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,4,5,5,6,Extremely Low,math,F
+GP,F,15,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,1,2,3,yes,no,yes,no,yes,yes,yes,no,High,Medium,Low,Low,Medium,Medium,10,7,8,10,Medium Low,math,D
+GP,F,15,U,GT3,T,higher education,5th to 9th grade,health,services,home,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,yes,Medium,Low,Low,Very Low,Very Low,Very High,2,15,14,15,Extremely Low,math,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,home,father,1,2,0,no,yes,yes,no,yes,yes,no,no,High,Medium,Low,Very Low,Low,Very High,4,6,10,10,Very Low,math,D
+GP,M,16,U,LE3,T,higher education,secondary education,services,other,reputation,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Low,Very High,10,15,15,15,Very Low,math,B
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,High,High,Very Low,Very Low,Medium,0,12,12,11,Extremely Low,math,D
+GP,F,17,U,GT3,A,higher education,higher education,other,teacher,home,mother,2,2,0,yes,yes,no,no,yes,yes,no,no,High,Very Low,High,Very Low,Very Low,Very Low,6,6,5,6,Extremely Low,math,F
+GP,M,15,U,LE3,A,secondary education,5th to 9th grade,services,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Very Low,0,16,18,19,Extremely Low,math,A
+GP,M,15,U,GT3,T,secondary education,higher education,other,other,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,Very High,Very Low,Very Low,Very Low,Very High,0,14,15,15,Extremely Low,math,B
+GP,F,15,U,GT3,T,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Low,Low,0,10,8,9,Very Low,math,F
+GP,F,15,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,reputation,father,3,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Low,Low,Very Low,Very Low,High,4,10,12,12,Extremely Low,math,C
+GP,M,15,U,LE3,T,higher education,higher education,health,services,course,father,1,1,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Medium,Very High,2,14,14,14,Low,math,B
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,course,mother,2,2,0,no,yes,yes,no,yes,yes,yes,no,Very High,High,Medium,Very Low,Low,Medium,2,10,10,11,Very Low,math,D
+GP,M,15,U,GT3,A,5th to 9th grade,5th to 9th grade,other,other,home,other,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Medium,0,14,16,16,Extremely Low,math,A
+GP,F,16,U,GT3,T,higher education,higher education,health,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,High,High,High,Very Low,Low,Low,4,14,14,14,Very Low,math,B
+GP,F,16,U,GT3,T,higher education,higher education,services,services,reputation,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,no,Medium,Low,Medium,Very Low,Low,Low,6,13,14,14,Very Low,math,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,reputation,mother,3,2,0,yes,yes,no,yes,yes,yes,no,no,Very High,Medium,Low,Very Low,Very Low,High,4,8,10,10,Extremely Low,math,D
+GP,M,17,U,GT3,T,secondary education,5th to 9th grade,services,services,course,mother,1,1,3,no,yes,no,yes,yes,yes,yes,no,Very High,Very High,Very High,Low,High,Very High,16,6,5,5,Medium,math,F
+GP,M,16,U,LE3,T,higher education,secondary education,health,other,home,father,1,1,0,no,no,yes,yes,yes,yes,yes,no,Medium,Very Low,Medium,Very Low,Medium,Very High,4,8,10,10,Low,math,D
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,reputation,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,High,Very Low,Very Low,Very Low,Very Low,0,13,14,15,Extremely Low,math,B
+GP,M,15,U,GT3,T,higher education,higher education,health,health,other,father,1,1,0,no,yes,yes,no,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,Very High,0,12,15,15,Extremely Low,math,B
+GP,M,16,U,LE3,T,higher education,5th to 9th grade,teacher,other,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,High,Very High,Very Low,Very Low,Medium,Very High,2,15,15,16,Low,math,A
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Low,High,Very High,0,13,13,12,Medium,math,C
+GP,F,15,R,GT3,T,5th to 9th grade,higher education,services,health,course,mother,1,3,0,yes,yes,yes,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,10,9,8,Extremely Low,math,F
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,home,mother,1,1,2,no,yes,yes,no,no,yes,yes,no,Very Low,Low,Low,Very Low,Medium,Very High,14,6,9,8,Low,math,F
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,1,0,no,yes,yes,no,yes,yes,yes,no,High,Low,Low,Very Low,Low,Very High,2,12,12,11,Very Low,math,D
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,health,services,other,mother,1,1,0,no,no,yes,no,yes,yes,yes,no,Low,Low,High,Low,High,Very Low,4,15,16,15,Medium,math,B
+GP,M,16,U,LE3,A,secondary education,higher education,services,other,home,mother,1,2,0,yes,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,4,11,11,11,Extremely Low,math,D
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,High,High,Very High,Very High,Very High,Very High,16,10,12,11,Extremely High,math,D
+GP,M,15,U,GT3,T,higher education,higher education,health,services,home,mother,1,2,0,no,yes,yes,no,no,yes,yes,no,Very High,High,Low,Medium,High,Very High,0,9,11,12,Medium-High,math,C
+GP,M,15,U,GT3,T,higher education,higher education,services,services,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very Low,Very Low,Very Low,Very High,0,17,16,17,Extremely Low,math,A
+GP,M,15,R,GT3,T,higher education,secondary education,teacher,at_home,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Very High,0,17,16,16,Extremely Low,math,A
+GP,M,15,U,LE3,T,secondary education,secondary education,other,other,course,mother,1,2,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,Low,0,8,10,12,Extremely Low,math,C
+GP,M,16,U,GT3,T,secondary education,5th to 9th grade,other,other,home,mother,1,1,0,no,yes,yes,no,no,yes,yes,no,Very High,High,Medium,Very Low,Very Low,Very High,0,12,14,15,Extremely Low,math,B
+GP,F,15,U,GT3,T,5th to 9th grade,secondary education,other,other,other,father,2,1,0,no,yes,no,yes,yes,yes,no,no,Medium,Very High,Very Low,Very Low,Very Low,Very High,0,8,7,6,Extremely Low,math,F
+GP,M,15,U,LE3,T,higher education,secondary education,teacher,services,home,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Very Low,High,2,15,16,18,Extremely Low,math,A
+GP,M,16,R,GT3,A,higher education,higher education,other,teacher,reputation,mother,2,3,0,no,yes,no,yes,yes,yes,yes,yes,Low,High,Medium,Very Low,Very Low,Very High,7,15,16,15,Extremely Low,math,B
+GP,F,15,R,GT3,T,secondary education,higher education,services,health,course,mother,1,3,0,yes,yes,yes,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,12,12,11,Extremely Low,math,D
+GP,F,15,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,reputation,mother,1,1,0,yes,yes,yes,yes,yes,yes,no,no,High,Medium,Very Low,Very Low,Very Low,Low,8,14,13,13,Extremely Low,math,C
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,2,2,1,no,yes,no,yes,no,yes,yes,yes,Medium,Medium,Medium,Very Low,Low,Medium,25,7,10,11,Very Low,math,D
+GP,M,15,U,LE3,T,higher education,higher education,teacher,other,home,other,1,1,0,no,yes,no,no,no,yes,yes,yes,Very High,High,Medium,Low,High,Very High,8,12,12,12,Medium,math,C
+GP,M,15,U,GT3,T,higher education,higher education,services,teacher,course,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Very High,2,19,18,18,Extremely Low,math,A
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,course,father,1,1,0,yes,yes,no,no,yes,yes,yes,no,Very High,High,Very Low,Very Low,Very Low,Very Low,0,8,8,11,Extremely Low,math,D
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,at_home,course,father,2,2,1,yes,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Very High,14,10,10,9,Low,math,F
+GP,F,15,U,LE3,A,higher education,secondary education,other,other,course,mother,1,2,0,yes,yes,yes,yes,yes,yes,yes,yes,Very High,Low,Low,Very Low,Very Low,Very High,8,8,8,6,Extremely Low,math,F
+GP,F,16,U,LE3,A,secondary education,secondary education,other,services,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Low,Medium,Very High,Very Low,High,Medium,12,11,12,11,Medium Low,math,D
+GP,M,16,U,GT3,T,higher education,secondary education,health,services,reputation,mother,1,4,0,no,no,no,yes,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Low,4,19,19,20,Extremely Low,math,A
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,teacher,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,no,no,High,Medium,Medium,Low,Low,Very High,2,15,15,14,Low,math,B
+GP,F,15,U,GT3,T,higher education,higher education,services,teacher,other,father,1,2,1,yes,yes,no,yes,no,yes,yes,no,High,High,High,Very Low,Very Low,Medium,2,7,7,7,Extremely Low,math,F
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,3,2,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Low,Medium,High,2,12,13,13,Medium Low,math,C
+GP,F,15,U,LE3,T,higher education,5th to 9th grade,health,other,other,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Very High,2,11,13,13,Extremely Low,math,C
+GP,M,15,U,LE3,A,higher education,5th to 9th grade,health,health,other,father,2,1,1,no,no,no,no,yes,yes,no,no,Very High,Very High,Very High,Medium,High,Very High,6,11,11,10,Medium-High,math,D
+GP,F,15,U,GT3,T,higher education,higher education,services,services,course,mother,1,1,0,yes,yes,yes,no,yes,yes,yes,no,Medium,Medium,High,Low,Medium,Very High,0,8,10,11,Medium Low,math,D
+GP,F,15,U,LE3,A,secondary education,secondary education,other,other,other,mother,1,1,0,no,no,yes,no,yes,yes,yes,no,Very High,Medium,High,High,High,Very Low,6,10,13,13,High,math,C
+GP,F,16,U,GT3,A,5th to 9th grade,primary education (4th grade),other,other,other,mother,1,2,0,no,no,yes,yes,yes,yes,yes,yes,Very High,Medium,High,Very Low,Very Low,Low,8,8,9,10,Extremely Low,math,D
+GP,F,15,U,GT3,A,higher education,secondary education,services,services,reputation,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very Low,0,14,15,15,Extremely Low,math,B
+GP,M,15,U,GT3,T,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,no,no,Medium,Low,Low,Very Low,Very Low,Very High,4,14,15,15,Extremely Low,math,B
+GP,M,15,U,LE3,T,primary education (4th grade),5th to 9th grade,other,at_home,home,father,1,2,0,yes,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,9,10,9,Extremely Low,math,F
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,services,other,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Low,Medium,Very Low,Very Low,Very High,2,15,16,16,Extremely Low,math,A
+GP,F,16,R,GT3,T,higher education,higher education,health,teacher,other,mother,1,2,0,no,yes,no,yes,yes,yes,no,no,Low,High,High,Low,Medium,High,6,10,11,11,Medium Low,math,D
+GP,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),services,services,course,father,4,1,0,yes,yes,no,yes,no,yes,yes,yes,Very High,Very High,Very High,Very High,Very High,Very High,6,10,8,11,Extremely High,math,D
+GP,F,16,U,LE3,T,primary education (4th grade),5th to 9th grade,other,services,reputation,father,1,2,0,yes,no,no,yes,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Very Low,4,8,10,9,Extremely Low,math,F
+GP,F,16,U,GT3,T,higher education,secondary education,teacher,health,home,mother,1,3,0,yes,yes,yes,yes,yes,yes,yes,no,Medium,High,High,Low,High,High,2,10,9,9,Medium,math,F
+GP,F,15,U,LE3,T,higher education,secondary education,services,services,reputation,father,1,2,0,yes,no,no,yes,yes,yes,yes,yes,High,High,High,Low,High,Low,0,10,10,10,Medium,math,D
+GP,F,16,U,LE3,T,higher education,secondary education,teacher,services,course,mother,3,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Low,Very Low,2,16,15,15,Very Low,math,B
+GP,M,15,U,GT3,A,higher education,higher education,other,services,reputation,mother,1,4,0,no,yes,no,yes,no,yes,yes,yes,Very Low,Medium,Medium,Very High,Very High,Medium,4,13,13,12,Extremely High,math,C
+GP,F,16,U,GT3,T,secondary education,primary education (4th grade),services,other,course,mother,1,4,0,yes,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Very High,4,7,7,6,Very Low,math,F
+GP,F,15,R,LE3,T,5th to 9th grade,5th to 9th grade,health,services,reputation,mother,2,2,0,yes,yes,yes,no,yes,yes,yes,no,High,Very Low,Medium,Very Low,Medium,High,2,8,9,8,Low,math,F
+GP,F,15,R,LE3,T,secondary education,primary education (4th grade),other,other,reputation,father,2,4,0,no,yes,no,no,no,yes,yes,no,High,High,Low,Low,Medium,Medium,12,16,16,16,Medium Low,math,A
+GP,M,16,U,GT3,T,secondary education,primary education (4th grade),other,other,reputation,father,2,4,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,0,13,15,15,Extremely Low,math,B
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,other,other,course,mother,1,4,0,no,no,no,no,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Very Low,Medium,0,10,10,10,Extremely Low,math,D
+GP,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,reputation,mother,1,2,2,yes,yes,no,no,no,yes,yes,yes,Medium,Medium,High,Low,High,Very High,2,8,6,5,Medium,math,F
+GP,M,16,U,GT3,T,secondary education,primary education (4th grade),other,other,reputation,mother,1,1,0,no,no,no,yes,yes,yes,no,no,Very High,Medium,Low,Low,Low,Very High,2,12,12,14,Low,math,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,services,home,mother,1,2,0,yes,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Low,High,Very High,54,11,12,11,Medium,math,D
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Low,Medium,Very High,6,9,9,10,Medium Low,math,D
+GP,M,15,U,GT3,T,higher education,none,teacher,other,course,mother,2,4,0,no,no,no,yes,yes,yes,yes,no,Medium,High,Medium,Very Low,Very Low,Very Low,8,11,11,10,Extremely Low,math,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,4,0,no,no,yes,no,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Medium,Medium,0,11,11,11,Low,math,D
+GP,M,17,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,2,1,3,yes,yes,no,yes,yes,no,yes,no,High,Very High,Very Low,Very Low,Very Low,Medium,2,8,8,10,Extremely Low,math,D
+GP,F,16,U,GT3,T,secondary education,higher education,at_home,other,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Low,High,Medium,Very Low,Low,Medium,12,5,5,5,Very Low,math,F
+GP,M,15,U,GT3,T,5th to 9th grade,secondary education,other,services,course,father,1,1,0,yes,yes,yes,yes,no,yes,yes,yes,Medium,Low,Low,Very Low,Medium,Medium,2,10,12,12,Low,math,C
+GP,M,15,U,GT3,T,5th to 9th grade,secondary education,other,other,home,mother,1,3,0,yes,no,yes,no,no,yes,yes,no,Very High,Medium,Low,Very Low,Low,Very High,4,11,10,11,Very Low,math,D
+GP,F,15,U,LE3,T,secondary education,5th to 9th grade,services,other,reputation,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,High,High,Very Low,Very Low,Very High,10,7,6,6,Extremely Low,math,F
+GP,M,15,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,home,mother,2,2,0,no,no,yes,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,High,4,15,15,15,Low,math,B
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,father,1,2,0,no,yes,no,yes,no,yes,yes,no,High,Medium,Low,Low,Medium,High,2,9,10,10,Medium Low,math,D
+GP,F,15,U,GT3,T,higher education,higher education,services,services,reputation,father,2,2,2,no,no,yes,no,yes,yes,yes,yes,High,High,High,Low,Medium,Very High,6,7,9,8,Medium Low,math,F
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,1,2,0,no,yes,no,no,yes,yes,no,no,High,Medium,High,Very Low,Low,Low,4,8,7,6,Very Low,math,F
+GP,F,15,U,GT3,T,higher education,5th to 9th grade,other,other,reputation,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Very Low,4,13,14,14,Low,math,B
+GP,M,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,reputation,father,2,2,1,no,no,yes,yes,no,yes,yes,no,High,High,Low,Very Low,Very Low,Medium,12,11,10,10,Extremely Low,math,D
+GP,M,16,U,LE3,A,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,no,no,yes,yes,no,no,High,Very Low,Medium,Medium,Very High,Very High,18,8,6,7,High,math,F
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,3,0,no,yes,yes,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,High,0,7,7,8,Low,math,F
+GP,F,15,U,GT3,T,higher education,secondary education,services,other,reputation,mother,1,1,0,no,no,yes,yes,yes,yes,yes,no,High,Very High,Very High,Very Low,Medium,Very Low,4,16,17,18,Low,math,A
+GP,F,16,U,LE3,T,secondary education,primary education (4th grade),other,other,home,father,1,2,0,yes,yes,no,no,yes,yes,no,no,Medium,Medium,Medium,Low,Medium,Low,4,7,6,6,Medium Low,math,F
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,teacher,services,home,mother,2,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very Low,0,11,10,10,Extremely Low,math,D
+GP,M,15,U,LE3,T,5th to 9th grade,5th to 9th grade,services,health,reputation,mother,1,4,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,High,Very Low,Very Low,High,6,11,13,14,Extremely Low,math,B
+GP,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,home,mother,2,4,1,yes,yes,yes,yes,yes,yes,yes,no,Medium,Very Low,Low,Very Low,Very Low,Very Low,2,7,10,10,Extremely Low,math,D
+GP,M,16,R,GT3,T,higher education,secondary education,services,other,reputation,mother,2,1,0,yes,yes,no,yes,no,yes,yes,no,Medium,Medium,Medium,Very Low,Very Low,High,2,11,15,15,Extremely Low,math,B
+GP,F,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,2,0,no,yes,yes,no,yes,yes,no,yes,High,Medium,Very High,Very Low,Very Low,Very High,2,8,9,10,Extremely Low,math,D
+GP,F,16,U,GT3,T,higher education,higher education,other,other,reputation,mother,1,1,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,High,Very Low,Low,Very Low,6,11,14,14,Very Low,math,B
+GP,F,16,U,GT3,T,higher education,secondary education,other,at_home,course,mother,1,3,0,yes,yes,yes,no,yes,yes,yes,no,Very High,Medium,Very High,Very Low,Very Low,Medium,0,7,9,8,Extremely Low,math,F
+GP,M,16,U,GT3,T,higher education,higher education,services,services,other,mother,1,1,0,yes,yes,yes,yes,yes,yes,yes,no,High,Very High,Very High,Very High,Very High,High,14,7,7,5,Extremely High,math,F
+GP,M,16,U,GT3,T,higher education,higher education,services,teacher,other,father,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,High,Medium,Very Low,Very Low,High,0,16,17,17,Extremely Low,math,A
+GP,M,15,U,GT3,T,higher education,higher education,services,other,course,mother,1,1,0,no,yes,no,yes,no,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,4,10,13,14,Extremely Low,math,B
+GP,F,15,U,GT3,T,secondary education,5th to 9th grade,services,other,home,mother,2,2,0,yes,yes,yes,no,yes,yes,yes,no,High,Medium,Very High,Very Low,Very Low,Low,26,7,6,6,Extremely Low,math,F
+GP,M,15,U,GT3,A,secondary education,higher education,services,other,course,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,Very Low,0,16,18,18,Extremely Low,math,A
+GP,F,15,U,GT3,A,secondary education,secondary education,other,health,reputation,father,1,4,0,yes,no,no,no,yes,yes,no,no,High,Medium,Medium,Very Low,Very Low,High,10,10,11,11,Extremely Low,math,D
+GP,F,15,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,4,0,yes,yes,yes,no,yes,yes,yes,no,Very High,Very Low,Low,Very Low,Very Low,Medium,8,7,8,8,Extremely Low,math,F
+GP,M,16,U,GT3,T,secondary education,secondary education,services,other,home,father,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,2,16,18,18,Extremely Low,math,A
+GP,M,15,R,GT3,T,higher education,higher education,other,other,home,father,4,4,0,no,yes,yes,yes,yes,yes,yes,yes,Very Low,Medium,Very High,Medium,Very High,Very Low,6,10,13,13,High,math,C
+GP,F,16,U,LE3,T,higher education,higher education,health,health,other,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,yes,Very High,High,Very High,Very Low,Very Low,High,4,14,15,16,Extremely Low,math,A
+GP,M,15,U,LE3,A,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Very High,Very High,Medium,Very Low,Very Low,High,6,18,19,19,Extremely Low,math,A
+GP,F,16,R,GT3,T,secondary education,secondary education,services,other,reputation,father,1,3,1,yes,yes,no,yes,yes,yes,yes,no,High,Very Low,Low,Very Low,Very Low,Low,0,7,10,10,Extremely Low,math,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,home,mother,1,2,1,yes,no,no,yes,yes,yes,yes,no,Medium,Very Low,Low,Very Low,Very Low,Very High,6,10,13,13,Extremely Low,math,C
+GP,M,15,U,LE3,T,higher education,5th to 9th grade,teacher,other,course,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Very High,Low,Very Low,Very Low,Medium,10,18,19,19,Extremely Low,math,A
+GP,M,15,R,GT3,T,5th to 9th grade,primary education (4th grade),health,services,reputation,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,High,Low,Very Low,Very Low,Very High,8,9,9,9,Extremely Low,math,F
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,course,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Low,Very High,2,15,15,16,Very Low,math,A
+GP,M,15,U,GT3,T,higher education,higher education,other,teacher,reputation,father,2,2,0,no,yes,no,yes,yes,yes,no,no,High,High,Medium,Very Low,Very Low,Low,2,11,13,14,Extremely Low,math,B
+GP,M,16,U,GT3,T,secondary education,secondary education,other,services,home,father,2,1,0,no,no,no,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,Very High,0,13,14,13,Extremely Low,math,C
+GP,M,17,R,GT3,T,primary education (4th grade),secondary education,other,other,course,father,3,2,1,no,yes,no,yes,yes,yes,yes,no,Very High,Low,High,Very Low,High,Very High,20,9,7,8,Medium Low,math,F
+GP,M,15,U,GT3,T,secondary education,higher education,other,other,reputation,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,High,Medium,Very Low,Low,High,6,14,13,13,Very Low,math,C
+GP,F,15,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,services,course,mother,1,2,0,no,no,no,no,no,yes,yes,no,Medium,Low,Medium,Very Low,Low,Very Low,2,16,15,15,Very Low,math,B
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,home,father,1,4,0,no,yes,yes,yes,yes,yes,yes,no,Very High,Very High,High,Very Low,Low,Very High,6,16,14,15,Very Low,math,B
+GP,F,16,U,LE3,T,5th to 9th grade,higher education,other,health,course,father,2,2,0,no,yes,yes,yes,yes,yes,yes,yes,High,Low,Low,Very Low,Low,Very High,2,13,13,13,Very Low,math,C
+GP,M,16,U,GT3,T,higher education,higher education,health,other,course,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,Medium,High,High,Very Low,High,Very High,18,14,11,13,Medium Low,math,C
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,no,yes,no,yes,yes,yes,yes,Very High,High,High,Very Low,Very Low,Very High,0,8,7,8,Extremely Low,math,F
+GP,M,15,U,GT3,T,secondary education,higher education,services,services,home,father,1,1,0,yes,no,no,no,yes,yes,yes,no,Very High,Very High,Very High,Medium,Low,Very High,0,13,13,12,Medium Low,math,C
+GP,F,15,U,LE3,A,secondary education,higher education,other,other,home,mother,1,2,0,yes,no,no,yes,yes,yes,yes,yes,Very High,Medium,Low,Very Low,Very Low,Very Low,0,7,10,11,Extremely Low,math,D
+GP,F,19,U,GT3,T,none,primary education (4th grade),at_home,other,course,other,1,2,3,no,yes,no,no,no,no,no,no,Medium,High,Low,Very Low,Very Low,Very High,2,7,8,9,Extremely Low,math,F
+GP,M,18,R,GT3,T,5th to 9th grade,5th to 9th grade,services,other,reputation,mother,1,1,2,no,yes,no,yes,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Low,High,0,7,4,0,Very Low,math,F
+GP,M,16,R,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,no,yes,yes,yes,yes,yes,no,Medium,Very High,Very High,Low,Very High,High,8,18,18,18,Medium-High,math,A
+GP,F,15,R,GT3,T,secondary education,higher education,services,teacher,course,father,2,3,2,no,yes,no,no,yes,yes,yes,yes,High,Low,Low,Low,Low,Very High,0,12,0,0,Low,math,F
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,3,1,0,no,yes,no,yes,no,yes,yes,yes,High,Medium,Medium,Very Low,Low,High,0,8,0,0,Very Low,math,F
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,1,1,0,no,yes,no,no,yes,yes,yes,yes,Medium,High,High,Very Low,Medium,Very High,12,10,13,12,Low,math,C
+GP,F,16,U,GT3,A,secondary education,higher education,services,other,course,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Low,Very Low,Very Low,High,Very High,16,12,11,11,Medium Low,math,D
+GP,M,15,R,GT3,T,secondary education,higher education,at_home,teacher,course,mother,4,2,0,no,yes,no,no,yes,yes,no,yes,Very High,Medium,Medium,Very Low,Very Low,Very High,0,9,0,0,Extremely Low,math,F
+GP,F,15,U,GT3,T,higher education,higher education,services,at_home,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Very High,0,11,0,0,Extremely Low,math,F
+GP,M,17,R,GT3,T,secondary education,higher education,at_home,other,course,mother,3,2,0,no,no,no,no,yes,yes,no,no,Very High,High,Very High,Low,High,Very High,0,10,0,0,Medium,math,F
+GP,F,16,U,GT3,A,secondary education,secondary education,other,other,course,other,2,1,2,no,yes,no,yes,no,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Very High,0,4,0,0,Extremely Low,math,F
+GP,M,16,U,LE3,T,primary education (4th grade),primary education (4th grade),services,other,course,mother,1,2,1,no,no,no,no,yes,yes,no,yes,High,High,High,Very Low,Medium,Very High,0,14,12,12,Low,math,C
+GP,F,15,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,0,16,16,15,Extremely Low,math,B
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,services,course,father,2,4,0,yes,yes,no,no,yes,yes,yes,no,Low,Low,Low,Very Low,Very Low,Medium,0,7,9,0,Extremely Low,math,F
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,father,2,1,2,no,yes,no,yes,yes,yes,yes,no,Low,Medium,Medium,Low,Low,Low,8,9,9,9,Low,math,F
+GP,F,15,U,GT3,T,higher education,higher education,teacher,services,course,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Very High,2,9,11,11,Extremely Low,math,D
+GP,F,16,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,High,High,Medium,Medium,Very Low,2,14,14,13,Medium,math,C
+GP,M,17,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,1,3,no,yes,no,no,yes,yes,yes,no,Very High,High,Very High,Very Low,Low,Very High,0,5,0,0,Very Low,math,F
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),other,services,course,father,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,High,Low,Very Low,Low,Very High,0,8,11,11,Very Low,math,D
+GP,F,15,U,GT3,T,secondary education,5th to 9th grade,health,services,home,father,1,2,3,no,yes,no,no,yes,yes,yes,no,Medium,Medium,Low,Very Low,Very Low,Medium,0,6,7,0,Extremely Low,math,F
+GP,F,15,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,other,course,mother,1,2,0,no,yes,yes,no,no,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,10,11,11,Extremely Low,math,D
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,yes,no,no,yes,no,yes,yes,Medium,Medium,Low,Low,Very Low,Very High,0,7,6,0,Very Low,math,F
+GP,M,15,U,LE3,A,5th to 9th grade,primary education (4th grade),services,other,course,mother,4,1,3,no,no,no,no,yes,yes,yes,no,High,Very High,Very High,Low,Very High,Very High,0,8,9,10,Medium-High,math,D
+GP,M,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,1,1,3,no,no,no,no,yes,no,yes,yes,Low,Medium,Very High,Low,Very High,High,0,6,5,0,Medium-High,math,F
+GP,M,16,U,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,1,1,1,no,no,no,yes,yes,yes,no,yes,High,High,High,Medium,Very High,Very High,6,12,13,14,High,math,B
+GP,F,15,R,GT3,T,secondary education,secondary education,services,services,reputation,other,2,3,2,no,yes,yes,yes,yes,yes,yes,yes,High,Low,Very Low,Low,Medium,Medium,8,10,10,10,Medium Low,math,D
+GP,M,19,U,GT3,T,secondary education,5th to 9th grade,services,at_home,home,mother,1,1,3,no,yes,no,no,yes,no,yes,yes,High,Very High,High,Very Low,Very Low,High,0,5,0,0,Extremely Low,math,F
+GP,F,17,U,GT3,T,higher education,higher education,other,teacher,course,mother,1,1,0,yes,yes,no,no,yes,yes,no,yes,High,Low,Very Low,Very Low,Very Low,High,0,11,11,12,Extremely Low,math,C
+GP,M,15,R,GT3,T,5th to 9th grade,secondary education,at_home,services,course,mother,1,2,0,yes,no,yes,yes,yes,yes,no,no,High,High,High,Very Low,Very Low,Very Low,2,11,8,8,Extremely Low,math,F
+GP,M,17,R,LE3,T,primary education (4th grade),5th to 9th grade,other,other,reputation,mother,1,1,0,no,no,no,no,yes,yes,no,no,Low,Low,Low,Medium,Medium,Very High,8,16,12,13,Medium,math,C
+GP,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,3,1,3,no,yes,no,yes,no,yes,no,no,Very High,Low,Very High,Very Low,Very High,High,6,9,8,10,Medium,math,D
+GP,M,16,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,3,1,0,no,no,no,no,no,yes,no,no,High,Low,Low,Very Low,Low,Medium,2,17,15,15,Very Low,math,B
+GP,M,16,U,GT3,T,secondary education,secondary education,other,services,course,father,1,2,1,no,yes,yes,no,yes,yes,yes,yes,High,Very High,Very High,High,High,Very High,4,10,12,12,High,math,C
+GP,M,17,R,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,2,1,2,no,no,no,yes,yes,no,yes,yes,Medium,Medium,Low,Low,Low,Very High,0,7,6,0,Low,math,F
+GP,M,15,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,2,2,2,yes,yes,no,no,yes,yes,yes,yes,High,High,High,Very Low,High,Medium,6,5,9,7,Medium Low,math,F
+GP,M,16,U,LE3,T,primary education (4th grade),5th to 9th grade,other,other,course,mother,2,1,1,no,no,no,yes,yes,yes,no,no,High,High,High,Low,High,Very High,0,7,0,0,Medium,math,F
+GP,M,17,U,GT3,T,primary education (4th grade),secondary education,at_home,services,course,father,1,1,0,no,no,no,no,yes,no,yes,no,Very High,Medium,Medium,Very Low,High,Low,2,10,10,10,Medium Low,math,D
+GP,M,17,R,LE3,T,primary education (4th grade),primary education (4th grade),other,services,course,mother,4,2,3,no,no,no,yes,yes,no,no,yes,Very High,Medium,Very High,Very Low,Very High,Very High,0,5,8,7,Medium,math,F
+GP,M,16,U,GT3,T,secondary education,5th to 9th grade,services,services,course,mother,2,1,1,no,yes,no,yes,no,no,no,no,High,Very High,Low,Very Low,Very Low,Low,16,12,11,12,Extremely Low,math,C
+GP,M,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,1,2,0,no,no,no,no,yes,no,yes,no,High,Medium,Very High,Low,High,High,4,10,10,10,Medium,math,D
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,health,services,home,father,1,2,0,no,no,yes,no,yes,yes,yes,yes,High,Low,Medium,Very Low,Very Low,Medium,0,14,15,16,Extremely Low,math,A
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,yes,no,no,yes,yes,no,Very High,Very Low,Very High,Very Low,Very Low,High,0,6,7,0,Extremely Low,math,F
+GP,F,16,U,GT3,T,higher education,higher education,health,health,reputation,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,High,High,Low,Very Low,Very Low,Medium,0,14,14,14,Extremely Low,math,B
+GP,M,16,U,GT3,T,secondary education,higher education,other,other,course,father,3,1,2,no,yes,no,yes,no,yes,yes,no,Medium,High,Very High,Low,High,Low,0,6,5,0,Medium,math,F
+GP,M,16,U,GT3,T,primary education (4th grade),none,other,other,reputation,mother,2,2,0,no,yes,yes,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Medium,2,13,15,16,Extremely Low,math,A
+GP,M,17,U,LE3,T,higher education,higher education,teacher,other,reputation,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,High,High,High,Very Low,Medium,Very High,0,13,11,10,Low,math,D
+GP,F,16,U,GT3,T,primary education (4th grade),secondary education,at_home,services,home,mother,1,2,3,no,no,no,yes,no,yes,yes,yes,High,Medium,Very High,Very Low,Very Low,Medium,0,8,7,0,Extremely Low,math,F
+GP,F,16,U,LE3,T,secondary education,secondary education,other,other,reputation,mother,2,2,0,no,yes,yes,yes,yes,yes,yes,no,High,High,Very High,Very Low,Very Low,High,4,10,11,9,Extremely Low,math,F
+GP,M,17,U,LE3,T,higher education,secondary education,teacher,other,course,mother,2,2,0,no,no,yes,yes,yes,yes,yes,no,High,High,High,High,High,High,4,10,9,9,High,math,F
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,reputation,mother,2,2,0,no,no,yes,yes,no,yes,yes,no,Medium,High,High,Very Low,High,Very High,2,13,13,11,Medium Low,math,D
+GP,M,17,U,GT3,T,secondary education,secondary education,other,other,reputation,father,1,2,0,no,no,no,yes,no,yes,yes,no,High,Medium,High,Very Low,High,High,4,6,5,6,Medium Low,math,F
+GP,M,16,R,GT3,T,higher education,5th to 9th grade,teacher,services,other,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Medium,Medium,High,Medium,10,10,8,9,Medium-High,math,F
+GP,M,17,U,GT3,T,higher education,secondary education,other,other,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Very Low,Low,4,10,10,11,Extremely Low,math,D
+GP,M,16,U,GT3,T,higher education,secondary education,teacher,other,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Medium,High,Medium,Low,Medium,Medium,10,9,8,8,Medium Low,math,F
+GP,M,16,U,GT3,T,secondary education,secondary education,services,other,home,mother,1,2,0,no,no,yes,yes,yes,yes,yes,yes,High,Low,Medium,Very Low,Low,Medium,2,12,13,12,Very Low,math,C
+GP,F,17,U,GT3,T,5th to 9th grade,higher education,services,services,reputation,father,1,2,0,no,yes,no,yes,yes,yes,no,no,Very High,High,Low,Low,Medium,Very High,0,16,17,17,Medium Low,math,A
+GP,F,17,U,LE3,T,secondary education,secondary education,other,other,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Low,Medium,Very Low,56,9,9,8,Medium Low,math,F
+GP,F,16,U,GT3,T,secondary education,5th to 9th grade,other,other,reputation,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,Very Low,Low,Low,Very Low,Low,Very Low,14,12,13,12,Very Low,math,C
+GP,M,17,U,GT3,T,secondary education,secondary education,services,services,other,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,High,Low,Medium,High,12,12,12,11,Medium Low,math,D
+GP,M,16,U,GT3,T,primary education (4th grade),5th to 9th grade,services,services,other,mother,1,1,0,no,yes,yes,yes,yes,yes,yes,yes,Medium,Medium,Medium,Very Low,Low,Medium,2,11,12,11,Very Low,math,D
+GP,M,16,U,LE3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,2,0,no,no,yes,yes,yes,yes,yes,yes,High,Low,Medium,Very Low,Low,Very High,0,15,15,15,Very Low,math,B
+GP,F,17,U,GT3,A,secondary education,secondary education,health,other,reputation,mother,1,2,0,no,yes,no,no,no,yes,yes,yes,Medium,Medium,Medium,Very Low,Medium,Medium,6,8,7,9,Low,math,F
+GP,M,17,R,GT3,T,primary education (4th grade),5th to 9th grade,at_home,other,home,mother,1,2,0,no,no,no,no,yes,yes,no,no,Medium,Very Low,Medium,Very Low,Very High,Medium,4,8,9,10,Medium,math,D
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,services,services,course,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Low,10,11,12,13,Extremely Low,math,C
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,0,8,8,9,Extremely Low,math,F
+GP,M,17,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,services,other,other,2,2,0,no,no,yes,yes,no,yes,yes,no,High,High,High,High,Very High,Very High,12,7,8,8,Very High,math,F
+GP,M,16,R,GT3,T,secondary education,secondary education,services,services,reputation,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Medium,High,Very High,8,8,9,10,Medium-High,math,D
+GP,M,16,U,GT3,T,5th to 9th grade,secondary education,other,other,home,father,2,1,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,0,13,14,14,Extremely Low,math,B
+GP,F,17,U,LE3,T,5th to 9th grade,higher education,services,services,course,father,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Very High,0,14,15,15,Extremely Low,math,B
+GP,M,17,U,GT3,T,higher education,higher education,services,teacher,home,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Very High,Low,Medium,Very Low,Low,Very High,4,17,15,16,Very Low,math,A
+GP,M,16,R,LE3,T,secondary education,secondary education,teacher,other,home,father,3,1,0,no,yes,yes,yes,yes,yes,yes,no,Medium,Medium,High,Medium,Very High,Medium,8,9,9,10,High,math,D
+GP,F,17,U,GT3,T,higher education,higher education,services,teacher,home,mother,2,1,1,no,yes,no,no,yes,yes,yes,no,High,Low,High,Low,Medium,Low,24,18,18,18,Medium Low,math,A
+GP,F,16,U,LE3,T,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Very High,Low,Very Low,Low,Medium,0,9,9,10,Very Low,math,D
+GP,F,16,U,GT3,T,higher education,secondary education,health,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very High,Very Low,Very High,Low,2,16,16,16,Medium,math,A
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,other,other,reputation,mother,1,2,0,yes,yes,yes,yes,yes,yes,no,no,High,High,Medium,Very Low,Medium,High,6,8,10,10,Low,math,D
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,1,2,0,no,yes,yes,no,no,yes,no,no,High,High,High,Very Low,Medium,Very Low,4,9,9,10,Low,math,D
+GP,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,Very High,Medium,Low,Very Low,Low,Medium,18,7,6,6,Very Low,math,F
+GP,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,mother,2,4,0,no,yes,yes,yes,no,yes,yes,no,Very High,Medium,Very High,Very Low,Very Low,Very High,6,10,10,11,Extremely Low,math,D
+GP,F,17,U,GT3,T,secondary education,higher education,at_home,services,home,mother,1,3,1,no,yes,yes,no,yes,yes,yes,yes,High,High,Medium,Medium,High,Very High,28,10,9,9,Medium-High,math,F
+GP,F,16,U,GT3,A,secondary education,primary education (4th grade),services,other,course,mother,1,2,3,no,yes,yes,no,yes,yes,yes,no,Low,Medium,Medium,Low,Low,High,5,7,7,7,Low,math,F
+GP,F,16,U,GT3,T,higher education,secondary education,teacher,other,other,mother,1,2,0,no,no,yes,yes,yes,yes,yes,yes,Very Low,Medium,Low,Very Low,Very Low,Very Low,10,11,12,13,Extremely Low,math,C
+GP,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,home,mother,2,1,0,no,yes,yes,no,yes,yes,no,no,High,Medium,Low,Very Low,High,Very High,6,9,9,10,Medium Low,math,D
+GP,F,17,R,GT3,T,higher education,secondary education,teacher,other,reputation,mother,2,3,0,no,yes,yes,yes,yes,yes,yes,yes,High,High,Low,Very Low,Very Low,High,6,7,7,7,Extremely Low,math,F
+GP,F,19,U,GT3,T,secondary education,secondary education,other,other,reputation,other,1,4,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Medium,10,8,8,8,Very Low,math,F
+GP,M,17,U,LE3,T,higher education,higher education,services,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,Very High,Medium,Very High,High,Very High,Medium,13,12,12,13,Very High,math,C
+GP,F,16,U,GT3,A,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,2,0,yes,yes,yes,no,yes,yes,yes,no,Medium,Medium,High,Very Low,Very Low,High,0,12,13,14,Extremely Low,math,B
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,home,mother,1,2,1,no,yes,yes,yes,yes,yes,yes,no,High,High,High,Low,High,Very High,15,6,7,8,Medium,math,F
+GP,F,17,R,LE3,T,higher education,higher education,services,other,other,mother,1,1,0,no,yes,yes,no,yes,yes,no,no,Very High,Low,Very Low,Very Low,Low,Medium,12,8,10,10,Very Low,math,D
+GP,F,17,U,LE3,T,secondary education,5th to 9th grade,other,other,reputation,mother,2,2,0,no,no,yes,no,yes,yes,yes,no,High,High,High,Very Low,Medium,Very Low,2,14,15,15,Low,math,B
+GP,F,17,U,GT3,T,higher education,secondary education,other,other,reputation,mother,1,2,2,no,no,yes,no,yes,yes,yes,yes,Medium,High,Very High,Low,High,Very Low,22,6,6,4,Medium,math,F
+GP,M,18,U,LE3,T,secondary education,secondary education,services,health,home,father,1,2,1,no,yes,yes,no,yes,yes,yes,no,Medium,Low,High,Low,High,High,13,6,6,8,Medium,math,F
+GP,F,17,U,GT3,T,5th to 9th grade,secondary education,at_home,other,home,father,2,1,0,no,yes,yes,no,yes,yes,no,no,Medium,Medium,Medium,Very Low,High,Medium,3,7,7,8,Medium Low,math,F
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,at_home,course,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,High,4,9,10,10,Extremely Low,math,D
+GP,F,17,R,GT3,T,5th to 9th grade,primary education (4th grade),at_home,services,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Very High,Very Low,Low,Very High,2,6,6,6,Very Low,math,F
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,mother,1,3,1,no,yes,no,yes,yes,yes,no,yes,High,Medium,High,Very Low,Very Low,Very High,0,6,5,0,Extremely Low,math,F
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,services,teacher,other,mother,1,2,0,yes,no,no,no,yes,yes,yes,no,Low,Medium,Very Low,Very Low,Very Low,Medium,2,16,16,17,Extremely Low,math,A
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,2,2,0,no,yes,yes,no,yes,yes,yes,no,Medium,Medium,Medium,Very High,Very High,High,0,12,13,13,Extremely High,math,C
+GP,F,16,U,GT3,T,higher education,higher education,teacher,services,home,mother,1,3,0,no,yes,no,yes,no,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,Very High,0,13,13,14,Extremely Low,math,B
+GP,F,18,R,GT3,T,secondary education,primary education (4th grade),other,other,reputation,mother,1,2,1,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Very Low,High,16,9,8,7,Extremely Low,math,F
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,1,2,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,High,Very Low,Medium,Medium,10,16,15,15,Low,math,B
+GP,M,17,U,LE3,T,5th to 9th grade,secondary education,services,services,reputation,father,1,2,0,no,yes,yes,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Medium,2,12,11,12,Low,math,C
+GP,M,18,U,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,4,2,0,yes,yes,yes,yes,yes,yes,yes,yes,High,Medium,Low,High,Very High,Medium,14,10,8,9,Very High,math,F
+GP,F,17,U,GT3,A,5th to 9th grade,primary education (4th grade),other,other,course,mother,2,3,0,no,no,no,yes,yes,yes,yes,yes,Medium,Low,Medium,Very Low,Low,Medium,10,12,10,12,Very Low,math,C
+GP,F,17,U,LE3,T,higher education,secondary education,health,other,reputation,father,1,2,0,no,no,no,yes,yes,yes,yes,yes,Medium,Low,Medium,Very Low,Low,Medium,14,13,13,14,Very Low,math,B
+GP,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,2,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Very High,Low,Very Low,Very Low,Very Low,4,11,11,11,Extremely Low,math,D
+GP,M,17,U,GT3,T,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,yes,yes,no,yes,yes,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,14,11,9,9,Low,math,F
+GP,M,16,U,GT3,T,higher education,higher education,health,other,reputation,father,1,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Low,High,Low,High,Very Low,2,14,13,13,Medium,math,C
+GP,M,16,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,no,yes,yes,no,yes,yes,yes,no,Medium,High,Low,Very Low,Very Low,Very High,18,9,7,6,Extremely Low,math,F
+GP,M,16,U,GT3,T,secondary education,5th to 9th grade,at_home,other,reputation,mother,2,3,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Medium,Low,10,11,9,10,Low,math,D
+GP,M,17,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,father,1,2,0,no,no,yes,yes,no,yes,yes,yes,High,High,Low,Very High,Very High,High,4,14,13,13,Extremely High,math,C
+GP,F,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,1,0,no,no,no,no,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Very High,20,13,12,12,Extremely Low,math,C
+GP,F,17,R,GT3,T,5th to 9th grade,primary education (4th grade),at_home,services,course,mother,3,2,0,no,no,no,yes,yes,yes,no,no,Low,Very Low,Very Low,Very Low,Very Low,Medium,2,13,11,11,Extremely Low,math,D
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,services,reputation,father,1,2,1,no,no,no,no,yes,no,yes,no,Very High,Very High,High,Medium,Very High,Low,0,7,7,0,High,math,F
+GP,M,17,U,LE3,T,higher education,secondary education,health,other,course,mother,2,2,0,no,no,no,yes,yes,yes,yes,yes,Low,Very High,Very High,Very Low,High,Very High,14,12,12,12,Medium Low,math,C
+GP,M,17,R,LE3,A,higher education,higher education,teacher,other,course,mother,2,2,0,no,yes,yes,no,yes,yes,yes,no,Medium,Medium,Medium,Low,Medium,High,2,10,11,12,Medium Low,math,C
+GP,M,16,U,LE3,T,higher education,secondary education,teacher,other,course,mother,1,1,0,no,no,no,yes,no,yes,yes,no,Very High,High,Very High,Very Low,Very Low,Medium,0,6,0,0,Extremely Low,math,F
+GP,M,16,U,GT3,T,higher education,higher education,services,services,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,Low,Very Low,Low,Very High,0,13,12,12,Very Low,math,C
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,other,2,3,0,no,yes,yes,no,no,yes,yes,yes,High,High,High,Very Low,Very Low,Medium,0,7,0,0,Extremely Low,math,F
+GP,M,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,3,1,0,no,no,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,High,6,18,18,18,Extremely Low,math,A
+GP,M,17,U,GT3,T,5th to 9th grade,secondary education,other,other,course,father,2,1,0,no,no,no,no,yes,yes,yes,no,Very High,Low,Low,Very Low,Very Low,Low,4,12,12,13,Extremely Low,math,C
+GP,M,22,U,GT3,T,secondary education,primary education (4th grade),services,services,other,mother,1,1,3,no,no,no,no,no,no,yes,yes,Very High,High,Very High,Very High,Very High,Very Low,16,6,8,8,Extremely High,math,F
+GP,M,18,R,LE3,T,secondary education,secondary education,other,services,course,mother,1,2,1,no,yes,no,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,Very High,8,3,5,5,Low,math,F
+GP,M,16,U,GT3,T,none,5th to 9th grade,other,other,other,mother,1,1,0,no,no,yes,no,no,yes,yes,no,High,Medium,Low,Low,High,Very High,0,13,15,15,Medium,math,B
+GP,M,18,U,GT3,T,secondary education,5th to 9th grade,services,other,course,mother,2,1,1,no,no,no,no,yes,no,yes,no,High,High,Very High,Low,High,Very High,0,6,8,8,Medium,math,F
+GP,M,16,U,GT3,T,secondary education,secondary education,at_home,other,reputation,other,3,2,0,yes,yes,no,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Low,6,7,10,10,Low,math,D
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,services,other,mother,1,1,1,no,no,no,no,no,no,yes,no,Medium,Low,Very High,Low,Very High,Very High,4,6,9,8,Medium-High,math,F
+GP,M,16,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,2,1,0,no,no,no,yes,no,yes,no,no,Medium,Medium,Low,Very Low,Medium,Medium,0,8,9,8,Low,math,F
+GP,M,17,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,1,0,no,no,no,no,no,yes,yes,no,High,High,Low,Low,High,Very High,0,8,12,12,Medium,math,C
+GP,M,17,U,LE3,T,primary education (4th grade),primary education (4th grade),health,other,course,mother,2,1,1,no,yes,no,yes,yes,yes,yes,no,High,High,High,Very Low,Low,Very High,2,7,9,8,Very Low,math,F
+GP,F,17,U,LE3,T,higher education,5th to 9th grade,teacher,services,reputation,mother,1,4,0,no,yes,yes,yes,yes,yes,yes,no,High,Low,Medium,Very Low,Very Low,High,6,14,12,13,Extremely Low,math,C
+GP,M,19,U,LE3,A,higher education,secondary education,services,at_home,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Very Low,Very Low,Very Low,Very Low,12,11,11,11,Extremely Low,math,D
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Low,High,Very Low,Low,High,8,15,14,14,Very Low,math,B
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,father,1,4,0,no,no,yes,yes,yes,yes,yes,yes,Medium,High,Very Low,Very Low,Very Low,Low,0,10,9,0,Extremely Low,math,F
+GP,F,18,U,GT3,T,higher education,secondary education,services,other,home,father,1,2,0,no,yes,yes,no,yes,yes,yes,yes,Medium,Very Low,Low,Very Low,Medium,Low,21,17,18,18,Low,math,A
+GP,M,18,U,GT3,T,higher education,secondary education,teacher,other,course,mother,1,2,0,no,yes,yes,no,no,yes,yes,no,High,Medium,Low,Very Low,Very Low,Medium,2,8,8,8,Extremely Low,math,F
+GP,M,18,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,1,3,0,no,no,no,yes,no,yes,no,no,Very High,Medium,Low,Very Low,Very Low,Medium,1,13,12,12,Extremely Low,math,C
+GP,F,17,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,3,0,no,no,no,yes,no,yes,no,no,Medium,Low,Medium,Very Low,Very Low,High,4,10,9,9,Extremely Low,math,F
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,services,home,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Medium,0,9,10,0,Extremely Low,math,F
+GP,M,18,R,LE3,A,secondary education,higher education,other,other,reputation,mother,2,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Low,Very High,Medium,High,Very Low,13,17,17,17,Medium-High,math,A
+GP,M,17,U,GT3,T,secondary education,primary education (4th grade),services,other,other,mother,1,2,0,no,no,yes,yes,yes,yes,yes,yes,Very High,High,High,Medium,High,Very High,2,9,9,10,Medium-High,math,D
+GP,F,18,R,GT3,T,higher education,higher education,teacher,other,reputation,mother,2,2,0,no,no,yes,yes,yes,yes,yes,no,High,Medium,High,Low,Low,High,8,12,10,11,Low,math,D
+GP,M,18,U,GT3,T,higher education,5th to 9th grade,health,other,reputation,father,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,Very High,High,Very High,Very Low,Medium,Very High,10,10,9,10,Low,math,D
+GP,F,18,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,reputation,mother,2,2,0,no,yes,no,no,yes,no,yes,yes,High,Medium,Very High,Very Low,Low,Medium,0,6,0,0,Very Low,math,F
+GP,F,19,U,GT3,T,secondary education,secondary education,other,services,home,other,1,2,2,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Very High,Medium,Medium,Very High,15,9,9,9,Medium,math,F
+GP,F,18,U,GT3,T,5th to 9th grade,secondary education,other,services,reputation,father,1,4,0,no,yes,yes,yes,yes,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,4,15,14,14,Low,math,B
+GP,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,no,yes,yes,no,no,yes,no,no,High,High,Medium,Very Low,Very Low,Medium,2,11,11,11,Extremely Low,math,D
+GP,M,17,R,GT3,T,primary education (4th grade),5th to 9th grade,at_home,at_home,home,mother,1,2,0,no,yes,yes,yes,no,yes,no,yes,Medium,Very High,Low,Low,Low,Very Low,2,15,14,14,Low,math,B
+GP,F,17,U,GT3,T,5th to 9th grade,higher education,at_home,health,reputation,mother,2,2,0,no,yes,yes,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Very Low,2,10,10,10,Extremely Low,math,D
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,services,other,course,mother,2,2,0,yes,yes,yes,no,yes,yes,yes,yes,High,High,High,Low,Medium,Very High,6,12,12,12,Medium Low,math,C
+GP,F,18,R,GT3,A,secondary education,5th to 9th grade,other,services,home,mother,2,2,0,no,no,no,no,no,no,yes,yes,High,Very Low,Very Low,Very Low,Very Low,Very High,75,10,9,9,Extremely Low,math,F
+GP,M,18,U,GT3,T,higher education,higher education,teacher,services,home,mother,2,1,0,no,no,yes,yes,yes,yes,yes,no,Medium,Low,High,Very Low,High,Medium,22,9,9,9,Medium Low,math,F
+GP,F,18,U,GT3,T,higher education,higher education,health,health,reputation,father,1,2,1,yes,yes,no,yes,yes,yes,yes,yes,Low,High,High,Very Low,Very Low,High,15,9,8,8,Extremely Low,math,F
+GP,M,18,U,LE3,T,higher education,secondary education,teacher,services,course,mother,2,1,0,no,no,yes,yes,yes,yes,yes,no,High,Low,Medium,Very Low,Low,Very Low,8,10,11,10,Very Low,math,D
+GP,M,17,U,LE3,A,higher education,primary education (4th grade),services,other,home,mother,2,1,0,no,no,yes,yes,yes,yes,yes,yes,High,Very High,High,Low,High,Very High,30,8,8,8,Medium,math,F
+GP,M,17,U,LE3,A,secondary education,5th to 9th grade,teacher,services,home,mother,1,1,1,no,no,no,no,yes,yes,yes,no,High,High,High,Medium,High,Medium,19,11,9,10,Medium-High,math,D
+GP,F,18,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,mother,2,4,0,no,yes,yes,yes,yes,yes,no,no,Very High,Low,Low,Very Low,Very Low,Medium,1,12,12,12,Extremely Low,math,C
+GP,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,yes,no,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,High,4,8,9,10,Extremely Low,math,D
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,High,Very High,Very Low,Low,Very High,4,10,9,11,Very Low,math,D
+GP,M,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,reputation,father,1,2,0,no,no,yes,no,no,yes,yes,no,High,Medium,Medium,Very Low,Low,High,2,12,10,11,Very Low,math,D
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,at_home,other,mother,1,3,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Low,5,18,18,19,Very Low,math,A
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),services,teacher,reputation,mother,1,3,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,6,13,12,12,Extremely Low,math,C
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,services,reputation,mother,1,3,0,no,no,yes,yes,yes,yes,yes,no,High,Low,High,Very Low,Medium,Low,6,15,14,14,Low,math,B
+GP,M,18,U,LE3,A,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Very Low,Low,9,15,13,15,Extremely Low,math,B
+GP,M,18,U,GT3,T,higher education,5th to 9th grade,teacher,other,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,High,Very High,11,12,11,11,Medium Low,math,D
+GP,F,17,U,GT3,T,higher education,secondary education,health,services,reputation,mother,1,3,0,no,yes,yes,no,yes,yes,yes,no,High,Low,Low,Very Low,Low,Medium,0,15,15,15,Very Low,math,B
+GP,F,18,U,LE3,T,5th to 9th grade,primary education (4th grade),services,at_home,reputation,mother,1,2,1,no,no,no,no,yes,yes,yes,yes,Very High,High,Medium,Very Low,Very Low,Very High,12,12,12,13,Extremely Low,math,C
+GP,F,17,R,LE3,T,secondary education,primary education (4th grade),services,other,reputation,mother,2,4,0,no,yes,yes,no,yes,yes,no,no,Medium,Very Low,Low,Very Low,Very Low,Medium,6,18,18,18,Extremely Low,math,A
+GP,M,18,R,LE3,T,secondary education,5th to 9th grade,services,other,reputation,mother,2,3,0,no,yes,yes,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,High,8,14,13,14,Extremely Low,math,B
+GP,M,17,U,GT3,T,secondary education,secondary education,health,other,home,mother,1,1,0,no,yes,yes,no,yes,yes,yes,no,High,High,Medium,Very Low,Medium,Very High,4,14,12,11,Low,math,D
+GP,F,19,U,GT3,T,higher education,higher education,health,other,reputation,other,2,2,0,no,yes,yes,yes,yes,yes,yes,no,Low,Medium,High,Low,Medium,Low,0,10,9,0,Medium Low,math,F
+GP,F,18,U,LE3,T,higher education,secondary education,other,other,home,other,2,2,0,no,yes,yes,no,yes,yes,yes,yes,High,High,Very High,Very Low,Low,Low,10,10,8,8,Very Low,math,F
+GP,F,18,U,GT3,T,higher education,secondary education,other,other,reputation,father,1,4,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,0,14,13,14,Extremely Low,math,B
+GP,M,18,U,LE3,T,higher education,higher education,teacher,teacher,home,mother,1,1,0,no,yes,yes,no,yes,yes,yes,yes,Very Low,High,Low,Low,Low,Very Low,5,16,15,16,Low,math,A
+GP,F,18,U,LE3,A,higher education,higher education,health,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Low,High,Very Low,Very Low,High,14,12,10,11,Extremely Low,math,D
+GP,M,17,U,LE3,T,higher education,higher education,other,teacher,home,father,2,1,0,no,no,yes,no,yes,yes,yes,no,High,Very Low,Very Low,Low,Low,Very High,0,11,11,10,Low,math,D
+GP,F,17,U,GT3,T,higher education,5th to 9th grade,other,other,reputation,mother,2,3,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,0,15,12,14,Extremely Low,math,B
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,health,health,reputation,father,1,4,0,no,yes,yes,yes,no,yes,yes,no,Very High,Low,Low,Very Low,Low,Very High,0,17,17,18,Very Low,math,A
+GP,M,19,U,GT3,T,secondary education,secondary education,other,other,home,other,1,2,1,no,yes,no,yes,yes,yes,yes,yes,High,High,High,Very Low,Very Low,Medium,20,15,14,13,Extremely Low,math,C
+GP,F,18,U,GT3,T,5th to 9th grade,higher education,services,at_home,reputation,other,1,2,1,no,yes,yes,yes,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Medium,8,14,12,12,Extremely Low,math,C
+GP,M,20,U,GT3,A,secondary education,5th to 9th grade,services,other,course,other,1,1,0,no,no,no,yes,yes,yes,no,no,Very High,Very High,Medium,Very Low,Very Low,Very High,0,17,18,18,Extremely Low,math,A
+GP,M,19,U,GT3,T,higher education,higher education,teacher,services,reputation,other,2,1,1,no,yes,yes,no,yes,yes,yes,yes,High,Medium,High,Very Low,Very Low,High,38,8,9,8,Extremely Low,math,F
+GP,M,19,R,GT3,T,secondary education,secondary education,other,services,reputation,father,1,2,1,no,no,no,yes,yes,yes,no,yes,High,Very High,Medium,Very Low,Low,Very High,0,15,12,12,Very Low,math,C
+GP,F,19,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,other,1,2,1,yes,yes,no,yes,no,yes,yes,no,High,High,Medium,Very Low,Medium,Medium,18,12,10,10,Low,math,D
+GP,F,19,U,LE3,T,primary education (4th grade),5th to 9th grade,services,services,home,other,1,2,1,no,no,no,yes,no,yes,no,yes,High,Low,High,Low,Low,Medium,0,9,9,0,Low,math,F
+GP,F,19,U,GT3,T,5th to 9th grade,primary education (4th grade),at_home,other,other,other,3,2,0,no,yes,no,no,yes,no,yes,yes,Medium,High,Very Low,Very Low,Very Low,Low,20,14,12,13,Extremely Low,math,C
+GP,M,19,U,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,other,1,2,1,no,no,no,no,no,yes,yes,no,High,Very High,Low,Low,Low,High,3,13,11,11,Low,math,D
+GP,F,19,U,LE3,T,secondary education,5th to 9th grade,services,other,reputation,other,2,2,1,no,yes,yes,no,no,yes,yes,yes,High,Low,Low,Very Low,Low,Very Low,22,13,10,11,Very Low,math,D
+GP,F,19,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,health,home,other,1,3,2,no,no,no,no,no,yes,yes,yes,High,Very Low,Low,Very Low,Very Low,Medium,14,15,13,13,Extremely Low,math,C
+GP,F,19,R,GT3,T,5th to 9th grade,secondary education,other,other,reputation,other,1,3,1,no,no,no,no,yes,yes,yes,yes,High,Very Low,Low,Very Low,Very Low,Medium,40,13,11,11,Extremely Low,math,D
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,course,mother,2,2,0,no,yes,yes,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Low,Very Low,0,8,8,0,Very Low,math,F
+GP,F,18,U,GT3,T,higher education,secondary education,other,other,course,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,yes,High,Medium,High,Very Low,Very Low,Very High,9,9,10,9,Extremely Low,math,F
+GP,F,17,R,GT3,T,secondary education,higher education,at_home,services,course,father,1,3,0,no,yes,yes,yes,no,yes,yes,no,High,Medium,High,Low,Very High,Very High,0,11,11,10,Medium-High,math,D
+GP,F,18,U,GT3,T,higher education,higher education,teacher,other,course,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,High,High,Medium,Medium,Very High,2,11,11,11,Medium,math,D
+GP,F,17,U,GT3,A,higher education,secondary education,services,services,course,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,Very High,Low,Low,Very Low,Low,Very High,23,13,13,13,Very Low,math,C
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,2,0,no,yes,no,no,yes,yes,no,yes,High,Low,Low,Very Low,Very Low,Medium,12,11,9,9,Extremely Low,math,F
+GP,F,17,R,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,no,Medium,Medium,Low,Low,Low,Medium,3,11,11,11,Low,math,D
+GP,F,17,U,GT3,T,secondary education,primary education (4th grade),services,services,course,father,1,3,0,no,yes,no,no,no,yes,yes,no,Medium,High,Medium,Low,Medium,Very High,1,12,14,15,Medium Low,math,B
+GP,F,17,U,LE3,T,none,5th to 9th grade,at_home,at_home,home,father,2,3,0,no,no,no,no,yes,yes,yes,no,Medium,Medium,Medium,Low,Medium,Low,0,16,15,15,Medium Low,math,B
+GP,M,18,U,GT3,T,higher education,higher education,other,other,course,mother,1,3,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Medium,3,9,12,11,Low,math,D
+GP,M,17,U,GT3,T,secondary education,secondary education,other,services,reputation,mother,1,1,0,no,no,no,yes,no,yes,yes,no,High,Medium,Very High,Medium,Very High,Very High,3,14,15,16,High,math,A
+GP,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,services,other,course,mother,4,1,0,no,yes,no,no,yes,yes,yes,no,High,High,Very High,Very High,Very High,High,8,11,10,10,Extremely High,math,D
+GP,F,17,U,GT3,T,higher education,higher education,teacher,services,course,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,no,Very High,High,High,Very Low,Medium,High,7,10,9,9,Low,math,F
+GP,F,17,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,2,3,0,no,yes,yes,no,no,yes,yes,yes,High,Medium,Medium,Very Low,Low,High,4,14,14,14,Very Low,math,B
+GP,M,18,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,4,0,no,yes,no,yes,yes,yes,yes,no,High,Very High,Very High,Low,High,Very High,2,9,8,8,Medium,math,F
+GP,F,17,R,GT3,T,5th to 9th grade,higher education,at_home,other,course,father,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,High,Medium,Very Low,Very Low,Very High,7,12,14,14,Extremely Low,math,B
+GP,F,18,U,GT3,T,secondary education,secondary education,services,services,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Very Low,High,0,7,0,0,Extremely Low,math,F
+GP,F,18,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,other,1,2,0,no,no,no,yes,no,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Low,0,8,8,0,Extremely Low,math,F
+GP,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,2,4,0,no,no,no,yes,yes,yes,no,no,High,High,High,Very Low,Very Low,High,0,10,9,0,Extremely Low,math,F
+GP,F,17,U,GT3,T,secondary education,higher education,services,other,course,mother,1,3,0,no,no,no,no,yes,yes,yes,no,High,High,Very High,Very Low,Medium,Very High,16,16,15,15,Low,math,B
+GP,F,19,R,GT3,A,secondary education,primary education (4th grade),services,at_home,home,other,1,3,1,no,no,yes,no,yes,yes,no,no,Very High,High,Medium,Very Low,Low,Very High,12,14,13,13,Very Low,math,C
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,High,Medium,Low,Low,Medium,Low,0,7,8,0,Medium Low,math,F
+GP,F,18,U,LE3,T,secondary education,secondary education,services,services,home,mother,1,4,0,no,yes,no,no,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very Low,7,16,15,17,Extremely Low,math,A
+GP,F,17,R,GT3,A,secondary education,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,Medium,Low,Medium,Low,4,9,10,10,Medium Low,math,D
+GP,F,19,U,GT3,T,5th to 9th grade,primary education (4th grade),services,services,home,other,1,3,1,no,no,yes,yes,yes,yes,yes,yes,High,Medium,High,Very Low,Medium,Medium,4,11,12,11,Low,math,D
+GP,M,18,U,GT3,T,higher education,higher education,teacher,services,home,father,1,2,1,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Low,0,10,10,0,Low,math,F
+GP,M,18,U,LE3,T,secondary education,higher education,services,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,Very High,11,16,15,15,Low,math,B
+GP,F,17,U,GT3,A,5th to 9th grade,5th to 9th grade,at_home,at_home,home,father,1,2,1,no,yes,no,no,yes,yes,yes,yes,Medium,Medium,Very Low,Very Low,Low,High,0,9,8,0,Very Low,math,F
+GP,F,18,U,GT3,T,5th to 9th grade,secondary education,at_home,other,course,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Medium,4,11,10,10,Very Low,math,D
+GP,F,18,U,GT3,T,secondary education,5th to 9th grade,other,services,other,mother,1,3,0,no,no,no,no,yes,yes,yes,yes,Very High,High,Medium,Low,Medium,Very Low,7,13,13,14,Medium Low,math,B
+GP,M,18,R,GT3,T,higher education,secondary education,teacher,services,course,mother,1,3,0,no,no,no,no,yes,yes,yes,yes,Very High,Medium,Low,Very Low,Low,High,9,16,15,16,Very Low,math,A
+GP,M,18,U,GT3,T,higher education,secondary education,teacher,other,course,mother,1,3,0,no,yes,yes,no,yes,yes,yes,yes,Very High,High,Very High,Low,Medium,Very High,0,10,10,9,Medium Low,math,F
+GP,F,17,U,GT3,T,higher education,secondary education,health,other,reputation,mother,1,3,0,no,yes,yes,yes,yes,yes,yes,yes,High,High,Medium,Very Low,Medium,High,0,13,15,15,Low,math,B
+MS,M,18,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,2,1,1,no,yes,no,no,no,yes,yes,no,Low,Very High,Very High,Very High,Very High,Very High,10,11,13,13,Extremely High,math,C
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,home,other,3,2,3,no,no,no,no,yes,yes,yes,no,Very High,High,High,Medium,Medium,Low,8,8,7,8,Medium,math,F
+MS,M,17,U,GT3,T,secondary education,secondary education,health,other,course,mother,2,2,0,no,yes,yes,no,yes,yes,yes,no,High,Very High,High,Low,Medium,Medium,2,13,13,13,Medium Low,math,C
+MS,M,18,U,LE3,T,primary education (4th grade),secondary education,at_home,services,course,mother,1,1,1,no,no,no,no,yes,no,yes,yes,High,Medium,Medium,Low,Medium,Medium,7,8,7,8,Medium Low,math,F
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,other,3,1,1,no,yes,no,no,yes,yes,yes,no,High,High,High,Medium,Medium,Very High,4,8,8,8,Medium,math,F
+MS,M,17,R,GT3,T,higher education,secondary education,services,other,home,mother,2,2,0,no,yes,yes,yes,no,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,4,13,11,11,Low,math,D
+MS,F,18,U,GT3,T,secondary education,secondary education,services,services,course,father,1,2,0,no,yes,no,no,yes,yes,no,yes,Very High,Medium,High,Very Low,Very Low,Very High,0,10,9,9,Extremely Low,math,F
+MS,F,17,R,GT3,T,higher education,higher education,teacher,services,other,father,2,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Very High,4,12,13,13,Very Low,math,C
+MS,F,17,U,LE3,A,secondary education,5th to 9th grade,services,other,reputation,mother,2,2,0,no,no,no,no,yes,yes,no,yes,Very Low,Low,Medium,Very Low,Low,Very High,2,12,12,11,Very Low,math,D
+MS,M,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,services,home,father,2,1,0,no,no,no,no,no,yes,yes,yes,Medium,Medium,Low,Very Low,Low,Medium,4,10,10,10,Very Low,math,D
+MS,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,father,2,3,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,High,0,18,16,16,Extremely Low,math,A
+MS,F,18,R,LE3,A,primary education (4th grade),higher education,at_home,other,course,mother,3,2,0,no,no,no,no,yes,yes,no,yes,High,Medium,High,Very Low,High,Very High,0,13,13,13,Medium Low,math,C
+MS,M,18,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,2,2,1,no,no,no,yes,no,no,no,no,High,High,Medium,Low,Medium,Very High,2,13,12,12,Medium Low,math,C
+MS,F,18,U,GT3,T,secondary education,secondary education,services,services,other,mother,2,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Low,Very Low,Medium,Medium,0,11,11,10,Low,math,D
+MS,F,17,U,LE3,T,higher education,higher education,at_home,at_home,course,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,Low,Medium,High,Very Low,Very Low,Very Low,0,16,15,15,Extremely Low,math,B
+MS,F,17,R,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,father,2,2,0,no,no,no,no,no,yes,no,no,Medium,Low,Low,Very Low,Low,Medium,0,12,11,12,Very Low,math,C
+MS,M,18,R,GT3,T,primary education (4th grade),secondary education,at_home,other,course,mother,2,2,0,no,yes,yes,no,yes,yes,no,no,Medium,Medium,High,Low,High,Medium,4,10,10,10,Medium,math,D
+MS,M,18,U,LE3,T,higher education,higher education,teacher,services,other,mother,2,3,0,no,no,yes,no,yes,yes,yes,yes,High,Low,Low,Low,Low,Very High,0,13,13,13,Low,math,C
+MS,F,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,reputation,mother,3,1,1,no,yes,yes,no,yes,yes,yes,yes,Very High,Low,Very Low,Very Low,Low,Very Low,0,7,6,0,Very Low,math,F
+MS,F,18,U,GT3,T,5th to 9th grade,secondary education,at_home,services,course,father,2,1,0,no,yes,yes,no,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Low,High,0,11,10,10,Very Low,math,D
+MS,F,18,R,GT3,T,higher education,higher education,other,teacher,other,father,3,2,0,no,yes,yes,no,no,yes,yes,yes,Medium,Low,Low,High,Low,Very High,10,14,12,11,Medium,math,D
+MS,F,19,U,LE3,T,secondary education,5th to 9th grade,services,services,home,other,2,2,2,no,no,no,yes,yes,yes,no,yes,Medium,Low,Low,Very Low,Very Low,Medium,4,7,7,9,Extremely Low,math,F
+MS,M,18,R,LE3,T,primary education (4th grade),5th to 9th grade,at_home,services,other,father,3,1,0,no,yes,yes,yes,yes,no,yes,yes,High,Medium,Medium,Low,Medium,Medium,3,14,12,12,Medium Low,math,C
+MS,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,at_home,home,mother,1,3,0,no,no,no,yes,yes,yes,no,yes,Medium,High,Medium,Very Low,Very Low,Medium,8,13,11,11,Extremely Low,math,D
+MS,F,17,R,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Very High,Very High,Very Low,Medium,Very Low,14,6,5,5,Low,math,F
+MS,F,18,R,LE3,T,higher education,higher education,other,other,reputation,mother,2,3,0,no,no,no,no,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,Very Low,0,19,18,19,Extremely Low,math,A
+MS,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,4,3,0,no,no,no,no,yes,yes,yes,no,High,Medium,Low,Very Low,Low,High,2,8,8,10,Very Low,math,D
+MS,F,20,U,GT3,T,higher education,5th to 9th grade,health,other,course,other,2,3,2,no,yes,yes,no,no,yes,yes,yes,Very High,High,Medium,Very Low,Very Low,Medium,4,15,14,15,Extremely Low,math,B
+MS,F,18,R,LE3,T,higher education,higher education,teacher,services,course,mother,1,2,0,no,no,yes,yes,yes,yes,yes,no,Very High,High,Medium,Medium,High,Low,4,8,9,10,Medium-High,math,D
+MS,F,18,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,2,0,no,no,yes,no,yes,yes,yes,yes,High,Very Low,Medium,Very Low,Low,Very Low,0,15,15,15,Very Low,math,B
+MS,F,17,R,GT3,T,secondary education,primary education (4th grade),at_home,other,reputation,mother,1,2,0,no,yes,yes,yes,no,yes,yes,no,High,Very High,High,Low,Medium,Very Low,17,10,10,10,Medium Low,math,D
+MS,M,18,U,GT3,T,higher education,higher education,teacher,teacher,home,father,1,2,0,no,no,yes,yes,no,yes,yes,no,Medium,Low,High,Very Low,High,Low,4,15,14,14,Medium Low,math,B
+MS,M,18,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,other,mother,2,1,0,no,no,no,yes,no,yes,yes,yes,High,High,Medium,Very Low,Medium,Very High,5,7,6,7,Low,math,F
+MS,M,17,U,GT3,T,5th to 9th grade,secondary education,other,services,home,father,2,2,0,no,no,no,yes,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Medium,2,11,11,10,Extremely Low,math,D
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,other,mother,2,1,1,no,no,no,no,yes,yes,no,no,High,Medium,Low,Very Low,Medium,Very High,0,6,5,0,Low,math,F
+MS,M,18,R,GT3,T,higher education,5th to 9th grade,other,other,home,father,2,1,1,no,no,yes,no,yes,yes,no,no,Very High,High,Medium,High,Medium,Medium,14,6,5,5,Medium-High,math,F
+MS,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,other,mother,2,3,0,no,no,yes,no,yes,yes,no,no,Very High,Medium,Medium,Very Low,Medium,High,2,10,9,10,Low,math,D
+MS,F,18,R,GT3,T,higher education,higher education,teacher,at_home,reputation,mother,3,1,0,no,yes,yes,yes,yes,yes,yes,yes,High,High,Medium,Low,Low,Very High,7,6,5,6,Low,math,F
+MS,F,19,R,GT3,T,5th to 9th grade,secondary education,services,other,course,mother,1,3,1,no,no,no,yes,no,yes,yes,no,Very High,High,Low,Very Low,Low,Very High,0,7,5,0,Very Low,math,F
+MS,F,18,U,LE3,T,secondary education,primary education (4th grade),teacher,services,course,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Medium,High,Very Low,Very Low,Very Low,0,7,9,8,Extremely Low,math,F
+MS,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,2,2,1,no,no,no,yes,yes,yes,no,no,Very Low,Very Low,Very Low,Very Low,Very Low,Very High,0,6,5,0,Extremely Low,math,F
+MS,M,20,U,LE3,A,5th to 9th grade,5th to 9th grade,services,services,course,other,1,2,2,no,yes,yes,no,yes,yes,no,no,Very High,Very High,High,High,Very High,High,11,9,9,9,Very High,math,F
+MS,M,17,U,LE3,T,secondary education,primary education (4th grade),services,services,course,mother,2,1,0,no,no,no,no,no,yes,yes,no,Low,High,Very High,Medium,High,Low,3,14,16,16,Medium-High,math,A
+MS,M,21,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,other,1,1,3,no,no,no,no,no,yes,no,no,Very High,Very High,Medium,Medium,Medium,Medium,3,10,8,7,Medium,math,F
+MS,M,18,R,LE3,T,secondary education,5th to 9th grade,services,other,course,mother,3,1,0,no,no,no,no,no,yes,yes,no,High,High,Very Low,Medium,High,Very High,0,11,12,10,Medium-High,math,D
+MS,M,19,U,LE3,T,primary education (4th grade),primary education (4th grade),other,at_home,course,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Low,Medium,Medium,Medium,Very High,5,8,9,9,Medium,math,F
+GP,F,18,U,GT3,A,higher education,higher education,at_home,teacher,course,mother,2,2,0,yes,no,no,no,yes,yes,no,no,High,Medium,High,Very Low,Very Low,Medium,4,0,11,11,Extremely Low,port,D
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,father,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,2,9,11,11,Extremely Low,port,D
+GP,F,15,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,1,2,0,yes,no,no,no,yes,yes,yes,no,High,Medium,Low,Low,Medium,Medium,6,12,13,12,Medium Low,port,C
+GP,F,15,U,GT3,T,higher education,5th to 9th grade,health,services,home,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,Medium,Low,Low,Very Low,Very Low,Very High,0,14,14,14,Extremely Low,port,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,home,father,1,2,0,no,yes,no,no,yes,yes,no,no,High,Medium,Low,Very Low,Low,Very High,0,11,13,13,Very Low,port,C
+GP,M,16,U,LE3,T,higher education,secondary education,services,other,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Low,Very High,6,12,12,13,Very Low,port,C
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,High,High,Very Low,Very Low,Medium,0,13,12,13,Extremely Low,port,C
+GP,F,17,U,GT3,A,higher education,higher education,other,teacher,home,mother,2,2,0,yes,yes,no,no,yes,yes,no,no,High,Very Low,High,Very Low,Very Low,Very Low,2,10,13,13,Extremely Low,port,C
+GP,M,15,U,LE3,A,secondary education,5th to 9th grade,services,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Very Low,0,15,16,17,Extremely Low,port,A
+GP,M,15,U,GT3,T,secondary education,higher education,other,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Very High,Very Low,Very Low,Very Low,Very High,0,12,12,13,Extremely Low,port,C
+GP,F,15,U,GT3,T,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Low,Low,2,14,14,14,Very Low,port,B
+GP,F,15,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,reputation,father,3,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Low,Low,Very Low,Very Low,High,0,10,12,13,Extremely Low,port,C
+GP,M,15,U,LE3,T,higher education,higher education,health,services,course,father,1,1,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Medium,Very High,0,12,13,12,Low,port,C
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,course,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,Very High,High,Medium,Very Low,Low,Medium,0,12,12,13,Very Low,port,C
+GP,M,15,U,GT3,A,5th to 9th grade,5th to 9th grade,other,other,home,other,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Medium,0,14,14,15,Extremely Low,port,B
+GP,F,16,U,GT3,T,higher education,higher education,health,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,High,High,High,Very Low,Low,Low,6,17,17,17,Very Low,port,A
+GP,F,16,U,GT3,T,higher education,higher education,services,services,reputation,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Medium,Low,Medium,Very Low,Low,Low,10,13,13,14,Very Low,port,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,reputation,mother,3,2,0,yes,yes,no,yes,yes,yes,no,no,Very High,Medium,Low,Very Low,Very Low,High,2,13,14,14,Extremely Low,port,B
+GP,M,17,U,GT3,T,secondary education,5th to 9th grade,services,services,course,mother,1,1,3,no,yes,yes,yes,yes,yes,yes,no,Very High,Very High,Very High,Low,High,Very High,2,8,8,7,Medium,port,F
+GP,M,16,U,LE3,T,higher education,secondary education,health,other,home,father,1,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Very Low,Medium,Very Low,Medium,Very High,6,12,12,12,Low,port,C
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,reputation,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,High,Very Low,Very Low,Very Low,Very Low,0,12,13,14,Extremely Low,port,B
+GP,M,15,U,GT3,T,higher education,higher education,health,health,other,father,1,1,0,no,yes,yes,no,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,Very High,0,11,12,12,Extremely Low,port,C
+GP,M,16,U,LE3,T,higher education,5th to 9th grade,teacher,other,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,High,Very High,Very Low,Very Low,Medium,Very High,0,12,13,14,Low,port,B
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Low,High,Very High,2,10,10,10,Medium,port,D
+GP,F,15,R,GT3,T,5th to 9th grade,higher education,services,health,course,mother,1,3,0,yes,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,10,11,10,Extremely Low,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,home,mother,1,1,0,no,yes,no,no,no,yes,yes,no,Very Low,Low,Low,Very Low,Medium,Very High,6,10,11,12,Low,port,C
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,High,Low,Low,Very Low,Low,Very High,8,11,12,12,Very Low,port,C
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,health,services,other,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Low,Low,High,Low,High,Very Low,0,11,11,11,Medium,port,D
+GP,M,16,U,LE3,A,secondary education,higher education,services,other,home,mother,1,2,0,yes,yes,yes,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,2,12,12,13,Extremely Low,port,C
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,High,High,Very High,Very High,Very High,Very High,4,12,11,12,Extremely High,port,C
+GP,M,15,U,GT3,T,higher education,higher education,health,services,home,mother,1,2,0,no,yes,yes,no,no,yes,yes,no,Very High,High,Low,Medium,High,Very High,0,10,11,11,Medium-High,port,D
+GP,M,15,U,GT3,T,higher education,higher education,services,services,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very Low,Very Low,Very Low,Very High,2,15,15,15,Extremely Low,port,B
+GP,M,15,R,GT3,T,higher education,secondary education,teacher,at_home,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Very High,0,13,14,15,Extremely Low,port,B
+GP,M,15,U,LE3,T,secondary education,secondary education,other,other,course,mother,1,2,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,Low,0,13,12,12,Extremely Low,port,C
+GP,M,16,U,GT3,T,secondary education,5th to 9th grade,other,other,home,mother,1,1,0,no,yes,no,no,no,yes,yes,no,Very High,High,Medium,Very Low,Very Low,Very High,4,12,12,12,Extremely Low,port,C
+GP,F,15,U,GT3,T,5th to 9th grade,secondary education,other,other,other,father,2,1,0,no,yes,no,yes,yes,yes,no,no,Medium,Very High,Very Low,Very Low,Very Low,Very High,4,11,11,11,Extremely Low,port,D
+GP,M,15,U,LE3,T,higher education,secondary education,teacher,services,home,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Very Low,High,0,14,14,14,Extremely Low,port,B
+GP,M,16,R,GT3,A,higher education,higher education,other,teacher,reputation,mother,2,3,0,no,yes,no,yes,yes,yes,yes,yes,Low,High,Medium,Very Low,Very Low,Very High,4,13,13,13,Extremely Low,port,C
+GP,F,15,R,GT3,T,secondary education,higher education,services,health,course,mother,1,3,0,yes,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,11,12,12,Extremely Low,port,C
+GP,F,15,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,reputation,mother,1,1,0,yes,yes,no,yes,yes,yes,no,no,High,Medium,Very Low,Very Low,Very Low,Low,8,14,13,12,Extremely Low,port,C
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,2,2,0,no,yes,no,yes,no,yes,yes,yes,Medium,Medium,Medium,Very Low,Low,Medium,16,11,11,10,Very Low,port,D
+GP,M,15,U,LE3,T,higher education,higher education,teacher,other,home,other,1,1,0,no,yes,no,no,no,yes,yes,yes,Very High,High,Medium,Low,High,Very High,8,10,11,11,Medium,port,D
+GP,M,15,U,GT3,T,higher education,higher education,services,teacher,course,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Very High,0,14,15,15,Extremely Low,port,B
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,course,father,1,1,0,yes,yes,no,no,yes,yes,yes,no,Very High,High,Very Low,Very Low,Very Low,Very Low,0,9,10,10,Extremely Low,port,D
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,other,at_home,course,father,2,2,1,yes,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Very High,14,10,11,11,Low,port,D
+GP,F,15,U,LE3,A,higher education,secondary education,other,other,course,mother,1,2,0,yes,yes,yes,yes,yes,yes,yes,yes,Very High,Low,Low,Very Low,Very Low,Very High,4,10,11,11,Extremely Low,port,D
+GP,F,16,U,LE3,A,secondary education,secondary education,other,services,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Low,Medium,Very High,Very Low,High,Medium,6,13,12,13,Medium Low,port,C
+GP,M,16,U,GT3,T,higher education,secondary education,health,services,reputation,mother,1,4,0,no,no,no,yes,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Low,2,17,17,17,Extremely Low,port,A
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,teacher,other,home,mother,1,2,0,no,yes,no,no,yes,yes,no,no,High,Medium,Medium,Low,Low,Very High,4,11,12,13,Low,port,C
+GP,F,15,U,GT3,T,higher education,higher education,services,teacher,other,father,1,2,0,yes,yes,no,yes,no,yes,yes,no,High,High,High,Very Low,Very Low,Medium,2,13,12,12,Extremely Low,port,C
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,3,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Low,Medium,High,0,14,13,13,Medium Low,port,C
+GP,F,15,U,LE3,T,higher education,5th to 9th grade,health,other,other,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Very High,0,16,14,16,Extremely Low,port,A
+GP,M,15,U,LE3,A,higher education,5th to 9th grade,health,health,other,father,2,1,0,no,no,no,no,yes,yes,no,no,Very High,Very High,Very High,Medium,High,Very High,4,10,9,9,Medium-High,port,F
+GP,F,15,U,GT3,T,higher education,higher education,services,services,course,mother,1,1,0,yes,yes,no,no,yes,yes,yes,no,Medium,Medium,High,Low,Medium,Very High,0,13,12,12,Medium Low,port,C
+GP,F,15,U,LE3,A,secondary education,secondary education,other,other,other,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,High,High,High,Very Low,0,13,12,13,High,port,C
+GP,F,16,U,GT3,A,5th to 9th grade,primary education (4th grade),other,other,other,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,High,Very Low,Very Low,Low,2,12,13,12,Extremely Low,port,C
+GP,F,15,U,GT3,A,higher education,secondary education,services,services,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very Low,0,15,14,15,Extremely Low,port,B
+GP,M,15,U,GT3,T,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,no,no,Medium,Low,Low,Very Low,Very Low,Very High,8,15,15,16,Extremely Low,port,A
+GP,M,15,U,LE3,T,primary education (4th grade),5th to 9th grade,other,at_home,home,father,1,2,0,yes,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,0,14,13,14,Extremely Low,port,B
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,services,other,course,mother,1,2,0,no,yes,yes,no,yes,yes,yes,no,High,Low,Medium,Very Low,Very Low,Very High,2,16,15,16,Extremely Low,port,A
+GP,F,16,R,GT3,T,higher education,higher education,health,teacher,other,mother,1,2,0,no,yes,no,yes,yes,yes,no,no,Low,High,High,Low,Medium,High,0,17,16,16,Medium Low,port,A
+GP,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),services,services,course,father,4,1,0,yes,yes,no,yes,no,yes,yes,yes,Very High,Very High,Very High,Very High,Very High,Very High,0,10,10,16,Extremely High,port,A
+GP,F,16,U,LE3,T,primary education (4th grade),5th to 9th grade,other,services,reputation,father,1,2,0,yes,no,no,yes,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Very Low,0,13,13,10,Extremely Low,port,D
+GP,F,16,U,GT3,T,higher education,secondary education,teacher,health,home,mother,1,3,0,yes,yes,no,yes,yes,yes,yes,no,Medium,High,High,Low,High,High,0,14,13,13,Medium,port,C
+GP,F,15,U,LE3,T,higher education,secondary education,services,services,reputation,father,1,2,0,yes,no,no,yes,yes,yes,yes,yes,High,High,High,Low,High,Low,0,13,12,12,Medium,port,C
+GP,F,16,U,LE3,T,higher education,secondary education,teacher,services,course,mother,3,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Low,Very Low,2,16,15,16,Very Low,port,A
+GP,M,15,U,GT3,A,higher education,higher education,other,services,reputation,mother,1,4,0,no,yes,no,yes,no,yes,yes,yes,Very Low,Medium,Medium,Very High,Very High,Medium,0,11,12,12,Extremely High,port,C
+GP,F,16,U,GT3,T,secondary education,primary education (4th grade),services,other,course,mother,1,4,0,yes,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Very High,0,10,9,10,Very Low,port,D
+GP,F,15,R,LE3,T,5th to 9th grade,5th to 9th grade,health,services,reputation,mother,2,2,0,yes,yes,no,no,yes,yes,yes,no,High,Very Low,Medium,Very Low,Medium,High,0,11,10,11,Low,port,D
+GP,F,15,R,LE3,T,secondary education,primary education (4th grade),other,other,reputation,father,2,4,0,no,yes,no,no,no,yes,yes,no,High,High,Low,Low,Medium,Medium,6,15,15,15,Medium Low,port,B
+GP,M,16,U,GT3,T,secondary education,primary education (4th grade),other,other,reputation,father,2,4,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,2,13,11,11,Extremely Low,port,D
+GP,M,15,U,GT3,T,higher education,5th to 9th grade,other,other,course,mother,1,4,0,no,no,no,no,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Very Low,Medium,0,11,9,10,Extremely Low,port,D
+GP,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,reputation,mother,1,2,0,yes,yes,no,no,no,yes,yes,yes,Medium,Medium,High,Low,High,Very High,2,13,11,11,Medium,port,D
+GP,M,16,U,GT3,T,secondary education,primary education (4th grade),other,other,reputation,mother,1,1,0,no,no,no,yes,yes,yes,no,no,Very High,Medium,Low,Low,Low,Very High,0,13,13,14,Low,port,B
+GP,F,16,U,GT3,T,secondary education,secondary education,other,services,home,mother,1,2,0,yes,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,High,Very High,4,11,11,11,Medium,port,D
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Medium,Very High,0,11,11,11,Medium Low,port,D
+GP,M,15,U,GT3,T,higher education,none,teacher,other,course,mother,2,4,0,no,no,no,yes,yes,yes,yes,no,Medium,High,Medium,Very Low,Very Low,Very Low,0,12,11,11,Extremely Low,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,4,0,no,no,no,no,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Medium,Medium,1,13,13,13,Low,port,C
+GP,M,17,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,2,1,3,yes,yes,no,yes,yes,no,yes,no,High,Very High,Very Low,Very Low,Very Low,Medium,0,9,9,10,Extremely Low,port,D
+GP,F,16,U,GT3,T,secondary education,higher education,at_home,other,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Low,High,Medium,Very Low,Low,Medium,14,12,11,11,Very Low,port,D
+GP,M,15,U,GT3,T,5th to 9th grade,secondary education,other,services,course,father,1,1,0,yes,yes,no,yes,no,yes,yes,yes,Medium,Low,Low,Very Low,Medium,Medium,0,11,11,12,Low,port,C
+GP,M,15,U,GT3,T,5th to 9th grade,secondary education,other,other,home,mother,1,3,0,yes,no,no,no,no,yes,yes,no,Very High,Medium,Low,Very Low,Low,Very High,2,10,9,9,Very Low,port,F
+GP,F,15,U,LE3,T,secondary education,5th to 9th grade,services,other,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,High,High,Very Low,Very Low,Very High,4,12,11,11,Extremely Low,port,D
+GP,M,15,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,home,mother,2,2,0,no,no,yes,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,High,2,13,12,13,Low,port,C
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,father,1,2,0,no,yes,no,yes,no,yes,yes,no,High,Medium,Low,Low,Medium,High,2,13,12,12,Medium Low,port,C
+GP,F,15,U,GT3,T,higher education,higher education,services,services,reputation,father,2,2,0,no,no,no,no,yes,yes,yes,yes,High,High,High,Low,Medium,Very High,4,12,11,12,Medium Low,port,C
+GP,F,16,U,LE3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,1,2,0,no,yes,no,no,yes,yes,no,no,High,Medium,High,Very Low,Low,Low,6,13,11,11,Very Low,port,D
+GP,F,15,U,GT3,T,higher education,5th to 9th grade,other,other,reputation,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Very Low,4,15,15,15,Low,port,B
+GP,M,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,reputation,father,2,2,0,no,no,no,yes,no,yes,yes,no,High,High,Low,Very Low,Very Low,Medium,6,12,10,11,Extremely Low,port,D
+GP,M,16,U,LE3,A,higher education,higher education,teacher,health,reputation,mother,1,2,0,no,yes,no,no,yes,yes,no,no,High,Very Low,Medium,Medium,Very High,Very High,6,9,9,10,High,port,D
+GP,F,16,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,High,2,9,11,11,Low,port,D
+GP,F,15,U,GT3,T,higher education,secondary education,services,other,reputation,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,High,Very High,Very High,Very Low,Medium,Very Low,6,14,13,13,Low,port,C
+GP,F,16,U,LE3,T,secondary education,primary education (4th grade),other,other,home,father,1,2,0,yes,yes,no,no,yes,yes,no,no,Medium,Medium,Medium,Low,Medium,Low,0,12,13,12,Medium Low,port,C
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,teacher,services,home,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very Low,2,13,14,14,Extremely Low,port,B
+GP,M,15,U,LE3,T,5th to 9th grade,5th to 9th grade,services,health,reputation,mother,1,4,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,High,Very Low,Very Low,High,2,11,12,12,Extremely Low,port,C
+GP,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,home,mother,2,4,0,yes,yes,yes,yes,yes,yes,yes,no,Medium,Very Low,Low,Very Low,Very Low,Very Low,4,13,13,13,Extremely Low,port,C
+GP,M,16,R,GT3,T,higher education,secondary education,services,other,reputation,mother,2,1,0,yes,yes,yes,yes,no,yes,yes,no,Medium,Medium,Medium,Very Low,Very Low,High,6,9,11,11,Extremely Low,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,2,0,no,yes,no,no,yes,yes,no,yes,High,Medium,Very High,Very Low,Very Low,Very High,0,13,12,12,Extremely Low,port,C
+GP,F,16,U,GT3,T,higher education,higher education,other,other,reputation,mother,1,1,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,High,Very Low,Low,Very Low,4,12,13,13,Very Low,port,C
+GP,F,16,U,GT3,T,higher education,secondary education,other,at_home,course,mother,1,3,0,yes,yes,no,no,yes,yes,yes,no,Very High,Medium,Very High,Very Low,Very Low,Medium,2,12,13,13,Extremely Low,port,C
+GP,M,16,U,GT3,T,higher education,higher education,services,services,other,mother,1,1,0,yes,yes,no,yes,yes,yes,yes,no,High,Very High,Very High,Very High,Very High,High,12,9,9,8,Extremely High,port,F
+GP,M,16,U,GT3,T,higher education,higher education,services,teacher,other,father,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,High,Medium,Very Low,Very Low,High,0,16,16,16,Extremely Low,port,A
+GP,M,15,U,GT3,T,higher education,higher education,services,other,course,mother,1,1,0,no,yes,yes,yes,no,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,2,12,13,12,Extremely Low,port,C
+GP,F,15,U,GT3,T,secondary education,5th to 9th grade,services,other,home,mother,2,2,0,yes,yes,no,no,yes,yes,yes,no,High,Medium,Very High,Very Low,Very Low,Low,16,11,10,10,Extremely Low,port,D
+GP,M,15,U,GT3,A,secondary education,higher education,services,other,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,Very Low,0,16,16,16,Extremely Low,port,A
+GP,F,15,U,GT3,A,secondary education,secondary education,other,health,reputation,father,1,4,0,yes,no,no,no,yes,yes,no,no,High,Medium,Medium,Very Low,Very Low,High,10,10,10,10,Extremely Low,port,D
+GP,F,15,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,4,0,yes,yes,no,no,yes,yes,yes,no,Very High,Very Low,Low,Very Low,Very Low,Medium,4,10,10,10,Extremely Low,port,D
+GP,M,16,U,GT3,T,secondary education,secondary education,services,other,home,father,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,4,13,14,14,Extremely Low,port,B
+GP,M,15,R,GT3,T,higher education,higher education,other,other,home,father,4,4,0,no,yes,no,yes,yes,yes,yes,yes,Very Low,Medium,Very High,Medium,Very High,Very Low,8,12,10,11,High,port,D
+GP,F,16,U,LE3,T,higher education,higher education,health,health,other,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,Very High,High,Very High,Very Low,Very Low,High,2,15,15,14,Extremely Low,port,B
+GP,M,15,U,LE3,A,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Very High,Very High,Medium,Very Low,Very Low,High,4,13,14,14,Extremely Low,port,B
+GP,F,16,R,GT3,T,secondary education,secondary education,services,other,reputation,father,1,3,0,yes,yes,no,yes,yes,yes,yes,no,High,Very Low,Low,Very Low,Very Low,Low,4,11,11,11,Extremely Low,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,home,mother,1,2,1,yes,no,no,yes,yes,yes,yes,no,Medium,Very Low,Low,Very Low,Very Low,Very High,12,8,10,10,Extremely Low,port,D
+GP,M,15,U,LE3,T,higher education,5th to 9th grade,teacher,other,course,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Very High,Low,Very Low,Very Low,Medium,10,18,17,18,Extremely Low,port,A
+GP,M,15,R,GT3,T,5th to 9th grade,primary education (4th grade),health,services,reputation,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,High,Low,Very Low,Very Low,Very High,4,10,9,10,Extremely Low,port,D
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,course,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Low,Very High,6,16,14,14,Very Low,port,B
+GP,M,15,U,GT3,T,higher education,higher education,other,teacher,reputation,father,2,2,0,no,yes,no,yes,yes,yes,no,no,High,High,Medium,Very Low,Very Low,Low,4,16,15,16,Extremely Low,port,A
+GP,M,16,U,GT3,T,secondary education,secondary education,other,services,home,father,2,1,0,no,no,no,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,Very High,6,14,14,15,Extremely Low,port,B
+GP,M,17,R,GT3,T,primary education (4th grade),secondary education,other,other,course,father,3,2,1,no,yes,no,yes,yes,yes,yes,no,Very High,Low,High,Very Low,High,Very High,14,12,11,11,Medium Low,port,D
+GP,M,15,U,GT3,T,secondary education,higher education,other,other,reputation,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,High,Medium,Very Low,Low,High,2,14,13,14,Very Low,port,B
+GP,F,15,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,services,course,mother,1,2,0,no,no,no,no,no,yes,yes,no,Medium,Low,Medium,Very Low,Low,Very Low,0,14,14,14,Very Low,port,B
+GP,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,home,father,1,4,0,no,yes,no,yes,yes,yes,yes,no,Very High,Very High,High,Very Low,Low,Very High,6,14,13,13,Very Low,port,C
+GP,F,16,U,LE3,T,5th to 9th grade,higher education,other,health,course,father,2,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Low,Low,Very Low,Low,Very High,2,14,12,13,Very Low,port,C
+GP,M,16,U,GT3,T,higher education,higher education,health,other,course,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,Medium,High,High,Very Low,High,Very High,4,12,13,13,Medium Low,port,C
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,no,no,no,yes,yes,yes,yes,Very High,High,High,Very Low,Very Low,Very High,0,12,11,11,Extremely Low,port,D
+GP,M,15,U,GT3,T,secondary education,higher education,services,services,home,father,1,1,0,yes,no,no,no,yes,yes,yes,no,Very High,Very High,Very High,Medium,Low,Very High,2,9,9,9,Medium Low,port,F
+GP,F,15,U,LE3,A,secondary education,higher education,other,other,home,mother,1,2,0,yes,no,no,yes,yes,yes,yes,yes,Very High,Medium,Low,Very Low,Very Low,Very Low,0,10,11,11,Extremely Low,port,D
+GP,F,19,U,GT3,T,none,primary education (4th grade),at_home,other,course,other,1,2,2,no,yes,no,no,no,no,no,no,Medium,High,Low,Very Low,Very Low,Very High,0,9,10,11,Extremely Low,port,D
+GP,M,16,R,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Very High,Very High,Low,Very High,High,8,14,14,15,Medium-High,port,B
+GP,M,16,U,GT3,T,5th to 9th grade,secondary education,other,other,course,mother,2,3,0,no,yes,no,no,no,yes,yes,yes,Medium,Low,Medium,Low,Low,Very Low,4,13,12,13,Low,port,C
+GP,F,15,R,GT3,T,secondary education,higher education,services,teacher,course,father,2,3,0,no,yes,no,no,yes,yes,yes,yes,High,Low,Low,Low,Low,Very High,0,10,11,12,Low,port,C
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,reputation,mother,1,2,3,no,yes,no,yes,yes,no,yes,yes,Very High,High,Very High,Very Low,Medium,Very High,10,10,9,8,Low,port,F
+GP,F,17,U,LE3,A,5th to 9th grade,primary education (4th grade),other,other,course,mother,3,1,0,no,yes,no,no,yes,yes,yes,no,Medium,Low,Low,Very Low,Low,Very High,8,11,10,11,Very Low,port,D
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,3,1,0,no,yes,no,yes,no,yes,yes,yes,High,Medium,Medium,Very Low,Low,High,6,11,12,13,Very Low,port,C
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,1,1,0,no,yes,no,no,yes,yes,yes,yes,Medium,High,High,Very Low,Medium,Very High,2,13,12,12,Low,port,C
+GP,F,16,U,GT3,A,secondary education,higher education,services,other,course,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Low,Very Low,Very Low,High,Very High,12,15,13,14,Medium Low,port,B
+GP,M,16,U,GT3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,4,1,0,no,no,no,no,yes,yes,no,no,Medium,Low,Very Low,Very Low,Very Low,Low,4,9,9,11,Extremely Low,port,D
+GP,F,16,U,GT3,A,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,1,1,no,no,no,no,yes,yes,no,no,Very High,Medium,High,Very Low,Very Low,Very High,12,13,11,11,Extremely Low,port,D
+GP,M,15,R,GT3,T,secondary education,higher education,at_home,teacher,course,mother,4,2,0,no,yes,no,no,yes,yes,no,yes,Very High,Medium,Medium,Very Low,Very Low,Very High,2,12,11,11,Extremely Low,port,D
+GP,F,15,U,GT3,T,higher education,higher education,services,at_home,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Very High,4,13,14,15,Extremely Low,port,B
+GP,M,17,R,GT3,T,secondary education,higher education,at_home,other,course,mother,3,2,0,no,no,no,no,yes,yes,no,no,Very High,High,Very High,Low,High,Very High,2,10,9,10,Medium,port,D
+GP,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,4,2,0,no,yes,no,no,yes,yes,no,no,Very High,Very Low,Medium,Very Low,Very Low,Medium,0,14,13,13,Extremely Low,port,C
+GP,M,18,U,LE3,T,secondary education,primary education (4th grade),services,services,course,mother,2,1,0,no,no,no,yes,yes,yes,yes,yes,Medium,Medium,High,High,Very High,High,2,11,11,12,Very High,port,C
+GP,F,18,U,GT3,A,secondary education,5th to 9th grade,other,services,course,other,1,3,0,no,yes,no,yes,no,yes,yes,yes,High,Medium,Medium,Very High,Very Low,Very High,10,12,11,11,Medium,port,D
+GP,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,reputation,mother,2,1,0,no,yes,no,yes,yes,yes,no,yes,Medium,Medium,Medium,Very Low,Low,Very Low,8,12,11,11,Very Low,port,D
+GP,F,16,U,GT3,A,secondary education,secondary education,other,other,course,other,2,1,0,no,yes,no,yes,no,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Very High,4,9,9,10,Extremely Low,port,D
+GP,M,16,U,LE3,T,primary education (4th grade),primary education (4th grade),services,other,course,mother,1,2,2,no,no,no,no,yes,yes,no,yes,High,High,High,Very Low,Medium,Very High,0,10,10,10,Low,port,D
+GP,F,15,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,6,13,14,14,Extremely Low,port,B
+GP,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,3,1,1,no,no,no,yes,yes,yes,yes,yes,Very High,Very High,Very High,Very Low,Very Low,Very Low,2,8,9,9,Extremely Low,port,F
+GP,M,15,U,GT3,T,higher education,secondary education,teacher,services,course,father,2,4,0,yes,yes,no,no,yes,yes,yes,no,Low,Low,Low,Very Low,Very Low,Medium,6,9,11,11,Extremely Low,port,D
+GP,F,15,U,GT3,A,secondary education,secondary education,services,services,home,mother,1,2,0,no,no,no,no,no,yes,no,yes,Very Low,Medium,Low,Low,Medium,Very Low,24,9,8,9,Medium Low,port,F
+GP,M,16,U,GT3,T,higher education,higher education,services,services,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Very High,0,15,13,13,Low,port,C
+GP,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,father,2,1,0,no,yes,no,yes,yes,yes,yes,no,Low,Medium,Medium,Low,Low,Low,4,12,11,11,Low,port,D
+GP,F,15,U,GT3,T,higher education,higher education,teacher,services,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Very High,2,13,13,13,Extremely Low,port,C
+GP,F,16,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,High,High,Medium,Medium,Very Low,4,10,11,11,Medium,port,D
+GP,M,17,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,Very High,High,Very High,Very Low,Low,Very High,22,9,7,6,Very Low,port,F
+GP,F,15,U,GT3,T,primary education (4th grade),primary education (4th grade),other,services,course,father,1,2,0,no,yes,no,no,yes,yes,yes,no,High,High,Low,Very Low,Low,Very High,0,12,12,12,Very Low,port,C
+GP,F,15,U,LE3,A,5th to 9th grade,primary education (4th grade),at_home,other,home,mother,2,1,0,no,yes,no,yes,yes,no,yes,yes,High,High,Low,Very Low,Very Low,Very High,0,11,10,10,Extremely Low,port,D
+GP,F,15,U,GT3,T,secondary education,5th to 9th grade,health,services,home,father,1,2,1,no,yes,no,no,yes,yes,yes,no,Medium,Medium,Low,Very Low,Very Low,Medium,2,11,11,11,Extremely Low,port,D
+GP,F,15,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,other,course,mother,1,2,0,no,yes,no,no,no,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very High,6,13,12,13,Extremely Low,port,C
+GP,F,15,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,services,course,father,1,2,0,no,no,no,no,no,yes,no,yes,Low,Medium,High,Low,High,Very Low,6,11,11,11,Medium,port,D
+GP,M,16,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,yes,no,no,yes,no,yes,yes,Medium,Medium,Low,Low,Very Low,Very High,16,9,9,8,Very Low,port,F
+GP,M,15,U,LE3,A,5th to 9th grade,primary education (4th grade),services,other,course,mother,4,1,0,no,no,no,no,yes,yes,yes,no,High,Very High,Very High,Low,Very High,Very High,0,12,11,11,Medium-High,port,D
+GP,M,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,1,1,2,no,no,no,no,yes,no,yes,yes,Low,Medium,Very High,Low,Very High,High,0,11,9,0,Medium-High,port,F
+GP,M,16,U,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,1,1,1,no,no,no,yes,yes,yes,no,yes,High,High,High,Medium,Very High,Very High,6,9,10,10,High,port,D
+GP,F,15,R,GT3,T,secondary education,secondary education,services,services,reputation,other,2,3,0,no,yes,yes,yes,yes,yes,yes,yes,High,Low,Very Low,Low,Medium,Medium,2,13,13,13,Medium Low,port,C
+GP,M,19,U,GT3,T,secondary education,5th to 9th grade,services,at_home,home,mother,1,1,0,no,yes,no,no,yes,no,yes,yes,High,Very High,High,Very Low,Very Low,High,6,11,9,11,Extremely Low,port,D
+GP,F,17,U,GT3,T,higher education,higher education,other,teacher,course,mother,1,1,0,yes,yes,no,no,yes,yes,no,yes,High,Low,Very Low,Very Low,Very Low,High,0,13,13,13,Extremely Low,port,C
+GP,M,15,R,GT3,T,5th to 9th grade,secondary education,at_home,services,course,mother,1,2,0,yes,no,yes,yes,yes,yes,no,no,High,High,High,Very Low,Very Low,Very Low,0,7,8,8,Extremely Low,port,F
+GP,M,17,R,LE3,T,primary education (4th grade),5th to 9th grade,other,other,reputation,mother,1,1,3,no,no,no,no,yes,yes,no,no,Low,Low,Low,Medium,Medium,Very High,14,9,8,10,Medium,port,D
+GP,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,3,1,3,no,yes,no,yes,no,yes,no,no,Very High,Low,Very High,Very Low,Very High,High,6,11,10,11,Medium,port,D
+GP,M,16,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,3,1,0,no,no,no,no,no,yes,no,no,High,Low,Low,Very Low,Low,Medium,4,12,10,11,Very Low,port,D
+GP,M,16,U,GT3,T,secondary education,secondary education,other,services,course,father,1,2,1,no,yes,no,no,yes,yes,yes,yes,High,Very High,Very High,High,High,Very High,0,10,10,1,High,port,F
+GP,M,16,U,LE3,T,primary education (4th grade),5th to 9th grade,health,services,course,mother,2,1,2,no,no,no,no,no,yes,yes,no,High,High,Very High,Medium,Very High,Very High,0,9,8,10,High,port,D
+GP,M,17,R,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,2,1,1,no,no,yes,yes,yes,no,yes,yes,Medium,Medium,Low,Low,Low,Very High,8,8,8,9,Low,port,F
+GP,M,17,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,2,2,2,yes,yes,no,no,yes,yes,yes,yes,High,High,High,Very Low,High,Medium,4,7,6,8,Medium Low,port,F
+GP,M,15,U,LE3,T,primary education (4th grade),5th to 9th grade,other,other,course,mother,2,1,0,no,no,no,yes,yes,yes,no,no,High,High,High,Low,High,Very High,2,8,9,10,Medium,port,D
+GP,M,16,U,GT3,T,primary education (4th grade),secondary education,at_home,services,course,father,1,1,1,no,no,no,no,yes,no,yes,no,Very High,Medium,Medium,Very Low,High,Low,2,9,8,8,Medium Low,port,F
+GP,M,17,R,LE3,T,primary education (4th grade),primary education (4th grade),other,services,course,mother,4,2,0,no,no,no,yes,yes,no,no,yes,Very High,Medium,Very High,Very Low,Very High,Very High,0,8,8,8,Medium,port,F
+GP,M,17,U,GT3,T,secondary education,5th to 9th grade,services,services,course,mother,2,1,3,no,yes,no,yes,no,no,no,no,High,Very High,Low,Very Low,Very Low,Low,10,8,7,8,Extremely Low,port,F
+GP,M,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,1,2,0,no,no,no,no,yes,no,yes,no,High,Medium,Very High,Low,High,High,0,9,10,11,Medium,port,D
+GP,F,16,U,GT3,T,higher education,5th to 9th grade,health,services,home,father,1,2,0,no,no,no,no,yes,yes,yes,yes,High,Low,Medium,Very Low,Very Low,Medium,0,17,17,18,Extremely Low,port,A
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,Very Low,Very High,Very Low,Very Low,High,0,12,12,13,Extremely Low,port,C
+GP,F,16,U,GT3,T,higher education,higher education,health,health,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,High,Low,Very Low,Very Low,Medium,0,16,16,17,Extremely Low,port,A
+GP,M,16,U,GT3,T,secondary education,higher education,other,other,course,father,3,1,1,no,yes,no,yes,no,yes,yes,no,Medium,High,Very High,Low,High,Low,4,9,9,10,Medium,port,D
+GP,M,16,U,GT3,T,primary education (4th grade),none,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Medium,0,16,17,18,Extremely Low,port,A
+GP,M,17,U,LE3,T,higher education,higher education,teacher,other,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,High,High,Very Low,Medium,Very High,0,11,9,10,Low,port,D
+GP,F,16,U,GT3,T,primary education (4th grade),secondary education,at_home,services,home,mother,1,2,0,no,no,no,yes,no,yes,yes,yes,High,Medium,Very High,Very Low,Very Low,Medium,0,14,13,13,Extremely Low,port,C
+GP,F,16,U,LE3,T,secondary education,secondary education,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,High,Very High,Very Low,Very Low,High,0,14,14,15,Extremely Low,port,B
+GP,M,17,U,LE3,T,higher education,secondary education,teacher,other,course,mother,2,2,0,no,no,no,yes,yes,yes,yes,no,High,High,High,High,High,High,0,10,11,11,High,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,reputation,mother,2,2,0,no,no,no,yes,no,yes,yes,no,Medium,High,High,Very Low,High,Very High,0,13,12,14,Medium Low,port,B
+GP,M,17,U,GT3,T,secondary education,secondary education,other,other,reputation,father,1,2,0,no,no,no,yes,no,yes,yes,no,High,Medium,High,Very Low,High,High,4,11,9,10,Medium Low,port,D
+GP,M,16,R,GT3,T,higher education,5th to 9th grade,teacher,services,other,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Medium,Medium,High,Medium,8,10,9,11,Medium-High,port,D
+GP,M,17,U,GT3,T,higher education,secondary education,other,other,course,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Very Low,Low,4,11,11,13,Extremely Low,port,C
+GP,M,16,U,GT3,T,higher education,secondary education,teacher,other,home,mother,1,2,0,no,yes,yes,yes,yes,yes,yes,no,Medium,High,Medium,Low,Medium,Medium,4,11,10,11,Medium Low,port,D
+GP,M,16,U,GT3,T,secondary education,secondary education,services,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Low,Medium,Very Low,Low,Medium,0,11,12,13,Very Low,port,C
+GP,F,17,U,GT3,T,5th to 9th grade,higher education,services,services,reputation,father,1,2,0,no,yes,no,yes,yes,yes,no,no,Very High,High,Low,Low,Medium,Very High,0,17,18,17,Medium Low,port,A
+GP,F,17,U,LE3,T,secondary education,secondary education,other,other,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Low,Medium,Very Low,32,14,13,14,Medium Low,port,B
+GP,F,16,U,GT3,T,secondary education,5th to 9th grade,other,other,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Very Low,Low,Low,Very Low,Low,Very Low,8,14,15,16,Very Low,port,A
+GP,M,17,U,GT3,T,secondary education,secondary education,services,services,other,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,High,Low,Medium,High,6,11,13,14,Medium Low,port,B
+GP,M,16,U,GT3,T,primary education (4th grade),5th to 9th grade,services,services,other,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,Medium,Medium,Medium,Very Low,Low,Medium,0,10,9,11,Very Low,port,D
+GP,M,16,U,LE3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Low,Medium,Very Low,Low,Very High,0,13,14,16,Very Low,port,A
+GP,F,17,U,GT3,A,secondary education,secondary education,health,other,reputation,mother,1,2,0,no,yes,no,no,no,yes,yes,yes,Medium,Medium,Medium,Very Low,Medium,Medium,10,12,13,14,Low,port,B
+GP,M,17,R,GT3,T,primary education (4th grade),5th to 9th grade,at_home,other,home,mother,1,2,0,no,no,no,no,yes,yes,no,no,Medium,Very Low,Medium,Very Low,Very High,Medium,6,9,9,10,Medium,port,D
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,services,services,course,mother,1,2,0,no,no,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Low,6,12,12,13,Extremely Low,port,C
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,0,12,11,12,Extremely Low,port,C
+GP,M,17,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,services,other,other,2,2,0,no,no,no,yes,no,yes,yes,no,High,High,High,High,Very High,Very High,16,10,11,12,Very High,port,C
+GP,M,16,R,GT3,T,secondary education,secondary education,services,services,reputation,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Low,Medium,High,Very High,0,11,10,10,Medium-High,port,D
+GP,M,16,U,GT3,T,5th to 9th grade,secondary education,other,other,home,father,2,1,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Medium,0,13,12,12,Extremely Low,port,C
+GP,F,17,U,LE3,T,5th to 9th grade,higher education,services,services,course,father,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Very High,8,14,15,16,Extremely Low,port,A
+GP,M,17,U,GT3,T,higher education,higher education,services,teacher,home,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Very High,Low,Medium,Very Low,Low,Very High,4,13,13,14,Very Low,port,B
+GP,M,16,R,LE3,T,secondary education,secondary education,teacher,other,home,father,3,1,0,no,yes,no,yes,yes,yes,yes,no,Medium,Medium,High,Medium,Very High,Medium,16,10,11,12,High,port,C
+GP,F,17,U,GT3,T,higher education,higher education,services,teacher,home,mother,2,1,1,no,yes,no,no,yes,yes,yes,no,High,Low,High,Low,Medium,Low,30,14,15,16,Medium Low,port,A
+GP,F,16,U,LE3,T,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Very High,Low,Very Low,Low,Medium,0,11,10,11,Very Low,port,D
+GP,F,16,U,GT3,T,higher education,secondary education,health,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very High,Very Low,Very High,Low,2,14,14,15,Medium,port,B
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,other,other,reputation,mother,1,2,0,yes,yes,no,yes,yes,yes,no,no,High,High,Medium,Very Low,Medium,High,4,11,12,12,Low,port,C
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,1,2,0,no,yes,no,no,no,yes,no,no,High,High,High,Very Low,Medium,Very Low,0,14,15,15,Low,port,B
+GP,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,Very High,Medium,Low,Very Low,Low,Medium,21,13,13,13,Very Low,port,C
+GP,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,mother,2,4,0,no,yes,no,yes,no,yes,yes,no,Very High,Medium,Very High,Very Low,Very Low,Very High,6,13,13,13,Extremely Low,port,C
+GP,F,17,U,GT3,T,secondary education,higher education,at_home,services,home,mother,1,3,1,no,yes,yes,no,yes,yes,yes,yes,High,High,Medium,Medium,High,Very High,14,8,9,8,Medium-High,port,F
+GP,F,16,U,GT3,A,secondary education,primary education (4th grade),services,other,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,Low,Medium,Medium,Low,Low,High,2,11,11,12,Low,port,C
+GP,F,16,U,GT3,T,higher education,secondary education,teacher,other,other,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very Low,Medium,Low,Very Low,Very Low,Very Low,4,14,15,15,Extremely Low,port,B
+GP,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,home,mother,2,1,0,no,yes,no,no,yes,yes,no,no,High,Medium,Low,Very Low,High,Very High,2,12,13,13,Medium Low,port,C
+GP,F,17,R,GT3,T,higher education,secondary education,teacher,other,reputation,mother,2,3,0,no,yes,no,yes,yes,yes,yes,yes,High,High,Low,Very Low,Very Low,High,0,11,12,12,Extremely Low,port,C
+GP,F,19,U,GT3,T,secondary education,secondary education,other,other,reputation,other,1,4,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Medium,4,12,12,12,Very Low,port,C
+GP,M,17,U,LE3,T,higher education,higher education,services,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,Very High,Medium,Very High,High,Very High,Medium,15,13,12,12,Very High,port,C
+GP,F,16,U,GT3,A,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,2,0,yes,yes,no,no,yes,yes,yes,no,Medium,Medium,High,Very Low,Very Low,High,0,13,13,13,Extremely Low,port,C
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,High,High,Low,High,Very High,10,12,11,11,Medium,port,D
+GP,F,17,R,LE3,T,higher education,higher education,services,other,other,mother,1,1,0,no,yes,no,no,yes,yes,no,no,Very High,Low,Very Low,Very Low,Low,Medium,6,12,11,11,Very Low,port,D
+GP,F,17,U,LE3,T,secondary education,5th to 9th grade,other,other,reputation,mother,2,2,0,no,no,no,no,yes,yes,yes,no,High,High,High,Very Low,Medium,Very Low,2,14,16,15,Low,port,B
+GP,F,17,U,GT3,T,higher education,secondary education,other,other,reputation,mother,1,2,0,no,no,no,no,yes,yes,yes,yes,Medium,High,Very High,Low,High,Very Low,16,11,9,10,Medium,port,D
+GP,M,18,U,LE3,T,secondary education,secondary education,services,health,home,father,1,2,0,no,yes,no,no,yes,yes,yes,no,Medium,Low,High,Low,High,High,10,10,10,10,Medium,port,D
+GP,F,17,U,GT3,T,5th to 9th grade,secondary education,at_home,other,home,father,2,1,0,no,yes,no,no,yes,yes,no,no,Medium,Medium,Medium,Very Low,High,Medium,4,12,13,13,Medium Low,port,C
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,at_home,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,High,0,12,12,13,Extremely Low,port,C
+GP,F,17,R,GT3,T,5th to 9th grade,primary education (4th grade),at_home,services,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Very High,Very Low,Low,Very High,0,11,10,11,Very Low,port,D
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,mother,1,3,0,no,yes,no,yes,yes,yes,no,yes,High,Medium,High,Very Low,Very Low,Very High,12,12,12,12,Extremely Low,port,C
+GP,F,16,U,GT3,T,5th to 9th grade,secondary education,services,teacher,other,mother,1,2,0,yes,no,no,no,yes,yes,yes,no,Low,Medium,Very Low,Very Low,Very Low,Medium,0,13,13,14,Extremely Low,port,B
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,2,2,3,no,yes,yes,no,yes,yes,yes,no,Medium,Medium,Medium,Very High,Very High,High,9,10,9,10,Extremely High,port,D
+GP,F,16,U,GT3,T,higher education,higher education,teacher,services,home,mother,1,3,0,no,yes,no,yes,no,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,Very High,4,15,16,16,Extremely Low,port,A
+GP,F,18,R,GT3,T,secondary education,primary education (4th grade),other,other,reputation,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Very Low,High,4,8,8,8,Extremely Low,port,F
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,1,2,0,no,no,no,yes,no,yes,yes,no,Very High,Medium,High,Very Low,Medium,Medium,2,17,18,17,Low,port,A
+GP,M,17,U,LE3,T,5th to 9th grade,secondary education,services,services,reputation,father,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Medium,0,10,11,11,Low,port,D
+GP,M,18,U,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,4,2,0,yes,yes,no,yes,yes,yes,yes,yes,High,Medium,Low,High,Very High,Medium,2,9,10,11,Very High,port,D
+GP,F,17,U,GT3,A,5th to 9th grade,primary education (4th grade),other,other,course,mother,2,3,0,no,no,no,yes,yes,yes,yes,yes,Medium,Low,Medium,Very Low,Low,Medium,0,15,15,16,Very Low,port,A
+GP,F,17,U,LE3,T,higher education,secondary education,health,other,reputation,father,1,2,0,no,no,no,yes,yes,yes,yes,yes,Medium,Low,Medium,Very Low,Low,Medium,0,14,12,12,Very Low,port,C
+GP,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Very High,Low,Very Low,Very Low,Very Low,0,12,13,13,Extremely Low,port,C
+GP,M,17,U,GT3,T,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,yes,yes,no,yes,yes,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,0,13,13,13,Low,port,C
+GP,M,16,U,GT3,T,higher education,higher education,health,other,reputation,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Low,High,Low,High,Very Low,0,13,13,14,Medium,port,B
+GP,M,16,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,Medium,High,Low,Very Low,Very Low,Very High,2,9,9,9,Extremely Low,port,F
+GP,M,16,U,GT3,T,secondary education,5th to 9th grade,at_home,other,reputation,mother,2,3,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Medium,Low,0,12,12,12,Low,port,C
+GP,M,17,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,father,1,2,0,no,no,no,yes,no,yes,yes,yes,High,High,Low,Very High,Very High,High,0,16,16,16,Extremely High,port,A
+GP,F,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,1,0,no,no,no,no,yes,yes,yes,yes,High,Very High,Low,Very Low,Very Low,Very High,4,9,10,10,Extremely Low,port,D
+GP,F,16,U,GT3,A,higher education,primary education (4th grade),other,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Low,Very High,0,14,13,13,Very Low,port,C
+GP,F,18,U,LE3,A,5th to 9th grade,higher education,services,other,course,mother,2,2,1,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,18,10,10,10,Extremely Low,port,D
+GP,F,18,U,LE3,T,5th to 9th grade,5th to 9th grade,at_home,services,course,mother,1,2,1,no,yes,no,no,no,yes,yes,yes,Very High,Medium,Very Low,Very Low,Very Low,Very High,16,9,8,10,Extremely Low,port,D
+GP,F,18,U,GT3,T,secondary education,secondary education,other,other,course,mother,2,1,1,no,no,no,no,yes,no,yes,no,High,Very Low,Very Low,Very Low,Very Low,Medium,14,8,7,7,Extremely Low,port,F
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,at_home,course,other,1,1,1,no,yes,no,yes,no,no,yes,yes,High,High,Medium,Low,Low,Very Low,26,7,8,8,Low,port,F
+GP,M,17,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,yes,no,yes,no,yes,yes,no,High,Low,Very Low,Very Low,Low,Very High,6,10,8,9,Very Low,port,F
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,other,other,course,father,1,2,0,no,no,no,yes,yes,yes,no,no,Very High,High,Low,Very Low,Very Low,Medium,4,14,14,15,Extremely Low,port,B
+GP,F,17,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,Low,High,10,11,10,10,Very Low,port,D
+GP,F,16,U,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,mother,1,1,0,no,no,no,no,yes,no,yes,no,Very High,Medium,Very High,Very Low,Low,Very High,4,12,11,11,Very Low,port,D
+GP,F,17,R,GT3,T,5th to 9th grade,primary education (4th grade),at_home,services,course,mother,3,2,0,no,no,no,yes,yes,yes,no,no,Low,Very Low,Very Low,Very Low,Very Low,Medium,2,13,13,13,Extremely Low,port,C
+GP,F,17,R,LE3,A,primary education (4th grade),higher education,other,other,course,other,4,1,1,no,yes,no,no,yes,yes,yes,no,Very High,Very High,High,Very Low,Very Low,Very High,14,9,9,8,Extremely Low,port,F
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,services,reputation,father,1,2,0,no,no,no,no,yes,no,yes,no,Very High,Very High,High,Medium,Very High,Low,16,8,7,8,High,port,F
+GP,F,17,U,LE3,A,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,1,1,no,yes,no,no,no,no,yes,no,Medium,Very Low,Low,Very Low,Very Low,Very Low,8,11,9,10,Extremely Low,port,D
+GP,F,17,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,2,3,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Medium,Very High,4,15,14,15,Low,port,B
+GP,F,17,U,LE3,A,higher education,5th to 9th grade,teacher,other,course,mother,1,2,0,no,yes,no,yes,yes,yes,no,no,High,Medium,Low,Very Low,Very Low,High,4,15,14,14,Extremely Low,port,B
+GP,M,17,U,LE3,T,higher education,secondary education,health,other,course,mother,2,2,0,no,no,no,yes,yes,yes,yes,yes,Low,Very High,Very High,Very Low,High,Very High,8,15,15,15,Medium Low,port,B
+GP,M,17,R,LE3,A,higher education,higher education,teacher,other,course,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,Medium,Medium,Medium,Low,Medium,High,0,12,12,12,Medium Low,port,C
+GP,M,16,U,LE3,T,higher education,secondary education,teacher,other,course,mother,1,1,0,no,no,no,yes,no,yes,yes,no,Very High,High,Very High,Very Low,Very Low,Medium,7,14,14,15,Extremely Low,port,B
+GP,M,16,U,GT3,T,higher education,higher education,services,services,course,mother,1,1,0,no,no,yes,yes,yes,yes,yes,no,Very High,Medium,Low,Very Low,Low,Very High,4,14,15,15,Very Low,port,B
+GP,F,17,U,GT3,T,higher education,higher education,teacher,services,course,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,Very High,Medium,Very Low,Very Low,High,Very High,2,11,11,12,Medium Low,port,C
+GP,M,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,father,2,3,0,no,no,no,no,no,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Very Low,2,13,14,15,Extremely Low,port,B
+GP,F,17,U,GT3,T,secondary education,secondary education,services,other,home,mother,2,3,0,no,yes,no,no,yes,yes,yes,yes,High,Low,Low,Low,Medium,Very High,10,11,11,11,Medium Low,port,D
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,1,2,0,yes,no,no,no,no,yes,no,yes,High,Medium,Low,Very Low,Very Low,High,10,10,9,10,Extremely Low,port,D
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,other,2,3,0,no,yes,no,no,no,yes,yes,yes,High,High,High,Very Low,Very Low,Medium,10,12,10,11,Extremely Low,port,D
+GP,M,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,3,1,0,no,no,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,High,7,15,16,16,Extremely Low,port,A
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,services,course,father,1,2,0,no,yes,no,no,yes,yes,no,no,High,Medium,High,Very Low,Low,Very High,4,11,10,11,Very Low,port,D
+GP,M,17,U,GT3,T,5th to 9th grade,secondary education,other,other,course,father,2,1,0,no,no,no,no,yes,yes,yes,no,Very High,Low,Low,Very Low,Very Low,Low,2,9,12,13,Extremely Low,port,C
+GP,M,22,U,GT3,T,secondary education,primary education (4th grade),services,services,other,mother,1,1,3,no,no,no,no,no,no,yes,yes,Very High,High,Very High,Very High,Very High,Very Low,12,7,8,5,Extremely High,port,F
+GP,M,18,R,LE3,T,secondary education,secondary education,other,services,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,Very High,8,10,9,10,Low,port,D
+GP,M,16,U,GT3,T,none,5th to 9th grade,other,other,other,mother,1,1,0,no,no,no,no,no,yes,yes,no,High,Medium,Low,Low,High,Very High,0,11,12,11,Medium,port,D
+GP,M,18,U,GT3,T,secondary education,5th to 9th grade,services,other,course,mother,2,1,0,no,no,no,no,yes,no,yes,no,High,High,Very High,Low,High,Very High,8,7,8,7,Medium,port,F
+GP,M,16,U,GT3,T,secondary education,secondary education,at_home,other,reputation,other,3,2,1,yes,yes,no,no,no,yes,yes,no,Very High,Medium,Medium,Very Low,Medium,Low,4,9,11,10,Low,port,D
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,services,other,mother,1,1,2,no,no,no,no,no,no,yes,no,Medium,Low,Very High,Low,Very High,Very High,4,7,8,6,Medium-High,port,F
+GP,M,16,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,2,1,0,no,no,no,yes,no,yes,no,no,Medium,Medium,Low,Very Low,Medium,Medium,2,14,13,12,Low,port,C
+GP,M,17,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,1,0,no,no,no,no,no,yes,yes,no,High,High,Low,Low,High,Very High,0,12,12,13,Medium,port,C
+GP,M,17,U,LE3,T,primary education (4th grade),primary education (4th grade),health,other,course,mother,2,1,1,no,yes,no,yes,yes,yes,yes,no,High,High,High,Very Low,Low,Very High,0,9,10,10,Very Low,port,D
+GP,F,18,U,LE3,A,5th to 9th grade,primary education (4th grade),other,other,course,mother,1,2,0,no,yes,no,no,no,yes,yes,yes,High,Medium,High,Very Low,Medium,Very High,2,12,12,13,Low,port,C
+GP,F,17,U,LE3,T,higher education,5th to 9th grade,teacher,services,reputation,mother,1,4,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Medium,Very Low,Very Low,High,2,14,15,17,Extremely Low,port,A
+GP,F,19,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Very High,0,10,10,11,Extremely Low,port,D
+GP,M,18,U,LE3,T,5th to 9th grade,primary education (4th grade),services,other,course,mother,3,2,1,no,no,no,yes,no,no,yes,no,High,High,Very High,High,High,Very High,4,11,10,11,High,port,D
+GP,F,17,R,GT3,T,higher education,5th to 9th grade,other,other,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,High,Very Low,Medium,Very High,2,11,12,14,Low,port,B
+GP,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,at_home,home,mother,1,3,0,no,yes,no,no,no,yes,no,no,High,High,Medium,Low,Medium,Medium,4,11,12,14,Medium Low,port,B
+GP,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,2,0,yes,no,no,no,yes,yes,no,no,Medium,Low,Medium,Very Low,Very Low,Very High,4,11,11,13,Extremely Low,port,C
+GP,M,19,U,LE3,A,higher education,secondary education,services,at_home,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Very Low,Very Low,Very Low,Very Low,4,11,13,14,Extremely Low,port,B
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Low,High,Very Low,Low,High,2,16,16,16,Very Low,port,A
+GP,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,services,other,mother,2,1,0,no,no,no,no,no,no,no,no,Very High,Low,Low,Very Low,Very Low,High,0,9,10,10,Extremely Low,port,D
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,father,1,4,0,no,no,no,yes,yes,yes,yes,yes,Medium,High,Very Low,Very Low,Very Low,Low,2,10,11,12,Extremely Low,port,C
+GP,F,20,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,course,other,2,2,0,no,yes,yes,yes,yes,no,yes,yes,Very Low,Low,Medium,Very Low,Low,Low,8,10,12,12,Very Low,port,C
+GP,F,18,U,GT3,T,higher education,secondary education,services,other,home,father,1,2,0,no,yes,no,no,yes,yes,yes,yes,Medium,Very Low,Low,Very Low,Medium,Low,2,15,15,15,Low,port,B
+GP,M,18,U,GT3,T,higher education,secondary education,teacher,other,course,mother,1,2,0,no,yes,no,no,no,yes,yes,no,High,Medium,Low,Very Low,Very Low,Medium,2,10,10,11,Extremely Low,port,D
+GP,M,18,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,1,3,0,no,no,no,yes,no,yes,no,no,Very High,Medium,Low,Very Low,Very Low,Medium,2,10,11,12,Extremely Low,port,C
+GP,F,17,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,3,0,no,no,no,yes,no,yes,no,no,Medium,Low,Medium,Very Low,Very Low,High,2,15,12,13,Extremely Low,port,C
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,services,home,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Medium,0,11,12,13,Extremely Low,port,C
+GP,M,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,home,father,2,1,0,no,no,no,no,yes,no,yes,no,High,High,High,Low,Medium,High,8,8,8,9,Medium Low,port,F
+GP,M,18,R,LE3,A,secondary education,higher education,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Very High,Medium,High,Very Low,6,15,16,16,Medium-High,port,A
+GP,M,17,U,GT3,T,secondary education,primary education (4th grade),services,other,other,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,High,High,Medium,High,Very High,0,11,11,14,Medium-High,port,B
+GP,F,18,R,GT3,T,higher education,higher education,teacher,other,reputation,mother,2,2,0,no,no,no,yes,yes,yes,yes,no,High,Medium,High,Low,Low,High,8,10,11,12,Low,port,C
+GP,M,18,U,GT3,T,higher education,5th to 9th grade,health,other,reputation,father,1,2,0,no,yes,no,yes,yes,yes,yes,yes,Very High,High,Very High,Very Low,Medium,Very High,4,10,12,14,Low,port,B
+GP,F,18,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,reputation,mother,2,2,0,no,yes,no,no,yes,no,yes,yes,High,Medium,Very High,Very Low,Low,Medium,12,8,9,10,Very Low,port,D
+GP,F,19,U,GT3,T,secondary education,secondary education,other,services,home,other,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very High,Medium,Medium,Very High,16,11,12,12,Medium,port,C
+GP,F,18,U,GT3,T,5th to 9th grade,secondary education,other,services,reputation,father,1,4,0,no,yes,no,yes,yes,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,10,16,16,16,Low,port,A
+GP,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,no,yes,no,no,no,yes,no,no,High,High,Medium,Very Low,Very Low,Medium,2,13,13,13,Extremely Low,port,C
+GP,M,17,R,GT3,T,primary education (4th grade),5th to 9th grade,at_home,at_home,home,mother,1,2,0,no,yes,no,yes,no,yes,no,yes,Medium,Very High,Low,Low,Low,Very Low,2,16,17,18,Low,port,A
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Low,Very High,Very Low,Low,Very Low,8,14,14,15,Very Low,port,B
+GP,F,17,U,GT3,T,5th to 9th grade,higher education,at_home,health,reputation,mother,2,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Very Low,6,15,16,16,Extremely Low,port,A
+GP,F,17,U,LE3,T,5th to 9th grade,5th to 9th grade,services,other,course,mother,2,2,0,yes,yes,no,no,yes,yes,yes,yes,High,High,High,Low,Medium,Very High,6,12,12,12,Medium Low,port,C
+GP,F,18,R,GT3,A,secondary education,5th to 9th grade,other,services,home,mother,2,2,0,no,no,no,no,no,no,yes,yes,High,Very Low,Very Low,Very Low,Very Low,Very High,15,12,9,10,Extremely Low,port,D
+GP,M,18,U,GT3,T,higher education,higher education,teacher,services,home,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Low,High,Very Low,High,Medium,6,11,12,12,Medium Low,port,C
+GP,F,18,U,GT3,T,higher education,higher education,health,health,reputation,father,1,2,1,yes,yes,no,yes,yes,yes,yes,yes,Low,High,High,Very Low,Very Low,High,2,14,12,13,Extremely Low,port,C
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,services,reputation,father,3,3,0,no,yes,no,no,yes,yes,yes,yes,High,Low,Medium,Very Low,Very Low,Very Low,8,13,15,15,Extremely Low,port,B
+GP,F,19,R,GT3,T,secondary education,5th to 9th grade,services,services,reputation,father,1,2,1,yes,yes,no,no,yes,no,yes,no,Medium,Medium,Medium,High,Medium,Medium,0,9,8,10,Medium-High,port,D
+GP,M,18,U,LE3,T,higher education,secondary education,teacher,services,course,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,High,Low,Medium,Very Low,Low,Very Low,0,10,10,10,Very Low,port,D
+GP,M,18,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,other,home,other,2,1,0,no,no,no,no,no,no,yes,no,Medium,High,High,Low,High,High,10,10,10,11,Medium,port,D
+GP,M,17,U,LE3,A,higher education,primary education (4th grade),services,other,home,mother,2,1,0,no,no,no,yes,yes,yes,yes,yes,High,Very High,High,Low,High,Very High,22,11,11,10,Medium,port,D
+GP,M,17,U,LE3,A,secondary education,5th to 9th grade,teacher,services,home,mother,1,1,0,no,no,no,no,yes,yes,yes,no,High,High,High,Medium,High,Medium,18,13,13,13,Medium-High,port,C
+GP,F,18,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,mother,2,4,0,no,yes,no,yes,yes,yes,no,no,Very High,Low,Low,Very Low,Very Low,Medium,2,17,17,18,Extremely Low,port,A
+GP,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,2,0,yes,no,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,High,0,12,13,13,Extremely Low,port,C
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,2,0,no,yes,no,no,no,yes,yes,no,Very High,High,Very High,Very Low,Low,Very High,12,12,12,14,Very Low,port,B
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,reputation,mother,2,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Very Low,Very Low,Very Low,Very High,10,12,13,14,Extremely Low,port,B
+GP,M,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,reputation,father,1,2,0,no,no,no,no,no,yes,yes,no,High,Medium,Medium,Very Low,Low,High,0,12,12,12,Very Low,port,C
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,at_home,other,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Low,0,18,18,18,Very Low,port,A
+GP,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),services,teacher,reputation,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,0,13,13,14,Extremely Low,port,B
+GP,M,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,services,reputation,mother,1,3,0,no,no,no,yes,yes,yes,yes,no,High,Low,High,Very Low,Medium,Low,0,14,15,15,Low,port,B
+GP,M,18,U,LE3,A,higher education,higher education,teacher,teacher,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Medium,Very Low,Very Low,Low,0,17,17,17,Extremely Low,port,A
+GP,M,18,U,GT3,T,higher education,5th to 9th grade,teacher,other,home,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Low,Very Low,High,Very High,2,15,16,16,Medium Low,port,A
+GP,F,17,U,GT3,T,higher education,secondary education,health,services,reputation,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,Low,Low,Very Low,Low,Medium,0,17,18,18,Very Low,port,A
+GP,F,17,R,LE3,T,secondary education,primary education (4th grade),services,other,reputation,mother,2,4,0,no,yes,no,no,yes,yes,no,no,Medium,Very Low,Low,Very Low,Very Low,Medium,0,18,19,19,Extremely Low,port,A
+GP,M,18,R,LE3,T,secondary education,5th to 9th grade,services,other,reputation,mother,2,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Low,Very Low,Very Low,High,0,14,15,15,Extremely Low,port,B
+GP,M,17,U,GT3,T,secondary education,secondary education,health,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Medium,Very High,0,14,15,15,Low,port,B
+GP,F,19,U,GT3,T,higher education,higher education,health,other,reputation,other,2,2,0,no,yes,no,yes,yes,yes,yes,no,Low,Medium,High,Low,Medium,Low,2,14,13,13,Medium Low,port,C
+GP,F,18,U,LE3,T,higher education,secondary education,other,other,home,other,2,2,0,no,yes,no,no,yes,yes,yes,yes,High,High,Very High,Very Low,Low,Low,0,13,14,14,Very Low,port,B
+GP,F,18,U,GT3,T,higher education,secondary education,other,other,reputation,father,1,4,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,0,16,17,17,Extremely Low,port,A
+GP,M,18,U,LE3,T,higher education,higher education,teacher,teacher,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,yes,Very Low,High,Low,Low,Low,Very Low,0,18,18,17,Low,port,A
+GP,F,18,U,LE3,A,higher education,higher education,health,other,home,mother,1,2,0,no,yes,yes,no,yes,yes,yes,yes,High,Low,High,Very Low,Very Low,High,0,14,15,15,Extremely Low,port,B
+GP,M,17,U,LE3,T,higher education,higher education,other,teacher,home,father,2,1,0,no,no,no,no,yes,yes,yes,no,High,Very Low,Very Low,Low,Low,Very High,0,12,13,13,Low,port,C
+GP,F,17,R,GT3,T,higher education,higher education,services,services,reputation,mother,2,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Very Low,Very High,0,7,7,8,Extremely Low,port,F
+GP,F,17,U,GT3,T,higher education,5th to 9th grade,other,other,reputation,mother,2,3,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Medium,0,16,16,16,Extremely Low,port,A
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,health,health,reputation,father,1,4,0,no,yes,no,yes,no,yes,yes,no,Very High,Low,Low,Very Low,Low,Very High,0,18,18,18,Very Low,port,A
+GP,M,19,R,LE3,T,5th to 9th grade,primary education (4th grade),at_home,services,course,mother,2,3,1,no,no,no,yes,yes,yes,yes,yes,High,Medium,Very Low,Very Low,Very Low,Very High,0,9,10,11,Extremely Low,port,D
+GP,M,20,U,GT3,A,secondary education,5th to 9th grade,services,other,course,other,1,1,2,no,no,no,yes,yes,yes,no,no,Very High,Very High,Medium,Very Low,Very Low,Very High,0,14,15,15,Extremely Low,port,B
+GP,M,19,R,GT3,T,secondary education,secondary education,other,services,reputation,father,1,2,0,no,no,no,yes,yes,yes,no,yes,High,Very High,Medium,Very Low,Low,Very High,0,10,10,11,Very Low,port,D
+GP,F,18,U,GT3,T,primary education (4th grade),higher education,other,teacher,home,mother,1,2,0,yes,yes,no,no,no,yes,no,yes,Medium,High,High,Very Low,Low,Very High,2,10,10,11,Very Low,port,D
+GP,F,18,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,course,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Low,Very Low,2,12,12,15,Very Low,port,B
+GP,F,17,U,GT3,T,5th to 9th grade,secondary education,other,other,course,father,2,2,0,no,no,no,yes,yes,yes,yes,yes,High,Low,Very Low,Very Low,Very Low,Medium,2,11,12,14,Extremely Low,port,B
+GP,F,17,R,GT3,T,higher education,higher education,teacher,teacher,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,High,High,High,Very Low,Very Low,Very High,2,15,16,17,Extremely Low,port,A
+GP,F,18,U,GT3,T,higher education,secondary education,other,other,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,High,Very Low,Very Low,Very High,2,14,15,17,Extremely Low,port,A
+GP,F,18,U,LE3,T,higher education,secondary education,health,services,course,mother,2,1,0,no,yes,no,no,yes,yes,yes,no,Medium,Low,High,Very Low,High,Very Low,8,12,12,15,Medium Low,port,B
+GP,F,17,R,GT3,T,secondary education,higher education,at_home,services,course,father,1,3,0,no,yes,no,yes,no,yes,yes,no,High,Medium,High,Low,Very High,Very High,2,15,15,17,Medium-High,port,A
+GP,F,18,U,GT3,T,secondary education,secondary education,at_home,other,course,father,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Very Low,High,Very Low,Very Low,Medium,8,11,12,14,Extremely Low,port,B
+GP,M,19,U,GT3,T,higher education,5th to 9th grade,health,other,course,mother,2,2,0,no,yes,no,yes,yes,yes,yes,yes,Very High,High,High,Very Low,Very Low,Very Low,9,11,10,10,Extremely Low,port,D
+GP,F,18,U,GT3,T,higher education,higher education,teacher,other,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,High,High,Medium,Medium,Very High,0,12,11,13,Medium,port,C
+GP,F,18,U,GT3,T,secondary education,higher education,other,other,course,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,Very High,High,High,Very Low,Very Low,Very Low,4,11,12,14,Extremely Low,port,B
+GP,F,17,U,GT3,T,higher education,higher education,health,health,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Low,Very High,2,14,15,17,Very Low,port,A
+GP,F,17,U,GT3,A,higher education,secondary education,services,services,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,Very High,Low,Low,Very Low,Low,Very High,14,15,14,17,Very Low,port,A
+GP,F,17,U,LE3,A,secondary education,secondary education,services,other,home,mother,1,2,0,yes,yes,no,no,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,0,12,12,13,Extremely Low,port,C
+GP,F,17,U,LE3,T,5th to 9th grade,primary education (4th grade),other,other,home,father,1,2,0,no,no,no,yes,yes,yes,yes,no,High,Low,Medium,Low,Low,Low,2,11,12,14,Low,port,B
+GP,M,18,U,LE3,T,higher education,higher education,other,other,reputation,father,1,1,0,no,yes,no,no,yes,yes,yes,no,High,Low,Very High,Medium,High,Very High,2,8,9,11,Medium-High,port,D
+GP,F,19,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,other,3,3,0,no,no,no,yes,yes,no,no,yes,Very Low,Very High,Very High,High,Medium,Very High,12,10,10,11,Medium-High,port,D
+GP,F,19,U,LE3,A,primary education (4th grade),primary education (4th grade),other,other,course,other,3,2,2,no,yes,no,no,no,yes,yes,yes,Very High,Medium,High,Very Low,Very Low,High,2,8,8,9,Extremely Low,port,F
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,Very High,Low,High,Very High,2,10,10,10,Medium,port,D
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,2,0,no,yes,no,no,yes,yes,no,yes,High,Low,Low,Very Low,Very Low,Medium,4,14,13,13,Extremely Low,port,C
+GP,F,17,R,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Medium,Medium,Low,Low,Low,Medium,0,11,11,10,Low,port,D
+GP,F,17,U,GT3,T,secondary education,primary education (4th grade),services,services,course,father,1,3,0,no,yes,no,no,no,yes,yes,no,Medium,High,Medium,Low,Medium,Very High,0,17,18,17,Medium Low,port,A
+GP,F,17,U,LE3,T,none,5th to 9th grade,at_home,at_home,home,father,2,3,0,no,no,no,no,yes,yes,yes,no,Medium,Medium,Medium,Low,Medium,Low,0,14,14,15,Medium Low,port,B
+GP,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,3,0,no,no,no,yes,yes,yes,yes,no,High,Very High,Very High,Very Low,Low,Low,0,14,14,14,Very Low,port,B
+GP,M,18,U,GT3,T,higher education,higher education,other,other,course,mother,1,3,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Medium,0,13,14,13,Low,port,C
+GP,M,17,U,GT3,T,secondary education,secondary education,other,services,reputation,mother,1,1,0,no,no,no,yes,no,yes,yes,no,High,Medium,Very High,Medium,Very High,Very High,0,17,18,17,High,port,A
+GP,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,services,other,course,mother,4,1,0,no,yes,no,no,yes,yes,yes,no,High,High,Very High,Very High,Very High,High,2,11,10,10,Extremely High,port,D
+GP,F,17,U,GT3,T,higher education,higher education,teacher,services,course,mother,1,3,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,High,Very Low,Medium,High,0,13,12,13,Low,port,C
+GP,F,17,U,GT3,T,higher education,higher education,teacher,teacher,course,mother,2,3,0,no,yes,no,no,no,yes,yes,yes,High,Medium,Medium,Very Low,Low,High,4,15,14,15,Very Low,port,B
+GP,F,17,U,GT3,T,secondary education,secondary education,at_home,other,course,mother,1,1,0,no,yes,yes,yes,yes,yes,yes,no,High,Low,Very High,Low,Very High,Very High,2,11,12,11,Medium-High,port,D
+GP,M,18,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,4,0,no,yes,yes,yes,yes,yes,yes,no,High,Very High,Very High,Low,High,Very High,0,11,11,12,Medium,port,C
+GP,M,19,R,GT3,T,secondary education,5th to 9th grade,at_home,services,home,other,1,1,0,no,yes,no,no,no,yes,no,yes,Very High,Medium,High,Low,Low,Very High,0,11,10,10,Low,port,D
+GP,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,4,2,0,no,no,no,yes,yes,yes,no,yes,High,Low,Very High,Very Low,Very Low,Low,2,10,9,10,Extremely Low,port,D
+GP,F,17,R,GT3,T,5th to 9th grade,higher education,at_home,other,course,father,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,High,Medium,Very Low,Very Low,Very High,0,15,15,15,Extremely Low,port,B
+GP,M,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,1,1,0,no,no,no,no,no,yes,yes,no,Very High,High,Low,Very Low,Low,Very High,6,15,14,15,Very Low,port,B
+GP,F,18,U,GT3,T,secondary education,secondary education,services,services,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Very Low,High,8,10,11,12,Extremely Low,port,C
+GP,F,18,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,other,1,2,0,no,no,no,yes,no,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Low,0,10,9,12,Extremely Low,port,C
+GP,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,2,4,0,no,no,no,yes,yes,yes,no,no,High,High,High,Very Low,Very Low,High,6,14,13,14,Extremely Low,port,B
+GP,F,17,U,GT3,T,secondary education,higher education,services,other,course,mother,1,3,0,no,no,no,no,yes,yes,yes,no,High,High,Very High,Very Low,Medium,Very High,8,11,13,14,Low,port,B
+GP,F,17,U,GT3,T,secondary education,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Low,Low,Medium,Low,0,12,13,15,Medium Low,port,B
+GP,F,18,U,LE3,T,secondary education,secondary education,services,services,home,mother,1,4,0,no,yes,no,no,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very Low,4,14,14,15,Extremely Low,port,B
+GP,F,17,R,GT3,A,secondary education,5th to 9th grade,other,other,home,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Low,Medium,Low,0,14,14,16,Medium Low,port,A
+GP,M,18,U,GT3,T,higher education,higher education,teacher,services,home,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Low,Low,Low,0,12,12,13,Low,port,C
+GP,M,18,U,LE3,T,secondary education,higher education,services,other,home,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Medium,Very Low,Medium,Very High,6,16,16,17,Low,port,A
+GP,F,17,U,GT3,A,5th to 9th grade,5th to 9th grade,at_home,at_home,home,father,1,2,0,no,yes,no,no,yes,yes,yes,yes,Medium,Medium,Very Low,Very Low,Low,High,18,10,12,14,Very Low,port,B
+GP,F,18,U,GT3,T,5th to 9th grade,secondary education,at_home,other,course,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Medium,0,11,12,14,Very Low,port,B
+GP,F,18,U,GT3,T,secondary education,5th to 9th grade,other,services,other,mother,1,3,0,no,no,no,no,yes,yes,yes,yes,Very High,High,Medium,Low,Medium,Very Low,4,14,16,17,Medium Low,port,A
+GP,M,18,R,GT3,T,higher education,secondary education,teacher,services,course,mother,1,3,0,no,no,no,no,yes,yes,yes,yes,Very High,Medium,Low,Very Low,Low,High,4,15,14,17,Very Low,port,A
+GP,M,18,U,GT3,T,higher education,secondary education,teacher,other,course,mother,1,3,0,no,yes,no,no,yes,yes,yes,yes,Very High,High,Very High,Low,Medium,Very High,0,14,13,14,Medium Low,port,B
+GP,F,17,U,GT3,T,higher education,secondary education,health,other,reputation,mother,1,3,0,no,yes,no,yes,yes,yes,yes,yes,High,High,Medium,Very Low,Medium,High,0,11,12,13,Low,port,C
+GP,F,17,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,course,mother,2,2,0,no,yes,no,yes,yes,yes,yes,yes,High,Medium,High,Low,Low,Very Low,10,12,15,15,Low,port,B
+GP,F,17,U,GT3,T,5th to 9th grade,primary education (4th grade),services,other,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Very High,Low,High,High,4,12,16,16,Medium,port,A
+GP,F,19,U,LE3,A,5th to 9th grade,secondary education,at_home,other,home,other,2,1,1,no,no,no,no,yes,no,yes,no,Low,Low,Medium,Medium,High,Very High,16,10,11,11,Medium-High,port,D
+GP,F,17,U,GT3,T,secondary education,primary education (4th grade),other,at_home,home,mother,1,1,1,no,yes,yes,no,yes,yes,yes,yes,High,Very Low,Low,Very Low,Very Low,Medium,6,10,13,13,Extremely Low,port,C
+GP,F,21,U,LE3,T,higher education,higher education,other,other,reputation,other,1,3,2,no,no,yes,yes,yes,yes,yes,no,Medium,Medium,Low,Very Low,Very Low,Very High,0,9,12,12,Extremely Low,port,C
+GP,M,18,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,mother,1,2,0,no,yes,no,yes,no,no,yes,no,High,High,High,Very Low,Medium,Medium,11,9,11,12,Low,port,C
+GP,M,18,U,LE3,A,secondary education,higher education,other,other,reputation,other,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Medium,Very High,Very Low,High,Low,9,13,14,15,Medium Low,port,B
+GP,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,services,services,reputation,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,High,Very Low,Medium,High,0,13,17,17,Low,port,A
+GP,M,17,U,LE3,A,higher education,higher education,health,other,reputation,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,High,Low,Very Low,Low,High,2,12,15,15,Very Low,port,B
+GP,F,18,U,LE3,T,higher education,5th to 9th grade,teacher,other,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,High,Low,Low,Very Low,Very Low,Medium,0,14,17,17,Extremely Low,port,A
+GP,M,21,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,other,2,2,2,no,yes,no,yes,yes,no,yes,yes,Very High,Medium,Medium,Very High,Low,High,21,9,10,10,Medium-High,port,D
+GP,F,20,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,reputation,other,2,3,0,no,no,no,no,yes,yes,yes,yes,Medium,Low,Low,Very Low,Medium,Medium,8,11,15,15,Low,port,B
+GP,F,19,U,GT3,T,higher education,higher education,teacher,other,home,other,1,1,1,no,yes,no,no,yes,yes,yes,yes,Medium,Low,Very High,High,High,Very High,5,9,10,11,High,port,D
+GP,M,17,U,LE3,A,secondary education,5th to 9th grade,other,other,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,High,High,Very Low,Low,Very High,10,16,18,18,Very Low,port,A
+GP,F,18,U,GT3,T,secondary education,5th to 9th grade,at_home,other,reputation,father,1,3,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,High,Very Low,Low,Low,5,14,17,17,Very Low,port,A
+GP,M,18,R,GT3,T,5th to 9th grade,secondary education,other,services,reputation,father,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Very Low,Medium,High,Very High,High,13,13,14,14,Very High,port,B
+GP,M,19,U,GT3,T,5th to 9th grade,primary education (4th grade),other,other,reputation,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,High,Very Low,High,High,10,7,11,11,Medium Low,port,D
+GP,F,18,U,LE3,A,5th to 9th grade,5th to 9th grade,services,other,reputation,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,High,Very Low,High,Very Low,Medium,High,10,14,17,17,Low,port,A
+GP,F,20,U,GT3,T,primary education (4th grade),none,other,other,reputation,mother,2,1,1,yes,no,no,no,yes,yes,yes,yes,Very High,Medium,Very Low,Very Low,Very Low,Very High,5,8,10,10,Extremely Low,port,D
+GP,F,18,U,GT3,T,secondary education,5th to 9th grade,services,other,home,mother,1,2,0,no,yes,no,yes,no,yes,yes,yes,Medium,Very Low,Low,Very Low,Low,Very Low,4,10,13,13,Very Low,port,C
+MS,F,16,U,GT3,T,primary education (4th grade),secondary education,at_home,other,other,father,2,1,0,no,yes,no,no,yes,no,yes,yes,High,Medium,Medium,Very Low,Medium,Very High,11,10,11,11,Low,port,D
+MS,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,High,High,Very Low,Very Low,Very High,0,12,12,12,Extremely Low,port,C
+MS,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,other,mother,1,1,1,no,yes,no,no,yes,yes,no,yes,High,Very Low,Medium,Very Low,Very Low,Low,6,10,10,10,Extremely Low,port,D
+MS,F,15,R,GT3,T,secondary education,secondary education,at_home,other,course,mother,2,1,0,no,yes,no,no,yes,yes,yes,no,Very High,High,High,Low,Medium,Very High,4,10,10,11,Medium Low,port,D
+MS,F,16,R,GT3,T,5th to 9th grade,secondary education,at_home,services,course,mother,2,2,0,no,no,no,no,yes,yes,no,no,High,Very High,Low,Very Low,Low,Very High,0,16,17,17,Very Low,port,A
+MS,F,15,R,LE3,T,5th to 9th grade,primary education (4th grade),at_home,other,home,mother,2,1,0,no,no,no,no,yes,no,no,no,Very Low,Medium,High,Very Low,Very Low,Very Low,0,6,8,9,Extremely Low,port,F
+MS,M,16,R,LE3,A,higher education,higher education,at_home,other,home,mother,1,2,0,no,yes,no,no,yes,yes,no,no,Very High,Medium,Low,Very Low,Medium,Low,5,10,11,11,Low,port,D
+MS,M,16,U,GT3,A,primary education (4th grade),5th to 9th grade,other,other,other,mother,1,3,0,yes,no,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Very High,0,10,11,11,Extremely Low,port,D
+MS,F,17,R,GT3,T,secondary education,5th to 9th grade,at_home,other,course,father,1,2,1,no,no,no,no,yes,yes,no,yes,High,Very High,High,Very Low,Low,Very High,0,10,10,10,Very Low,port,D
+MS,F,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,other,father,1,1,1,no,yes,no,no,no,no,yes,no,Very High,High,High,Low,Low,Very High,0,6,6,7,Low,port,F
+MS,F,15,R,GT3,T,higher education,higher education,teacher,other,course,mother,2,1,0,no,no,no,no,yes,yes,yes,yes,Very Low,Very High,Very Low,Medium,Very High,Very High,0,13,14,14,High,port,B
+MS,F,16,U,LE3,A,5th to 9th grade,5th to 9th grade,at_home,other,reputation,mother,2,4,0,no,no,no,yes,no,no,no,yes,Very Low,Low,Very Low,Very Low,Very Low,Very Low,4,10,9,11,Extremely Low,port,D
+MS,F,15,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,services,reputation,father,2,2,0,no,yes,no,no,yes,yes,yes,no,Very High,High,Medium,Very Low,Low,High,0,10,10,10,Very Low,port,D
+MS,F,15,R,LE3,T,primary education (4th grade),primary education (4th grade),other,services,course,mother,2,1,1,no,yes,no,no,yes,yes,yes,yes,High,High,Medium,Very Low,Low,Low,4,6,7,8,Very Low,port,F
+MS,F,16,R,GT3,T,none,5th to 9th grade,other,other,other,mother,2,1,0,no,yes,no,yes,yes,yes,no,no,Medium,Low,Medium,Very Low,Low,Low,0,12,11,12,Very Low,port,C
+MS,F,17,R,GT3,T,5th to 9th grade,secondary education,other,other,course,mother,2,1,0,no,yes,no,no,yes,yes,yes,no,Very High,Very High,Very High,Very Low,Medium,Medium,2,10,11,12,Low,port,C
+MS,F,15,R,GT3,T,secondary education,secondary education,other,services,course,father,2,1,0,no,no,no,no,no,yes,yes,no,High,Very Low,Medium,Very Low,Very Low,High,0,14,16,16,Extremely Low,port,A
+MS,M,16,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,home,mother,2,2,0,no,yes,no,yes,yes,yes,no,yes,Very High,High,Very High,High,Very High,Medium,0,7,0,0,Very High,port,F
+MS,M,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,1,2,0,no,no,yes,no,no,yes,yes,no,High,High,Medium,Low,High,Very High,4,8,9,9,Medium,port,F
+MS,M,15,R,LE3,T,higher education,primary education (4th grade),health,services,reputation,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Low,Low,0,12,13,14,Very Low,port,B
+MS,M,15,R,LE3,T,higher education,primary education (4th grade),health,services,reputation,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Low,Low,7,7,9,8,Very Low,port,F
+MS,M,16,R,GT3,T,secondary education,higher education,other,health,other,mother,3,2,0,no,no,no,no,no,yes,no,no,Medium,High,Very High,Very Low,Low,Very High,4,9,10,11,Very Low,port,D
+MS,M,15,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,4,2,0,no,yes,no,yes,yes,yes,no,yes,Very High,High,Very High,Low,High,High,8,7,9,9,Medium,port,F
+MS,M,15,U,LE3,T,secondary education,secondary education,at_home,at_home,reputation,father,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very High,0,11,11,11,Extremely Low,port,D
+MS,M,17,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,other,mother,3,1,0,no,no,no,yes,yes,no,no,yes,Very High,Very High,Very High,Very High,Very High,Medium,8,8,10,9,Extremely High,port,F
+MS,F,16,R,GT3,T,higher education,higher education,teacher,teacher,course,mother,2,3,0,no,no,no,yes,yes,yes,yes,yes,High,Low,Low,Very Low,Very Low,High,6,16,16,17,Extremely Low,port,A
+MS,F,15,R,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,mother,2,1,0,no,no,no,no,yes,yes,no,no,Very High,Very Low,Low,Very Low,Very Low,Very Low,3,11,13,13,Extremely Low,port,C
+MS,F,16,R,GT3,T,5th to 9th grade,secondary education,other,services,course,mother,3,2,0,no,yes,no,no,yes,yes,yes,no,High,Very High,High,Very Low,Low,Very Low,2,15,15,15,Very Low,port,B
+MS,M,16,R,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,father,2,2,0,no,no,no,no,yes,yes,no,no,High,Medium,Medium,Very Low,Very Low,Very High,0,10,11,11,Extremely Low,port,D
+MS,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,3,2,0,no,yes,no,no,yes,yes,yes,no,High,High,Very High,Very Low,Very Low,High,4,9,10,11,Extremely Low,port,D
+MS,F,16,U,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,mother,1,3,1,no,yes,no,no,yes,yes,no,no,Very Low,Medium,Low,Very Low,Low,High,0,10,8,8,Very Low,port,F
+MS,F,16,U,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,mother,1,3,1,no,yes,no,no,yes,yes,no,no,Very Low,Medium,Low,Very Low,Low,High,3,9,8,8,Very Low,port,F
+MS,F,15,U,GT3,T,5th to 9th grade,primary education (4th grade),at_home,other,home,mother,1,2,0,yes,yes,no,no,no,yes,yes,no,High,High,Low,Medium,Medium,Low,0,9,10,9,Medium,port,F
+MS,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,father,1,2,0,no,yes,no,no,no,yes,no,yes,Very High,High,Medium,Low,Very Low,Low,0,13,14,15,Very Low,port,B
+MS,M,17,R,LE3,T,primary education (4th grade),5th to 9th grade,at_home,services,reputation,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,Very High,Very High,Very High,Very High,Very High,Medium,4,10,11,11,Extremely High,port,D
+MS,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,father,4,4,0,no,yes,no,no,no,yes,yes,no,High,Medium,Low,Very Low,Very Low,Very Low,0,13,10,13,Extremely Low,port,C
+MS,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,father,4,3,0,yes,yes,no,no,yes,yes,no,no,High,High,Medium,Very Low,Very Low,Very High,2,10,9,10,Extremely Low,port,D
+MS,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,home,father,2,2,0,no,yes,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Very Low,Low,1,11,10,11,Extremely Low,port,D
+MS,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,2,1,0,no,no,no,yes,yes,yes,yes,yes,High,Low,Low,High,Medium,Low,0,13,12,14,Medium-High,port,B
+MS,F,15,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,father,3,2,0,no,yes,no,no,yes,yes,no,no,High,Low,Very Low,Very Low,Low,Low,0,13,14,14,Very Low,port,B
+MS,F,15,R,LE3,T,5th to 9th grade,5th to 9th grade,other,other,other,father,1,3,0,yes,yes,no,no,yes,yes,no,no,High,High,Medium,Low,Low,Very High,2,14,11,12,Low,port,C
+MS,M,16,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,father,2,1,0,no,no,no,yes,yes,yes,no,no,Medium,High,High,Medium,High,Very High,6,11,11,11,Medium-High,port,D
+MS,F,18,U,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,father,1,2,1,no,yes,no,yes,yes,yes,yes,yes,Medium,High,High,Low,Medium,Very High,9,9,8,8,Medium Low,port,F
+MS,M,15,U,GT3,T,secondary education,primary education (4th grade),other,services,home,mother,2,1,0,no,yes,no,no,yes,yes,no,no,Medium,Low,Medium,Very Low,Medium,High,0,10,9,11,Low,port,D
+MS,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,other,services,course,father,3,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,High,Very Low,Very Low,Low,1,14,13,14,Extremely Low,port,B
+MS,M,15,U,GT3,T,5th to 9th grade,5th to 9th grade,health,other,reputation,mother,3,1,0,no,no,no,no,yes,yes,no,no,High,Medium,Medium,Very Low,Low,High,1,13,12,13,Very Low,port,C
+MS,M,16,U,GT3,T,higher education,higher education,other,teacher,course,father,1,2,0,no,yes,no,yes,yes,yes,no,yes,High,Medium,Very Low,Very Low,Very Low,Medium,0,13,12,13,Extremely Low,port,C
+MS,F,15,R,GT3,T,secondary education,secondary education,services,other,reputation,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Very High,High,Very Low,Very Low,Very Low,4,13,12,12,Extremely Low,port,C
+MS,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,2,2,1,no,yes,no,yes,no,yes,no,no,High,High,High,Low,Medium,Very High,2,12,11,12,Medium Low,port,C
+MS,F,16,R,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,father,3,1,0,no,yes,no,yes,yes,yes,no,yes,High,Medium,Low,Very Low,Very Low,High,0,14,14,16,Extremely Low,port,A
+MS,M,16,U,LE3,T,5th to 9th grade,primary education (4th grade),at_home,services,course,mother,2,1,0,no,yes,no,yes,yes,yes,yes,no,Low,High,Medium,Low,Medium,High,4,10,8,10,Medium Low,port,D
+MS,M,15,R,LE3,T,primary education (4th grade),secondary education,at_home,other,reputation,father,3,1,0,no,yes,no,yes,yes,yes,yes,no,High,Low,High,Medium,Very High,Medium,2,10,11,11,High,port,D
+MS,F,15,U,GT3,T,5th to 9th grade,5th to 9th grade,other,services,course,mother,2,3,0,no,yes,no,yes,yes,yes,no,no,Very High,Medium,Low,Very Low,Very Low,High,0,12,13,14,Extremely Low,port,B
+MS,F,16,R,LE3,T,5th to 9th grade,primary education (4th grade),other,other,home,mother,1,1,0,no,yes,no,no,yes,yes,yes,yes,Very High,High,Medium,Very Low,Very Low,Very High,2,10,8,8,Extremely Low,port,F
+MS,M,15,U,GT3,T,secondary education,secondary education,services,services,course,father,2,1,0,no,yes,no,yes,no,yes,yes,no,High,Medium,Medium,Low,High,Medium,11,12,10,11,Medium,port,D
+MS,F,16,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,father,2,2,3,yes,yes,no,no,yes,yes,no,no,Medium,High,Medium,Very Low,Very Low,Very Low,0,7,7,8,Extremely Low,port,F
+MS,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,at_home,course,mother,1,1,0,no,yes,no,yes,yes,no,no,no,High,Very High,Medium,Very Low,Very Low,Very High,4,9,9,10,Extremely Low,port,D
+MS,F,19,U,GT3,T,5th to 9th grade,secondary education,at_home,services,course,other,1,1,1,no,no,no,no,yes,no,yes,yes,High,High,High,Very Low,Very Low,Low,0,9,9,10,Extremely Low,port,D
+MS,F,17,R,GT3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,mother,3,1,0,no,yes,no,yes,yes,no,no,yes,Very High,Very High,Medium,Very Low,Very Low,Medium,2,9,10,11,Extremely Low,port,D
+MS,F,15,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,2,1,0,no,yes,no,no,yes,no,no,yes,Very High,Low,Very Low,Very Low,Medium,High,0,9,10,9,Low,port,F
+MS,F,16,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,father,3,2,0,no,yes,no,no,yes,no,yes,no,Medium,High,Very High,Very Low,Low,Very Low,1,9,10,11,Very Low,port,D
+MS,F,16,U,LE3,A,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,1,0,no,yes,no,no,yes,no,no,no,High,Medium,High,Very Low,Low,Very Low,6,7,7,8,Very Low,port,F
+MS,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Very High,Very Low,Low,High,0,11,10,11,Very Low,port,D
+MS,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,other,services,course,father,1,1,1,no,yes,yes,yes,no,yes,yes,no,High,High,Medium,Very Low,High,Medium,1,9,10,10,Medium Low,port,D
+MS,F,18,R,LE3,A,secondary education,5th to 9th grade,other,other,course,other,2,3,2,no,yes,no,no,no,no,no,yes,Medium,Medium,Low,Very Low,Very Low,Low,6,7,9,10,Extremely Low,port,D
+MS,F,19,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,mother,1,3,1,no,no,no,yes,yes,no,no,yes,Very High,Medium,Very Low,Very Low,Very Low,Medium,6,7,9,9,Extremely Low,port,F
+MS,M,18,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,2,1,1,no,no,no,yes,yes,no,yes,no,High,High,Medium,Medium,High,High,0,8,9,10,Medium-High,port,D
+MS,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,mother,2,1,1,no,no,no,no,no,no,yes,yes,Medium,Low,Medium,Very Low,Very Low,Low,4,9,11,10,Extremely Low,port,D
+MS,F,19,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,other,2,2,1,no,yes,no,no,yes,yes,yes,yes,Very Low,Very Low,High,High,Very Low,Very Low,12,7,8,9,Medium Low,port,F
+MS,F,16,R,GT3,A,5th to 9th grade,5th to 9th grade,health,other,course,mother,1,2,0,no,no,no,no,no,yes,no,yes,Medium,Medium,Low,Very Low,Very Low,Medium,2,8,10,10,Extremely Low,port,D
+MS,F,17,U,GT3,T,none,primary education (4th grade),other,at_home,course,father,2,1,0,no,no,no,yes,no,yes,no,no,Low,High,High,Medium,Very High,Very High,5,9,9,10,High,port,D
+MS,F,16,R,LE3,T,primary education (4th grade),5th to 9th grade,at_home,other,course,mother,1,2,0,no,no,no,yes,yes,no,yes,no,High,High,Very High,Very Low,Medium,Medium,0,8,9,9,Low,port,F
+MS,F,16,U,GT3,T,secondary education,secondary education,other,other,reputation,mother,1,1,0,no,no,no,yes,yes,no,yes,yes,High,Very High,High,Very Low,Very Low,High,0,14,13,13,Extremely Low,port,C
+MS,F,16,R,LE3,T,primary education (4th grade),primary education (4th grade),services,services,home,mother,1,1,0,no,yes,no,yes,yes,yes,yes,yes,High,High,High,Low,Low,High,2,14,14,14,Low,port,B
+MS,M,17,U,GT3,T,secondary education,secondary education,services,at_home,course,mother,2,4,1,no,yes,yes,yes,yes,yes,no,no,Very High,High,Very High,Medium,High,Very High,0,10,11,10,Medium-High,port,D
+MS,F,16,U,GT3,T,5th to 9th grade,primary education (4th grade),other,services,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,no,Very High,Medium,Medium,Very Low,Very Low,Very Low,0,14,13,14,Extremely Low,port,B
+MS,F,16,U,GT3,T,5th to 9th grade,5th to 9th grade,services,other,course,mother,1,1,0,no,yes,yes,yes,yes,yes,no,yes,High,Low,Very High,Very Low,Low,Very High,0,17,16,16,Very Low,port,A
+MS,M,17,U,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,father,1,1,1,no,yes,no,yes,yes,no,yes,yes,Very High,Medium,Very High,Very High,Very High,Very Low,12,6,7,7,Extremely High,port,F
+MS,M,16,U,LE3,T,higher education,secondary education,other,other,course,father,1,1,0,no,no,no,yes,yes,yes,yes,no,High,Low,Very High,Very Low,Very High,Very High,8,14,12,13,Medium,port,C
+MS,M,17,R,LE3,T,5th to 9th grade,5th to 9th grade,services,services,other,mother,3,4,1,no,yes,no,no,yes,yes,no,no,Very Low,Medium,Very High,Medium,Very High,Medium,2,10,8,9,High,port,F
+MS,F,16,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,other,1,4,0,yes,yes,no,yes,yes,yes,yes,no,Low,Low,Very Low,Very Low,Very Low,Very High,0,14,14,14,Extremely Low,port,B
+MS,F,19,U,LE3,T,5th to 9th grade,5th to 9th grade,other,other,home,mother,1,3,0,no,no,no,no,yes,yes,yes,yes,Very High,High,Very High,Very Low,Very Low,Very Low,0,12,13,13,Extremely Low,port,C
+MS,F,17,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,reputation,mother,2,1,0,no,yes,no,yes,no,yes,yes,yes,High,High,Very High,Very Low,Low,Very High,0,11,11,11,Very Low,port,D
+MS,F,20,U,GT3,T,secondary education,secondary education,at_home,services,other,mother,2,2,1,no,no,no,yes,yes,yes,yes,yes,Medium,Medium,High,Low,High,Medium,8,11,9,10,Medium,port,D
+MS,F,17,U,LE3,T,primary education (4th grade),primary education (4th grade),other,services,course,father,1,3,0,no,yes,no,no,yes,yes,no,yes,High,Medium,Medium,Very Low,Very Low,Medium,0,11,11,10,Extremely Low,port,D
+MS,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,3,1,1,no,yes,no,no,no,yes,yes,no,High,High,Very High,Very Low,Low,Very High,0,10,9,9,Very Low,port,F
+MS,F,16,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,father,3,2,0,no,yes,no,no,yes,yes,no,no,Very High,Medium,Low,Very Low,Very Low,Very Low,0,16,17,18,Extremely Low,port,A
+MS,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,2,2,0,no,yes,no,yes,yes,yes,no,no,Very High,Medium,Low,Very Low,Very Low,Very Low,0,15,17,17,Extremely Low,port,A
+MS,F,17,U,GT3,A,primary education (4th grade),none,other,other,other,mother,2,2,0,no,no,no,no,yes,yes,yes,yes,High,High,Very High,Very Low,Very Low,High,1,11,9,10,Extremely Low,port,D
+MS,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,1,2,1,no,yes,no,no,yes,yes,yes,yes,High,Medium,Low,Very Low,Very Low,Very High,9,7,7,7,Extremely Low,port,F
+MS,F,16,U,GT3,T,secondary education,primary education (4th grade),other,other,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Very Low,Medium,Very Low,Medium,Very Low,0,8,6,8,Low,port,F
+MS,F,16,U,GT3,T,secondary education,5th to 9th grade,services,at_home,course,mother,1,1,0,no,no,no,no,yes,yes,yes,no,Medium,Very Low,Medium,Very Low,High,Medium,2,7,6,7,Medium Low,port,F
+MS,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,at_home,reputation,mother,2,2,0,yes,no,no,no,yes,yes,no,no,Low,Medium,Very High,Very Low,High,Medium,8,9,8,10,Medium Low,port,D
+MS,F,16,R,GT3,T,higher education,higher education,health,teacher,reputation,father,1,2,0,no,no,no,yes,no,yes,yes,yes,High,Medium,Medium,Low,Medium,Low,0,14,16,16,Medium Low,port,A
+MS,F,16,R,LE3,T,primary education (4th grade),5th to 9th grade,other,other,reputation,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,Very High,High,Very High,Very Low,High,Low,0,14,14,15,Medium Low,port,B
+MS,F,18,U,GT3,A,5th to 9th grade,higher education,other,services,reputation,father,1,2,1,no,yes,no,no,yes,yes,yes,no,Low,Medium,Low,Very Low,Medium,Very Low,8,8,5,8,Low,port,F
+MS,M,16,R,GT3,T,5th to 9th grade,primary education (4th grade),other,services,reputation,mother,2,2,0,no,no,no,yes,yes,yes,yes,no,Very High,Low,Very Low,Very Low,Very Low,Low,0,8,7,0,Extremely Low,port,F
+MS,F,16,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,other,mother,3,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Low,Very Low,Medium,Very High,6,6,8,8,Low,port,F
+MS,F,16,R,GT3,T,5th to 9th grade,secondary education,at_home,services,other,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Medium,Medium,Medium,Very Low,Very Low,Low,0,8,10,10,Extremely Low,port,D
+MS,F,16,U,GT3,T,higher education,higher education,health,health,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,High,Very Low,Low,Medium,4,8,8,8,Very Low,port,F
+MS,M,18,U,LE3,T,higher education,higher education,at_home,health,home,mother,1,4,0,no,yes,no,yes,yes,no,yes,yes,Very High,Very High,Very High,Very High,Very High,Very High,2,5,6,6,Extremely High,port,F
+MS,F,16,R,LE3,T,secondary education,higher education,at_home,other,other,mother,3,2,0,no,yes,no,no,no,yes,no,no,High,Low,Very Low,Very Low,Very Low,Low,2,7,9,8,Extremely Low,port,F
+MS,M,17,U,LE3,T,higher education,higher education,other,services,home,mother,1,3,0,no,yes,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Low,Very High,0,15,14,16,Very Low,port,A
+MS,F,17,R,GT3,T,higher education,primary education (4th grade),other,other,other,mother,1,1,0,no,no,no,no,yes,yes,yes,yes,High,Low,Medium,Very Low,Low,Very High,1,13,14,14,Very Low,port,B
+MS,M,16,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,other,mother,4,3,0,no,no,no,no,yes,yes,no,no,Very High,Very Low,Medium,Low,Low,Medium,0,10,9,10,Low,port,D
+MS,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,other,mother,1,1,0,no,yes,yes,no,yes,yes,yes,no,Very High,Very Low,Medium,Very Low,Low,Very High,5,9,9,9,Very Low,port,F
+MS,F,16,U,LE3,T,higher education,higher education,services,services,other,father,2,1,0,no,yes,no,no,yes,yes,no,no,Very High,Very Low,Medium,Very Low,Low,Very High,1,11,11,11,Very Low,port,D
+MS,M,17,U,GT3,T,secondary education,secondary education,services,services,home,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,High,Very Low,High,Very High,Very High,Medium,8,7,10,9,Extremely High,port,F
+MS,M,17,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,other,mother,3,2,0,no,no,no,no,yes,yes,yes,yes,Very High,Very Low,Medium,Medium,Medium,Very Low,0,10,10,10,Medium,port,D
+MS,M,16,U,GT3,T,5th to 9th grade,primary education (4th grade),health,services,other,mother,2,2,0,no,no,no,no,no,yes,yes,yes,High,Low,Low,Very Low,High,Very High,2,9,7,8,Medium Low,port,F
+MS,F,16,U,LE3,T,5th to 9th grade,primary education (4th grade),other,services,other,mother,1,2,0,no,no,no,no,yes,yes,yes,yes,Medium,Low,Low,Very Low,Very Low,Medium,0,14,15,16,Extremely Low,port,A
+MS,M,16,U,LE3,T,higher education,higher education,teacher,health,other,father,1,1,0,no,yes,no,no,yes,yes,yes,no,High,Very Low,Low,Low,Very High,Very High,0,11,12,12,Medium-High,port,C
+MS,M,15,R,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,mother,3,2,0,no,yes,no,yes,yes,yes,no,no,Very High,Very High,Very High,Very Low,Medium,Very High,11,9,11,10,Low,port,D
+MS,M,15,U,LE3,A,5th to 9th grade,5th to 9th grade,other,other,reputation,mother,3,4,0,no,yes,no,yes,yes,yes,no,no,Very High,High,Very High,Low,Medium,Very High,8,13,14,14,Medium Low,port,B
+MS,M,15,U,LE3,A,5th to 9th grade,primary education (4th grade),services,services,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Very High,11,12,13,12,Very Low,port,C
+MS,F,16,R,LE3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,3,0,no,yes,no,no,no,yes,no,yes,High,Medium,Medium,Low,Low,Very High,2,11,11,11,Low,port,D
+MS,F,16,U,LE3,T,higher education,primary education (4th grade),other,other,home,mother,2,2,0,no,yes,no,yes,yes,yes,yes,no,Very Low,Low,High,Low,Low,Very Low,8,9,10,10,Low,port,D
+MS,F,17,U,GT3,T,secondary education,5th to 9th grade,at_home,other,home,mother,2,1,0,no,no,no,no,yes,yes,no,yes,High,Medium,Medium,Low,Low,Very Low,5,9,11,11,Low,port,D
+MS,F,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,other,mother,2,2,0,yes,no,yes,no,yes,yes,no,no,Very High,Very Low,Medium,Very Low,Very Low,Very High,0,11,9,11,Extremely Low,port,D
+MS,F,16,U,GT3,T,higher education,higher education,teacher,services,course,mother,2,3,0,no,yes,no,no,yes,yes,yes,yes,Very High,Medium,Very High,Very Low,High,Very High,1,10,11,12,Medium Low,port,C
+MS,M,17,R,GT3,T,higher education,higher education,health,other,course,father,3,1,3,no,no,no,yes,yes,yes,yes,yes,Medium,Medium,Medium,Very Low,Medium,Very High,2,9,9,8,Low,port,F
+MS,M,17,R,LE3,T,primary education (4th grade),secondary education,other,other,course,father,2,1,0,no,no,no,yes,yes,yes,no,yes,Very High,Very Low,Low,Medium,Medium,Very High,2,12,11,12,Medium,port,C
+MS,M,17,U,GT3,T,secondary education,higher education,services,other,other,mother,1,2,1,no,yes,no,yes,no,yes,yes,yes,Very High,High,High,Medium,High,Very High,8,8,9,8,Medium-High,port,F
+MS,F,17,U,GT3,T,higher education,higher education,health,health,course,father,1,2,0,no,yes,no,no,yes,yes,yes,no,Very High,Low,Very High,Very Low,Very Low,Very High,0,13,15,16,Extremely Low,port,A
+MS,M,16,R,LE3,T,higher education,primary education (4th grade),other,at_home,other,father,1,1,0,no,no,no,no,yes,yes,yes,no,High,Very Low,Low,Low,Very Low,Low,0,10,11,11,Very Low,port,D
+MS,F,17,U,GT3,A,primary education (4th grade),primary education (4th grade),at_home,at_home,other,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,High,Very High,Very High,Very Low,Low,Medium,2,11,10,11,Very Low,port,D
+MS,F,17,R,GT3,T,higher education,5th to 9th grade,other,other,course,mother,2,2,0,yes,yes,no,no,no,yes,yes,no,High,Medium,Medium,Low,Medium,Very High,0,17,18,18,Medium Low,port,A
+MS,M,16,U,LE3,A,5th to 9th grade,5th to 9th grade,other,services,course,father,2,2,0,no,yes,no,no,no,yes,yes,yes,High,Very Low,Low,Low,Low,Very High,0,12,13,13,Low,port,C
+MS,M,17,U,GT3,T,secondary education,5th to 9th grade,other,other,other,father,2,2,0,no,yes,yes,no,yes,yes,yes,no,High,Very Low,Low,Low,Low,Very Low,0,13,14,13,Low,port,C
+MS,M,19,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,other,mother,1,2,2,no,yes,no,yes,yes,no,yes,no,High,High,Medium,Medium,High,High,2,9,9,10,Medium-High,port,D
+MS,M,17,U,LE3,A,primary education (4th grade),none,other,other,home,mother,1,1,0,no,no,no,no,yes,yes,no,yes,High,Very Low,Low,Very Low,Very Low,Very High,4,11,11,12,Extremely Low,port,C
+MS,F,17,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,father,2,1,0,no,yes,no,yes,yes,no,yes,yes,Medium,Very High,Very High,Low,Low,High,3,10,11,10,Low,port,D
+MS,F,16,R,GT3,T,primary education (4th grade),5th to 9th grade,other,other,home,father,1,3,0,yes,yes,no,no,no,yes,yes,yes,High,Medium,High,Very Low,Very Low,Medium,5,13,14,13,Extremely Low,port,C
+MS,M,16,R,LE3,T,primary education (4th grade),5th to 9th grade,other,at_home,course,mother,1,1,0,no,no,no,no,yes,yes,no,no,High,High,High,Low,High,Very High,4,9,10,11,Medium,port,D
+MS,F,17,R,GT3,T,secondary education,primary education (4th grade),other,other,course,mother,2,2,3,no,yes,no,yes,no,yes,yes,yes,Very High,High,High,Very Low,Very Low,Very High,2,7,9,10,Extremely Low,port,D
+MS,M,17,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,2,1,0,no,no,no,yes,yes,no,no,yes,Very High,Very High,Very High,Medium,Very High,Very High,0,8,13,10,High,port,D
+MS,M,18,R,GT3,T,primary education (4th grade),none,at_home,at_home,course,other,3,1,1,yes,yes,no,no,yes,yes,no,no,High,Medium,Low,Very Low,Very Low,High,0,12,12,13,Extremely Low,port,C
+MS,M,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,course,mother,2,1,0,no,yes,no,yes,no,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,0,10,9,10,Low,port,D
+MS,M,18,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,at_home,course,mother,2,2,0,no,yes,no,yes,yes,yes,no,no,High,Medium,Medium,Very Low,High,Very High,6,10,9,10,Medium Low,port,D
+MS,F,16,R,LE3,T,5th to 9th grade,5th to 9th grade,other,services,course,father,1,2,0,no,no,no,yes,yes,yes,no,yes,Very High,High,Medium,Very Low,Very Low,Very Low,0,11,13,12,Extremely Low,port,C
+MS,M,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,1,1,1,no,no,no,yes,yes,yes,no,yes,Very Low,Low,Very Low,Low,Medium,Very High,0,7,0,0,Medium Low,port,F
+MS,M,16,R,GT3,T,secondary education,5th to 9th grade,services,other,course,father,2,1,0,no,no,no,no,yes,yes,yes,no,High,Very High,Very High,Low,Medium,Very High,2,11,9,10,Medium Low,port,D
+MS,M,16,R,LE3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,2,1,0,no,no,no,yes,yes,yes,yes,no,High,Very High,Very High,Low,High,Very High,0,10,10,9,Medium,port,F
+MS,M,18,R,GT3,T,primary education (4th grade),primary education (4th grade),services,other,course,other,2,1,1,no,yes,no,no,yes,no,yes,yes,Very High,Medium,Medium,Low,Medium,Very High,2,9,7,9,Medium Low,port,F
+MS,M,18,R,GT3,T,secondary education,5th to 9th grade,services,other,course,mother,1,1,1,no,no,no,no,yes,no,yes,no,Low,Medium,Very Low,Low,Low,Very High,0,4,0,0,Low,port,F
+MS,M,19,U,GT3,T,secondary education,5th to 9th grade,at_home,services,course,mother,2,1,3,no,no,no,yes,yes,yes,no,no,Medium,Low,Very Low,Very Low,Very Low,Medium,4,6,11,9,Extremely Low,port,F
+MS,M,18,U,GT3,T,secondary education,secondary education,at_home,at_home,course,mother,1,2,2,no,yes,no,yes,yes,no,yes,no,High,High,Very High,Very Low,Medium,Medium,9,4,8,8,Low,port,F
+MS,M,16,R,GT3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,2,1,0,no,yes,no,yes,yes,yes,yes,yes,Very High,High,Medium,Low,High,High,6,7,8,8,Medium,port,F
+MS,M,19,U,GT3,T,5th to 9th grade,primary education (4th grade),at_home,other,course,other,2,1,3,no,no,no,yes,no,no,yes,yes,High,High,Medium,Very Low,Medium,Very High,4,8,9,9,Low,port,F
+MS,F,16,U,GT3,A,secondary education,5th to 9th grade,services,at_home,course,mother,2,2,2,no,yes,no,yes,yes,yes,no,yes,Low,Very High,Very High,Very Low,Very Low,Very Low,8,5,5,7,Extremely Low,port,F
+MS,F,17,U,GT3,T,primary education (4th grade),primary education (4th grade),other,at_home,course,mother,1,1,0,no,yes,no,yes,yes,yes,no,no,High,Medium,Low,Very Low,Low,Very High,9,7,9,10,Very Low,port,D
+MS,M,20,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,other,2,1,1,no,yes,no,no,yes,no,yes,yes,High,High,Medium,Low,High,High,12,8,11,10,Medium,port,D
+MS,F,18,R,GT3,A,higher education,secondary education,services,services,course,mother,1,1,0,no,yes,no,no,yes,yes,yes,no,Very High,High,High,Medium,High,Low,8,10,11,10,Medium-High,port,D
+MS,M,18,R,GT3,T,secondary education,5th to 9th grade,other,other,course,mother,2,1,0,no,yes,no,no,no,yes,yes,no,Low,Very High,Very High,Very High,Very High,Very High,8,9,10,11,Extremely High,port,D
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,home,other,3,2,1,no,no,no,no,yes,yes,yes,no,Very High,High,High,Medium,Medium,Low,8,10,9,11,Medium,port,D
+MS,M,17,U,GT3,T,secondary education,secondary education,health,other,course,mother,2,2,1,no,yes,no,no,yes,yes,yes,no,High,Very High,High,Low,Medium,Medium,4,8,9,10,Medium Low,port,D
+MS,M,18,U,LE3,T,primary education (4th grade),secondary education,at_home,services,course,mother,1,1,0,no,no,no,no,yes,no,yes,yes,High,Medium,Medium,Low,Medium,Medium,0,9,10,9,Medium Low,port,F
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,other,3,1,1,no,yes,no,no,yes,yes,yes,no,High,High,High,Medium,Medium,Very High,4,8,9,10,Medium,port,D
+MS,F,18,U,GT3,A,primary education (4th grade),5th to 9th grade,at_home,other,course,mother,2,2,2,no,yes,no,no,yes,yes,no,no,High,Medium,Medium,Very Low,Very Low,Very High,2,6,8,8,Extremely Low,port,F
+MS,F,19,U,LE3,A,primary education (4th grade),primary education (4th grade),at_home,other,course,mother,1,1,0,no,yes,no,no,yes,no,no,no,Very Low,High,High,Very Low,Very Low,Very High,0,6,8,7,Extremely Low,port,F
+MS,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,other,other,other,mother,2,1,1,no,no,no,no,yes,no,yes,yes,Very High,Very High,Very High,Very Low,Very Low,Medium,0,8,6,0,Extremely Low,port,F
+MS,F,17,R,GT3,T,none,none,at_home,other,course,mother,2,1,0,no,yes,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Very High,0,10,11,11,Extremely Low,port,D
+MS,F,17,R,LE3,A,secondary education,primary education (4th grade),other,at_home,course,other,2,3,0,no,yes,yes,no,yes,no,no,no,High,Low,Medium,Low,Low,Medium,5,8,7,8,Low,port,F
+MS,F,17,U,GT3,T,higher education,5th to 9th grade,teacher,services,home,mother,1,2,0,yes,yes,no,yes,yes,yes,yes,no,Very High,Very High,Very High,Very Low,Medium,Very High,0,8,8,0,Low,port,F
+MS,F,18,R,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,mother,1,2,1,no,yes,no,yes,yes,yes,yes,no,Low,Medium,Medium,Very Low,Low,High,3,7,6,8,Very Low,port,F
+MS,F,17,U,GT3,T,higher education,primary education (4th grade),health,at_home,course,mother,1,1,0,no,yes,no,no,yes,yes,no,yes,Medium,Low,Low,Very Low,Very Low,Very High,0,8,10,9,Extremely Low,port,F
+MS,F,17,U,LE3,T,primary education (4th grade),5th to 9th grade,at_home,other,course,father,1,1,0,no,no,no,no,yes,yes,yes,no,Very High,Very High,Very Low,Very Low,Very Low,Medium,0,7,10,10,Extremely Low,port,D
+MS,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,3,2,2,no,no,no,yes,yes,yes,no,yes,Medium,High,High,Low,Low,Very High,3,7,8,7,Low,port,F
+MS,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,services,at_home,reputation,father,2,2,0,no,no,no,yes,no,yes,yes,no,High,Medium,Very High,Very Low,Very Low,Very Low,2,12,13,14,Extremely Low,port,B
+MS,F,17,U,GT3,T,secondary education,secondary education,services,services,course,mother,2,1,0,no,yes,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,High,0,11,12,13,Extremely Low,port,C
+MS,F,18,U,LE3,A,primary education (4th grade),5th to 9th grade,at_home,other,reputation,mother,2,2,0,no,no,no,no,yes,yes,yes,no,High,High,Medium,Very Low,Low,High,0,12,13,14,Very Low,port,B
+MS,F,18,U,GT3,T,higher education,higher education,teacher,teacher,reputation,mother,2,2,0,no,no,no,yes,no,yes,yes,no,High,Medium,Very High,Very Low,Low,Very Low,0,18,18,18,Very Low,port,A
+MS,M,18,U,LE3,T,higher education,higher education,services,other,reputation,mother,1,1,0,no,yes,no,yes,yes,yes,yes,no,Very High,High,Very High,Very Low,Very Low,Very High,3,17,17,17,Extremely Low,port,A
+MS,F,17,U,GT3,T,higher education,5th to 9th grade,other,other,course,mother,2,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,High,0,17,18,18,Very Low,port,A
+MS,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,course,mother,3,2,1,no,no,no,yes,yes,yes,no,yes,High,Medium,Medium,Very Low,Very Low,High,0,9,0,0,Extremely Low,port,F
+MS,M,18,U,LE3,T,primary education (4th grade),5th to 9th grade,at_home,services,home,mother,2,1,0,no,yes,no,no,no,yes,no,no,High,Very Low,High,Very High,Very High,Very Low,8,10,11,11,Extremely High,port,D
+MS,M,18,R,GT3,T,higher education,higher education,at_home,services,other,mother,3,1,0,no,yes,yes,yes,yes,yes,yes,yes,Low,Very High,Very High,Very Low,Very Low,Very Low,5,12,13,14,Extremely Low,port,B
+MS,M,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,other,father,3,1,0,no,no,no,no,no,no,no,no,High,Low,Medium,Medium,High,High,4,12,13,14,Medium-High,port,B
+MS,F,18,U,GT3,T,5th to 9th grade,5th to 9th grade,other,other,course,mother,2,2,0,no,yes,no,no,no,yes,yes,yes,Very Low,Medium,Very Low,Very Low,Very Low,Low,4,8,8,10,Extremely Low,port,D
+MS,F,18,U,LE3,T,5th to 9th grade,5th to 9th grade,services,services,course,father,2,3,0,no,no,no,no,yes,yes,yes,yes,Very High,High,Very High,Very Low,High,Medium,0,11,12,13,Medium Low,port,C
+MS,F,18,R,LE3,A,higher education,5th to 9th grade,teacher,other,reputation,mother,1,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Very Low,Very Low,Very Low,Very High,0,5,0,0,Extremely Low,port,F
+MS,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,mother,3,2,1,no,no,no,no,yes,no,no,no,High,High,Low,Very Low,Low,Low,2,9,10,10,Very Low,port,D
+MS,F,19,U,GT3,T,primary education (4th grade),primary education (4th grade),at_home,services,other,father,2,1,1,no,no,no,no,yes,no,no,no,Very High,Very High,Very High,Low,Medium,Low,0,5,0,0,Medium Low,port,F
+MS,F,17,U,GT3,T,higher education,5th to 9th grade,teacher,other,course,father,2,4,0,no,no,no,no,yes,yes,yes,yes,High,Low,Medium,Medium,Very Low,Very High,0,18,18,18,Low,port,A
+MS,F,17,R,LE3,A,5th to 9th grade,primary education (4th grade),services,other,reputation,mother,2,2,0,no,no,no,yes,yes,yes,yes,yes,Very High,Medium,Medium,Very Low,Low,Low,5,11,11,12,Very Low,port,C
+MS,F,18,U,LE3,A,primary education (4th grade),primary education (4th grade),at_home,services,course,mother,1,2,0,no,no,no,no,yes,yes,no,yes,Very High,Low,Medium,Very Low,Low,Medium,2,8,10,11,Very Low,port,D
+MS,F,18,U,GT3,T,primary education (4th grade),5th to 9th grade,at_home,at_home,course,father,2,2,0,no,yes,no,no,yes,no,no,no,High,Very Low,Very Low,Very Low,Very Low,High,0,11,11,12,Extremely Low,port,C
+MS,F,19,R,GT3,A,primary education (4th grade),primary education (4th grade),at_home,at_home,course,other,2,2,3,no,yes,no,yes,yes,no,no,yes,Medium,Very High,High,Very Low,High,Very Low,0,8,0,0,Medium Low,port,F
+MS,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,services,other,home,mother,2,3,0,no,no,no,no,yes,yes,yes,yes,High,Low,Very Low,Very Low,Very Low,High,5,14,14,15,Extremely Low,port,B
+MS,M,17,R,GT3,T,higher education,secondary education,services,other,home,mother,2,2,1,no,yes,yes,yes,no,yes,yes,yes,High,Very High,Very High,Very Low,Medium,Low,4,10,11,11,Low,port,D
+MS,F,18,U,GT3,T,secondary education,secondary education,services,services,course,father,1,2,0,no,yes,no,no,yes,yes,no,yes,Very High,Medium,High,Very Low,Very Low,Very High,0,10,10,10,Extremely Low,port,D
+MS,F,17,R,GT3,T,higher education,higher education,teacher,services,other,father,2,2,0,no,yes,yes,yes,yes,yes,yes,no,High,Medium,Medium,Very Low,Low,Very High,2,12,12,12,Very Low,port,C
+MS,F,17,U,LE3,A,secondary education,5th to 9th grade,services,other,reputation,mother,2,2,0,no,no,no,no,yes,yes,no,yes,Very Low,Low,Medium,Very Low,Low,Very High,0,15,14,15,Very Low,port,B
+MS,M,18,U,LE3,T,primary education (4th grade),primary education (4th grade),other,services,home,father,2,1,0,no,no,no,no,no,yes,yes,yes,Medium,Medium,Low,Very Low,Low,Medium,2,14,13,14,Very Low,port,B
+MS,F,18,U,LE3,T,primary education (4th grade),primary education (4th grade),at_home,services,course,father,2,3,0,no,no,no,no,yes,yes,yes,no,Very High,Medium,Low,Very Low,Very Low,High,0,19,17,18,Extremely Low,port,A
+MS,F,18,R,LE3,A,primary education (4th grade),5th to 9th grade,at_home,other,course,mother,3,2,0,no,no,no,no,yes,yes,no,yes,High,Medium,High,Very Low,High,Very High,0,16,15,15,Medium Low,port,B
+MS,F,18,U,GT3,T,secondary education,secondary education,services,services,other,mother,2,2,0,no,yes,no,no,yes,yes,yes,yes,High,Medium,Low,Very Low,Medium,Medium,6,13,12,13,Low,port,C
+MS,F,17,U,LE3,T,higher education,higher education,at_home,at_home,course,mother,1,2,0,no,yes,no,yes,yes,yes,yes,yes,Low,Medium,High,Very Low,Very Low,Very Low,4,15,14,15,Extremely Low,port,B
+MS,F,17,R,GT3,T,primary education (4th grade),5th to 9th grade,other,services,course,father,2,2,0,no,no,no,no,no,yes,no,no,Medium,Low,Low,Very Low,Low,Medium,0,13,13,13,Very Low,port,C
+MS,M,18,R,GT3,T,primary education (4th grade),secondary education,at_home,other,course,mother,2,2,0,no,yes,yes,no,yes,yes,no,no,Medium,Medium,High,Low,High,Medium,0,8,10,9,Medium,port,F
+MS,M,18,U,LE3,T,higher education,higher education,teacher,services,other,mother,2,3,0,no,no,no,no,yes,yes,yes,yes,High,Low,Low,Low,Low,Very High,0,15,16,16,Low,port,A
+MS,F,17,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,reputation,mother,3,1,1,no,yes,no,no,yes,yes,yes,yes,Very High,Low,Very Low,Very Low,Low,Very Low,0,8,8,9,Very Low,port,F
+MS,F,18,U,GT3,T,5th to 9th grade,secondary education,at_home,services,course,father,2,1,0,no,yes,no,no,yes,yes,yes,yes,Very High,Low,Medium,Very Low,Low,High,0,10,10,10,Very Low,port,D
+MS,F,18,R,GT3,T,higher education,higher education,other,teacher,other,father,3,2,0,no,yes,no,no,no,yes,yes,yes,Medium,Low,Low,High,Low,Very High,0,7,5,0,Medium,port,F
+MS,M,18,R,LE3,T,primary education (4th grade),5th to 9th grade,at_home,services,other,father,3,1,0,no,yes,no,yes,yes,no,yes,yes,High,Medium,Medium,Low,Medium,Medium,3,9,10,10,Medium Low,port,D
+MS,F,17,U,GT3,T,5th to 9th grade,5th to 9th grade,other,at_home,home,mother,1,3,0,no,no,no,yes,yes,yes,no,yes,Medium,High,Medium,Very Low,Very Low,Medium,8,10,11,12,Extremely Low,port,C
+MS,F,17,R,GT3,T,primary education (4th grade),5th to 9th grade,other,other,course,mother,1,1,0,no,no,no,yes,yes,yes,yes,no,Medium,Very High,Very High,Very Low,Medium,Very Low,4,7,8,9,Low,port,F
+MS,F,18,R,LE3,T,higher education,higher education,other,other,reputation,mother,2,3,0,no,no,no,no,yes,yes,yes,no,Very High,High,High,Very Low,Very Low,Very Low,0,15,17,17,Extremely Low,port,A
+MS,F,18,R,GT3,T,primary education (4th grade),primary education (4th grade),other,other,home,mother,4,3,0,no,no,no,no,yes,yes,yes,no,High,Medium,Low,Very Low,Low,High,4,10,11,12,Very Low,port,C
+MS,F,19,R,GT3,T,primary education (4th grade),primary education (4th grade),at_home,other,course,other,2,2,1,no,yes,no,no,yes,yes,yes,yes,High,Medium,Medium,Very Low,Very Low,Medium,4,7,8,9,Extremely Low,port,F
+MS,F,18,R,LE3,T,higher education,higher education,teacher,services,course,mother,1,2,0,no,no,no,yes,yes,yes,yes,no,Very High,High,Medium,Medium,High,Low,1,13,14,14,Medium-High,port,B
+MS,F,18,U,GT3,T,secondary education,secondary education,other,other,home,mother,1,2,0,no,no,no,no,yes,yes,yes,yes,High,Very Low,Medium,Very Low,Low,Very Low,1,16,16,16,Very Low,port,A
+MS,F,17,R,GT3,T,secondary education,primary education (4th grade),at_home,other,reputation,mother,1,2,0,no,yes,no,yes,no,yes,yes,no,High,Very High,High,Low,Medium,Very Low,10,8,9,9,Medium Low,port,F
+MS,M,18,U,GT3,T,higher education,higher education,teacher,teacher,home,father,1,2,0,no,no,no,yes,no,yes,yes,no,Medium,Low,High,Very Low,High,Low,4,17,18,19,Medium Low,port,A
+MS,M,18,R,GT3,T,5th to 9th grade,primary education (4th grade),other,other,other,mother,2,1,0,no,no,no,yes,no,yes,yes,yes,High,High,Medium,Very Low,Medium,Very High,0,7,7,0,Low,port,F
+MS,M,17,U,GT3,T,5th to 9th grade,secondary education,other,services,home,father,2,2,0,no,no,no,yes,yes,yes,yes,no,High,High,Medium,Very Low,Very Low,Medium,4,14,15,16,Extremely Low,port,A
+MS,M,19,R,GT3,T,primary education (4th grade),primary education (4th grade),other,services,other,mother,2,1,1,no,no,no,no,yes,yes,no,no,High,Medium,Low,Very Low,Medium,Very High,0,5,8,0,Low,port,F
+MS,M,18,R,GT3,T,higher education,5th to 9th grade,other,other,home,father,2,1,1,no,no,yes,no,yes,yes,no,no,Very High,High,Medium,High,Medium,Medium,0,7,7,0,Medium-High,port,F
+MS,F,18,R,GT3,T,5th to 9th grade,5th to 9th grade,at_home,other,other,mother,2,3,0,no,no,no,no,yes,yes,no,no,Very High,Medium,Medium,Very Low,Medium,High,0,14,17,15,Low,port,B
+MS,F,17,U,GT3,T,higher education,secondary education,teacher,other,other,mother,2,2,0,no,no,no,no,yes,yes,yes,no,Very High,Very High,High,Very Low,Very Low,Very Low,0,6,9,11,Extremely Low,port,D
+MS,F,18,R,GT3,T,higher education,higher education,teacher,at_home,reputation,mother,3,1,0,no,yes,no,yes,yes,yes,yes,yes,High,High,Medium,Low,Low,Very High,4,7,9,10,Low,port,D
+MS,F,19,R,GT3,T,5th to 9th grade,secondary education,services,other,course,mother,1,3,1,no,no,no,yes,no,yes,yes,no,Very High,High,Low,Very Low,Low,Very High,4,10,11,10,Very Low,port,D
+MS,F,18,U,LE3,T,secondary education,primary education (4th grade),teacher,services,course,mother,1,2,0,no,yes,no,no,yes,yes,yes,no,High,Medium,High,Very Low,Very Low,Very Low,4,15,15,16,Extremely Low,port,A
+MS,F,18,U,GT3,T,primary education (4th grade),primary education (4th grade),other,other,course,mother,2,2,0,no,no,no,yes,yes,yes,no,no,Very Low,Very Low,Very Low,Very Low,Very Low,Very High,6,11,12,9,Extremely Low,port,F
+MS,M,17,U,LE3,T,secondary education,primary education (4th grade),services,services,course,mother,2,1,0,no,no,no,no,no,yes,yes,no,Low,High,Very High,Medium,High,Low,6,10,10,10,Medium-High,port,D
+MS,M,18,R,LE3,T,secondary education,5th to 9th grade,services,other,course,mother,3,1,0,no,no,no,no,no,yes,yes,no,High,High,Very Low,Medium,High,Very High,4,10,11,11,Medium-High,port,D
