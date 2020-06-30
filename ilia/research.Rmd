@@ -1,0 +1,121 @@
+---
+title: "EDA of Alcohol Consumption among Students"
+author: Ilia Ozhmegov, Olena Horyn
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    highlight: pygments
+    fontsize: 11pt
+    number_section: true
+    toc_depth: 2
+    toc_float: true
+    toc: yes
+    fig_caption: true
+    theme: cosmo
+  pdf_document:
+    latex_engine: xelatex
+    df_print: kable
+    highlight: pygments
+    number_section: true
+    toc: yes
+    fig_caption: true
+---
+
+```{r Setting template options, include=FALSE}
+
+# knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, echo = TRUE)
+knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
+
+```
+
+
+```{r Loading libraries, include=FALSE}
+
+# library(aider)
+library(tidyverse)
+setwd('..')
+source("load_data.R")
+
+matlab = tibble(blue='#1F77B4', orange='#FF7F0E')
+
+```
+# Introduction 
+
+Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text. 
+
+# Data Preparation
+
+It is done in `load_data.R` file.
+
+# Correlation Bar Plot
+
+Text.
+
+```{r}
+  int_df <- lapply(full_df, as.integer)
+  n = length(int_df)
+  
+  c = rep(0, n)
+  for(i in 1:n) c[i] = cor(int_df$G3, int_df[[i]]) %>% abs()
+
+  cor_df = data.frame(correlation=c, name=colnames(full_df)) 
+  
+  cor_df %>% 
+    filter(!str_detect(name, "^G")) %>% 
+    ggplot(aes(x=correlation, y=reorder(name, correlation))) + 
+    geom_bar(stat="identity", aes(fill=str_detect(name, "alc$"))) +
+    scale_fill_manual(values = c(matlab$blue, matlab$orange) ) +
+    theme_bw() +
+    theme(legend.position="none") +
+    labs(y = "Variable", x = "Correlation", title = "Final Grade Correlation")
+```
+
+# A closer look at alcohol consumption
+
+Здесь могла быть ваша реклама. Здесь могла быть ваша реклама. Здесь могла быть ваша реклама. 
+
+```{r}
+
+full_df %>% 
+  ggplot(aes(x=Salc, y=G3, fill=Salc)) +
+  geom_boxplot() +
+  theme_bw() +
+  theme(legend.position="none") +
+  # scale_fill_manual(values=grades_colours) +
+  xlab("Alcohol Consumption") +
+  ylab("Grade") +
+  ggtitle("Final period grade")
+
+```
+
+
+
+
+```{r}
+
+full_df %>% 
+  ggplot(aes(x= Salc, y=G3, fill=Salc)) +
+  geom_violin() +
+  theme_bw() +
+  theme(legend.position="none") +
+  # scale_fill_manual(values=grades_colours)
+  labs(y = "Final Grade", x = "Alcohol consumption", title = "Final period grade")
+```
+
+
+```{r}
+  full_df %>% 
+    ggplot(aes(x=Salc, G3_d)) +
+    geom_jitter(aes(colour = Salc)) + 
+    theme_bw() +
+    theme(legend.position="none") +
+    geom_hline(yintercept='C',      color = "black") + 
+    geom_vline(xintercept='Medium', color = "black") +
+    labs(y = "Final Grade (Descrete)", x = "Alcohol consumption", title = "Final period grade")
+```
+
+Here clearly seen that there is extreamly poor dependece between alcohol 
+consumption and decent grades. However, the conditional probability to have 
+decent grade is little bit higher when alcohol consumption is not `High$`.

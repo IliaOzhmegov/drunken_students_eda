@@ -1,33 +1,12 @@
-library("ggpubr")
-library(magrittr)
-library(dplyr)
-library("gridExtra") # grid.arrange
+{ # Setup ----------------------------------------------------------------------
+  # library("ggpubr")
+  library(tidyverse)
+  library(gridExtra)
+  
+  grades_colours <- c("#00d27f","#adff00","#f9d62e","#fc913a","#ff4e50")
+}
 
-str(full_df)
-
-levels(full_df$paid)
-levels(full_df$G1)
-levels(full_df$G2)
-levels(full_df$G3)
-
-grades_colours <- c("#00d27f","#adff00","#f9d62e","#fc913a","#ff4e50")
-
-# Just grades research
-
-full_df %>%
-    ggplot(aes(x=G3_d)) + geom_bar()
-
-
-# full_df %>%
-#     ggplot(aes(x=sex, y=G3_d, fill=sex)) + geom_bar(position="dodge", stat="identity")
-
-full_df %>%
-    ggplot(aes(x=G3_d, fill=sex)) + geom_bar()
-
-full_df %>%
-    ggplot(aes(x=G3_d, fill=sex)) + geom_bar(position="dodge")
-
-
+# Just grades dummy research ---------------------------------------------------
 full_df %>%
     ggplot(aes(x=G3_d, fill=G1)) + 
     geom_bar(position="dodge") +
@@ -185,25 +164,26 @@ full_df %>%
         ggtitle("Final period grade")
     
     grid.arrange(d1, d2, d3, e1, e2, e3, ncol=3, nrow=2)
+    
+    
+    full_df %>% 
+        ggplot(aes(x=Salc, y=G3, fill=Salc)) +
+        geom_boxplot() +
+        theme_bw() +
+        theme(legend.position="none") +
+        # scale_fill_manual(values=grades_colours) +
+        xlab("Alcohol Consumption") +
+        ylab("Grade") +
+        ggtitle("Final period grade")
 }
 
 { # What's classes can be found in the dataset? 
   # (Well-educated alcos or Uneducated alcos)
-    full_df %>% 
-      ggplot(aes(x=Salc, G3_d)) +
-      geom_jitter(aes(colour = Salc))
-  
-      scale_fill_manual(aes(colour = G3_d)) 
-    # 
-    # str(foo)
-    # min(foo)
-    # 
-    #     
-    # 
-    # %>% 
-    #     ggplot(aes(x=Salc, y=G3, fill=G3)) +
-    #     geom_bar(position="dodge")
-    
+  full_df %>% 
+    ggplot(aes(x=Salc, G3_d)) +
+    geom_jitter(aes(colour = Salc)) + 
+    geom_hline(yintercept='C',      color = "black") + 
+    geom_vline(xintercept='Medium', color = "black")  
     
 }
 
@@ -212,28 +192,38 @@ full_df %>%
   
   # how to get correlation
   int_df <- lapply(full_df, as.integer)
-  
-  int_df = int_df 
-  
   n = length(int_df)
-  # C <- matrix(0, nrow = n, ncol = n); C
-  
-  # for(i in 1:n){
-  #   for(j in i:n){
-  #     C[i, j] = cor(int_df[[i]], int_df[[j]])
-  #   }
-  # }
   
   c = rep(0, n)
-  for(i in 1:n){
-    c[i] = cor(int_df$G3, int_df[[i]]) %>% abs()
-  }
+  for(i in 1:n) c[i] = cor(int_df$G3, int_df[[i]]) %>% abs()
+  
+  
   
   # plot(c)
   ffff = data.frame(correlation=c, name=colnames(full_df)) 
   
-  ffff %>% 
-  ggplot(aes(x=correlation, y=name)) + geom_bar(stat="identity")
+  # decr = c %>% order(decreasing = TRUE)
+  # ffff %<>% mutate(
+  #   correlation = correlation[decr],
+  #   name        = name[decr]
+  # )
+  
+  ffff %>% filter(!str_detect(name, "^G")) %>% 
+    ggplot(aes(x=correlation, y=reorder(name, correlation))) + geom_bar(stat="identity")
+  
+  full_df %>% 
+    ggplot(aes(x=G3, y=failures)) + geom_bar(stat="identity")
+  
+  full_df %>% 
+    ggplot(aes(x=G3, y=failures)) + 
+    geom_jitter(aes(colour = higher))
+  
+  # full_df %>% 
+  #   ggplot(aes(x=G3, y=higher)) + geom_jitter()
+  
+  full_df %>% 
+    ggplot(aes(x=G3_d, fill=higher)) + geom_bar(position="dodge")
+  # lm(G3~failures + I(failures^2), data = full_df) %>% summary()
   
   # colnames(full_df)
   
