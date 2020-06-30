@@ -1,6 +1,5 @@
 # import some libraries --------------------------------------------------------
 library(tidyverse)
-library(magrittr)
 
 # Some useful functions --------------------------------------------------------
 get_df <- function(path, subject_name){
