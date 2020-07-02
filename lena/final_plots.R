@@ -2,8 +2,6 @@
 library(ggplot2)
 library(dplyr)
 library(gridExtra)
-library(alluvial)
-library(waffle)
 library(extrafont)
 library(tidyverse)
 library(ggmosaic)
@@ -15,21 +13,23 @@ df <- readRDS("data/student-full.rds")
 full_df %>% 
 ggplot(aes(x=age, y=Dalc, color=gender))+
   geom_jitter()+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_colour_manual(values=c("#ff7f50", "#468499"), name="Gender", labels=c("Female", "Male"))+
   theme_bw()+
   xlab("Age")+
   ylab("Alcohol consumption")+
-  ggtitle("Weekday alcohol consumption per Age and Gender")
+  ggtitle("Weekday alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
 
 # Jitter plot: Walc, Age, sex -- reversed
 full_df %>% 
 ggplot(aes(x=age, y=Walc, color=gender))+
   geom_jitter()+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_colour_manual(values=c("#ff7f50", "#468499"), name="Gender", labels=c("Female", "Male"))+
   theme_bw()+
   xlab("Age")+
   ylab("Alcohol consumption")+
-  ggtitle("Weekend alcohol consumption per Age and Gender")
+  ggtitle("Weekend alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
 
 
 # Percentage Address bar plot
@@ -41,13 +41,14 @@ df1 <- full_df %>%
 df1 <- ggplot(df1, aes(x=factor(Dalc), y = perc*100, fill=address))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
-  ggtitle("Weekday alcohol consumption depending on the Area")
+  ggtitle("Weekday alcohol consumption depending on the Area")+
+  theme(plot.title = element_text(hjust = 0.5))
 df1
-
 
 #Walc
 df2 <- full_df %>% 
@@ -57,11 +58,13 @@ df2 <- full_df %>%
 df2 <- ggplot(df2, aes(x=factor(Walc), y = perc*100, fill=address))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
-  ggtitle("Weekend alcohol consumption depending on the Area")
+  ggtitle("Weekend alcohol consumption depending on the Area")+
+  theme(plot.title = element_text(hjust = 0.5))
 df2
 
 # Arrange plots
@@ -78,11 +81,14 @@ df3 <- full_df %>%
 df3 <- ggplot(df3, aes(x=factor(Dalc), y = perc*100, fill=famsize))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Greater than 3', 'Less or equal to 3'))+
+  labs(fill = "Family size")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
-  ggtitle("Weekday alcohol consumption per students' family size")
+  ggtitle("Weekday alcohol consumption per students' family size")+
+  theme(plot.title = element_text(hjust = 0.5))
 df3
 
 # Bar plot. % of students of different fam. sizes and alc. consumption.
@@ -94,11 +100,14 @@ df4 <- full_df %>%
 df4 <- ggplot(df4, aes(x=factor(Walc), y = perc*100, fill=famsize))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
-  scale_colour_manual(values=c("#ff7f50", "#468499"))+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Greater than 3', 'Less or equal to 3'))+
+  labs(fill = "Family size")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
-  ggtitle("Weekend alcohol consumption per students' family size")
+  ggtitle("Weekend alcohol consumption per students' family size")+
+  theme(plot.title = element_text(hjust = 0.5))
 df4
 
 # Arrange plots
@@ -120,6 +129,7 @@ df5 <- ggplot(df5, aes(x=factor(freetime), y = count, fill=Dalc))+
   theme_bw()+
   xlab("Free time")+
   ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption depending on students' free time")
 df5
 
@@ -135,12 +145,13 @@ df6 <- ggplot(df6, aes(x=factor(freetime), y = count, fill=Walc))+
   theme_bw()+
   xlab("Free time")+
   ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekend alcohol consumption depending on students' free time")
 df6
 
 
 
-# Go out
+# Go out time
 df7 <- full_df %>% 
   group_by(goout, Dalc) %>% 
   summarise(count=n()) %>% 
@@ -153,6 +164,7 @@ df7 <- ggplot(df7, aes(x=factor(goout), y = count, fill=Dalc))+
   theme_bw()+
   xlab("Go out time")+
   ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption depending students' go out time")
 df7
 
@@ -168,6 +180,7 @@ df8 <- ggplot(df8, aes(x=factor(goout), y = count, fill=Walc))+
   theme_bw()+
   xlab("Go out time")+
   ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekend alcohol consumption depending students' go out time")
 df8
 
@@ -185,6 +198,8 @@ full_df %>%
                position = "dodge",
                dotsize = 0.3, binwidth = 0.5)+
   theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Female', 'Male'))+
   xlab("Workday alcohol consumption")+
   ylab("Final Grade")+
   ggtitle("Grades by gender and Weekday alcohol consumption")
@@ -198,6 +213,8 @@ full_df %>%
                position = "dodge",
                dotsize = 0.3, binwidth = 0.5)+
   theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
   xlab("Workday alcohol consumption")+
   ylab("Final Grade")+
   ggtitle("Grades by gender and Weekend alcohol consumption")
