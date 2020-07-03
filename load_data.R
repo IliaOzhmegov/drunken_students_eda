@@ -80,7 +80,6 @@ get_join_df <- function(){
 
 math_df <- get_math_df()
 port_df <- get_port_df()
-join_df <- get_join_df()
 full_df <- rbind(math_df, port_df)
 
 # removing functions -----------------------------------------------------------
@@ -89,11 +88,24 @@ rm(get_math_df)
 rm(get_port_df)
 rm(get_join_df)
 
+rm(math_df)
+rm(port_df)
+
 # saving CSV and Rds files -----------------------------------------------------
 
 write_csv(full_df, "data/student-full.csv")
 write_rds(full_df, "data/student-full.rds")
 
-
+# loading Matlab color scheme --------------------------------------------------
+matlab.colors = tibble(c0 = "#1f77b4",
+                       c1 = "#ff7f0e",
+                       c2 = "#2ca02c",
+                       c3 = "#d62728",
+                       c4 = "#9467bd",
+                       c5 = "#8c564b",
+                       c6 = "#e377c2",
+                       c7 = "#7f7f7f",
+                       c8 = "#bcbd22",
+                       c9 = "#17becf")
 
 
