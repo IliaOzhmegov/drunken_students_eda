@@ -23,11 +23,13 @@
                       name = "Weektype", labels = c("Weekday", "Weekend")) +
     theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
     labs(y = "Number of students", x = "Alcohol consumption", 
-         title = "Comparison alcohol consumption during weekend and weekday")
+         title = "Comparison alcohol consumption during weekend and weekday") +
+    theme(plot.title = element_text(hjust = 0.5))
   p
   
-  ggsave(file="ilia/pics/png/1.png", plot=p, width=8, height=6)
-  ggsave(file="ilia/pics/svg/1.svg", plot=p, width=8, height=6)
+  save_plot(path="ilia/pics/png/1.png", plot=p)
+  # ggsave(file="ilia/pics/png/1.png", plot=p, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/1.svg", plot=p, width=8, height=6)
   
 }
 
@@ -52,11 +54,13 @@
     scale_fill_manual(values = matlab.colors[1:2]) +
     theme_bw() +
     theme(legend.position="none") +
-    labs(y = "Variable", x = "|Correlation|", title = "Final Grade Correlation")
+    labs(y = "Variable", x = "|Correlation|", title = "Final Grade Correlation") +
+    theme(plot.title = element_text(hjust = 0.5))
   
   
-  ggsave(file="ilia/pics/png/2.png", plot=p, width=8, height=6)
-  ggsave(file="ilia/pics/svg/2.svg", plot=p, width=8, height=6)
+  save_plot(path="ilia/pics/png/2.png", plot=p)
+  # ggsave(file="ilia/pics/png/2.png", plot=p, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/2.svg", plot=p, width=8, height=6)
   
 }
 
@@ -71,27 +75,32 @@
     ggplot(aes(x=G3_d, fill=success)) +
     geom_bar(position = "dodge") +
     theme_bw() +
-    theme(legend.position="none") +
+    theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
     scale_fill_manual(values=matlab.colors[2:1]) +
     labs(y = "Number of students", 
          x = "Final Grade (Descrete)", 
-         title = "Final Grade Descrete Distribution")
+         title = "Final Grade Descrete Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
     
   p2 <- ddf %>% 
     ggplot(aes(x=success, fill=success)) +
     geom_bar(position = "dodge") +
     scale_fill_manual(values=matlab.colors[2:1]) +
     theme_bw() +
+    theme(legend.position="none") +
     scale_x_discrete(breaks=c("No","Yes"),
                      labels=c("Low", "High")) +
     labs(y = "Number of students", 
          x = "Final Grade (Binary)", 
-         title = "Final Grade Binary Distribution")
+         title = "Final Grade Binary Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
   
   p <- grid.arrange(p1, p2, nrow=1)
+  p
 
-  ggsave(file="ilia/pics/png/3.png", plot=p, width=8, height=6)
-  ggsave(file="ilia/pics/svg/3.svg", plot=p, width=8, height=6)
+  save_plot(path="ilia/pics/png/3.png", plot=p)
+  # ggsave(file="ilia/pics/png/3.png", plot=p, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/3.svg", plot=p, width=8, height=6)
   
   # Now let's have a look directrly at dependence between 
   # Grades and Alcohol consumption
@@ -112,13 +121,15 @@
     scale_color_manual(values=matlab.colors[c(2, 3, 4, 1)]) +
     theme_bw() +
     theme(legend.position="none") +
+    theme(plot.title = element_text(hjust = 0.5)) +
     labs(y = "Final Grade (Descrete)", 
          x = "Alcohol consumption", 
-         title = "Final period grade")
+         title = "Final (Descrete) grade depending on alcohol consumption")
   
   
-  ggsave(file="ilia/pics/png/4.png", plot=p3, width=8, height=6)
-  ggsave(file="ilia/pics/svg/4.svg", plot=p3, width=8, height=6)
+  save_plot(path="ilia/pics/png/4.png", plot=p3)
+  # ggsave(file="ilia/pics/png/4.png", plot=p3, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/4.svg", plot=p3, width=8, height=6)
   
   p4 <- class_df %>% 
     mutate(
@@ -131,13 +142,15 @@
     geom_mosaic(aes(x=product(failure, addiction), fill=failure), na.rm = TRUE) +
     scale_fill_manual(values=matlab.colors[2:1]) +
     theme_bw() +
+    theme(plot.title = element_text(hjust = 0.5)) +
     theme(legend.position="none") +
     labs(x = "The amount of alcohol consumption",
          y = "Final Grade (Binary)",
-         title = "Final period grade")
+         title = "Final (Binary) grade depending on alcohol consumption")
            
-  ggsave(file="ilia/pics/png/5.png", plot=p4, width=8, height=6)
-  ggsave(file="ilia/pics/svg/5.svg", plot=p4, width=8, height=6)
+  save_plot(path="ilia/pics/png/5.png", plot=p4)
+  # ggsave(file="ilia/pics/png/5.png", plot=p4, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/5.svg", plot=p4, width=8, height=6)
   
   # grid.arrange(p3, p4, nrow = 1)
 }
@@ -272,6 +285,7 @@
                       draw_quantiles = c(0.5)) +
     scale_fill_manual(values=alpha(matlab.colors[2:1], 0.8)) +
     theme_bw() +
+    theme(plot.title = element_text(hjust = 0.5)) +
     annotate("text", x = "22", y = 5,  label = "F-students\n area") +
     annotate("text", x = "22", y = 11, label = "D-students\n area") +
     annotate("text", x = "22", y = 13, label = "C-students\n area") +
