@@ -63,8 +63,8 @@ library(tidyverse)
 }
 
 { # saving plot wrapper 
-  save_plot <- function(path, plot){
-    ggsave(file=path, plot=plot, width=8, height=6)
+  save_plot <- function(path, plot, w=10, h=6){
+    ggsave(file=path, plot=plot, width=w, height=h)
   }
 }
 
