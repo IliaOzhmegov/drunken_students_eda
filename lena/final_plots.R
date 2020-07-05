@@ -7,7 +7,11 @@ library(tidyverse)
 library(ggmosaic)
 
 # Load the data frame.
-df <- readRDS("data/student-full.rds")
+# df <- readRDS("data/student-full.rds")
+
+## Saving plots
+
+source("common/load_functions.R")
 
 # Jitter plot: Dalc, Age, sex -- reversed
 full_df %>% 
@@ -19,6 +23,8 @@ ggplot(aes(x=age, y=Dalc, color=gender))+
   ylab("Alcohol consumption")+
   ggtitle("Weekday alcohol consumption per Age and Gender")+
   theme(plot.title = element_text(hjust = 0.5))
+
+save_plot(path="lena/plots/png/1.png", plot=pl1)
 
 # Jitter plot: Walc, Age, sex -- reversed
 full_df %>% 
@@ -115,6 +121,34 @@ df4
 grid.arrange(df3, df4, ncol=2)
 
 
+
+
+## Overall plot: Free time/ Go out time vs Salc
+
+# research over facet_grid
+library(RColorBrewer)
+colours = brewer.pal(9, 'RdYlGn')[9:1]
+
+full_df %>% 
+  ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+  geom_count() + 
+  scale_size(range = c(3, 15)) +
+  scale_color_manual(values=colours, name="Total \nalcohol \nconsumption") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        panel.spacing.x=unit(0.5, "lines")) +
+  facet_grid(. ~ goout, switch="both") +
+  labs(x = "Goout",
+       size = "")+
+  xlab("Go Out Time")+
+  ylab("Free Time")+
+  ggtitle("Alcohol consumption depending on students' free time and go out time")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+
+
+
 ## Free time:
 
 df5 <- full_df %>% 
@@ -189,6 +223,8 @@ df8
 grid.arrange(df5, df6, df7, df8, nrow=2, ncol=2)
 
 
+
+
 #### Other dot plot: Final grade, gender, Dalc/Walc ###
 # Dalc
 full_df %>% 
@@ -200,9 +236,10 @@ full_df %>%
   theme_bw()+
   labs(fill = "Gender")+
   scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Female', 'Male'))+
-  xlab("Workday alcohol consumption")+
+  xlab("Alcohol consumption")+
   ylab("Final Grade")+
-  ggtitle("Grades by gender and Weekday alcohol consumption")
+  ggtitle("Grades by gender and weekday alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
 
 
 # Walc
@@ -214,10 +251,15 @@ full_df %>%
                dotsize = 0.3, binwidth = 0.5)+
   theme_bw()+
   labs(fill = "Gender")+
-  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
-  xlab("Workday alcohol consumption")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Female', 'Male'))+
+  xlab("Alcohol consumption")+
   ylab("Final Grade")+
-  ggtitle("Grades by gender and Weekend alcohol consumption")
+  ggtitle("Grades by gender and weekend alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+### 
+
+
 
 
 

@@ -428,3 +428,19 @@ ggplot(df) +
 
 ## look at: matlab color scheme
 
+full_df %>% 
+  ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+  geom_count() + 
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        panel.spacing.x=unit(0.5, "lines")) +
+  theme_bw()+
+  scale_size(range=c(1, 10))+
+  facet_grid(. ~ goout) +
+  labs(x = "Goout",
+       size = "")+
+  theme(plot.title = element_text(hjust = 0.5))+
+  xlab("Go Out Time")+
+  ylab("Free Time")+
+  ggtitle("Alcohol consumption depending on students' free time and go out time")
+
