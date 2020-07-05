@@ -18,7 +18,7 @@ get_df <- function(path, subject_name){
     mutate_at(vars(Salc), 
              ~plyr::mapvalues(.x %>% as.factor(), from=2:10, 
              to=c("Extremely Low", "Very Low", "Low", "Medium Low", "Medium", 
-                  "Medium-High", "High", "Very High", "Extremely High"))) %>% 
+                  "Medium High", "High", "Very High", "Extremely High"))) %>% 
       
     # Changing variables to a more meaningful values
     mutate_at(vars(c("Dalc", "Walc", "famrel", "freetime", "goout", "health")), 
@@ -97,15 +97,9 @@ write_csv(full_df, "data/student-full.csv")
 write_rds(full_df, "data/student-full.rds")
 
 # loading Matlab color scheme --------------------------------------------------
-matlab.colors = tibble(c0 = "#1f77b4",
-                       c1 = "#ff7f0e",
-                       c2 = "#2ca02c",
-                       c3 = "#d62728",
-                       c4 = "#9467bd",
-                       c5 = "#8c564b",
-                       c6 = "#e377c2",
-                       c7 = "#7f7f7f",
-                       c8 = "#bcbd22",
-                       c9 = "#17becf")
+matlab.colors = c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
+                  "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf")
 
+colours_5 = RColorBrewer::brewer.pal(5, 'RdYlGn')[5:1]
+colours_9 = RColorBrewer::brewer.pal(9, 'RdYlGn')[9:1]
 

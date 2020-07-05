@@ -295,15 +295,23 @@ full_df %>%  # importan one
     geom_line()
   
   
-  full_df %>% 
-    ggplot(aes(y=freetime, x=Dalc, color=Dalc, group=freetime)) +
-    geom_count() + 
-    theme(axis.text.x = element_blank(),
-          axis.ticks.x = element_blank(),
-          panel.spacing.x=unit(0.5, "lines")) +
-    facet_grid(. ~ goout) +
-    labs(x = "Goout",
-         size = "")
+  { # research over facet_grid
+    library(RColorBrewer)
+    colours = brewer.pal(9, 'RdYlGn')[9:1]
+    
+    full_df %>% 
+      ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+      geom_count() + 
+      scale_size(range = c(3, 20)) +
+      scale_color_manual(values=colours) +
+      theme_bw() +
+      theme(axis.text.x = element_blank(),
+            axis.ticks.x = element_blank(),
+            panel.spacing.x=unit(0.5, "lines")) +
+      facet_grid(. ~ goout, switch="both") +
+      labs(x = "Goout",
+           size = "")
+    }
   
     
     
