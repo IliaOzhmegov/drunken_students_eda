@@ -1,5 +1,10 @@
-# import some libraries --------------------------------------------------------
+# import some libraries for usage ----------------------------------------------
 library(tidyverse)
+library(gridExtra)
+library(ggmosaic)
+library(RColorBrewer)
+
+require(svglite)
 
 # Some useful functions --------------------------------------------------------
 get_df <- function(path, subject_name){
