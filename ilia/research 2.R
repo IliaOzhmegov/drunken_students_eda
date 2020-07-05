@@ -1,15 +1,16 @@
 { # Setup ----------------------------------------------------------------------
   # library("ggpubr")
-  library(gridExtra)
-  library(ggmosaic)
+  # library(gridExtra)
+  # library(ggmosaic)
   
 }
 
 { # Let's just have a look at alcohol consumption during weekDAY and weekEND
   # result: during weekEND consumption is higher
   
+  
   mdf <- reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0)
-  mdf %>% 
+  p <- mdf %>% 
     group_by(variable, value) %>% 
     summarise(n=n()) %>% 
     mutate(
@@ -23,6 +24,11 @@
     theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
     labs(y = "Number of students", x = "Alcohol consumption", 
          title = "Comparison alcohol consumption during weekend and weekday")
+  p
+  
+  ggsave(file="ilia/pics/png/1.png", plot=p, width=8, height=6)
+  ggsave(file="ilia/pics/svg/1.svg", plot=p, width=8, height=6)
+  
 }
 
 { # Though basically we have categorical data we still want to have a look at
@@ -39,7 +45,7 @@
 
   cor_df = data.frame(correlation=c, name=colnames(full_df)) 
   
-  cor_df %>% 
+  p <- cor_df %>% 
     filter(!str_detect(name, "^G")) %>% 
     ggplot(aes(x=correlation, y=reorder(name, correlation))) + 
     geom_bar(stat="identity", aes(fill=str_detect(name, "alc$"))) +
@@ -47,6 +53,10 @@
     theme_bw() +
     theme(legend.position="none") +
     labs(y = "Variable", x = "|Correlation|", title = "Final Grade Correlation")
+  
+  
+  ggsave(file="ilia/pics/png/2.png", plot=p, width=8, height=6)
+  ggsave(file="ilia/pics/svg/2.svg", plot=p, width=8, height=6)
   
 }
 
@@ -61,6 +71,7 @@
     ggplot(aes(x=G3_d, fill=success)) +
     geom_bar(position = "dodge") +
     theme_bw() +
+    theme(legend.position="none") +
     scale_fill_manual(values=matlab.colors[2:1]) +
     labs(y = "Number of students", 
          x = "Final Grade (Descrete)", 
@@ -71,15 +82,17 @@
     geom_bar(position = "dodge") +
     scale_fill_manual(values=matlab.colors[2:1]) +
     theme_bw() +
-    theme(legend.position="none") +
     scale_x_discrete(breaks=c("No","Yes"),
                      labels=c("Low", "High")) +
     labs(y = "Number of students", 
          x = "Final Grade (Binary)", 
          title = "Final Grade Binary Distribution")
   
-  grid.arrange(p1, p2, nrow=1)
+  p <- grid.arrange(p1, p2, nrow=1)
 
+  ggsave(file="ilia/pics/png/3.png", plot=p, width=8, height=6)
+  ggsave(file="ilia/pics/svg/3.svg", plot=p, width=8, height=6)
+  
   # Now let's have a look directrly at dependence between 
   # Grades and Alcohol consumption
   # result: decent grades are much less frequent among high alcohol consumption
@@ -103,6 +116,10 @@
          x = "Alcohol consumption", 
          title = "Final period grade")
   
+  
+  ggsave(file="ilia/pics/png/4.png", plot=p3, width=8, height=6)
+  ggsave(file="ilia/pics/svg/4.svg", plot=p3, width=8, height=6)
+  
   p4 <- class_df %>% 
     mutate(
       failure   = ifelse( s_class %% 2 == 1, 'High', 'Low'),
@@ -119,7 +136,10 @@
          y = "Final Grade (Binary)",
          title = "Final period grade")
            
-  grid.arrange(p3, p4, nrow = 1)
+  ggsave(file="ilia/pics/png/5.png", plot=p4, width=8, height=6)
+  ggsave(file="ilia/pics/svg/5.svg", plot=p4, width=8, height=6)
+  
+  # grid.arrange(p3, p4, nrow = 1)
 }
 
 # pure research ----------------------------------------------------------------
@@ -129,38 +149,38 @@
   # between males and females, but after the age of 18 the distribution 
   # is completely different and we do not know why
   
-  { # custom split violin
-    GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin, 
-                               draw_group = function(self, data, ..., draw_quantiles = NULL) {
-                                 data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
-                                 grp <- data[1, "group"]
-                                 newdata <- plyr::arrange(transform(data, x = if (grp %% 2 == 1) xminv else xmaxv), if (grp %% 2 == 1) y else -y)
-                                 newdata <- rbind(newdata[1, ], newdata, newdata[nrow(newdata), ], newdata[1, ])
-                                 newdata[c(1, nrow(newdata) - 1, nrow(newdata)), "x"] <- round(newdata[1, "x"])
-                                 
-                                 if (length(draw_quantiles) > 0 & !scales::zero_range(range(data$y))) {
-                                   stopifnot(all(draw_quantiles >= 0), all(draw_quantiles <=
-                                                                             1))
-                                   quantiles  <- ggplot2:::create_quantile_segment_frame(data, draw_quantiles)
-                                   aesthetics <- data[rep(1, nrow(quantiles)), setdiff(names(data), c("x", "y")), drop = FALSE]
-                                   aesthetics$alpha <- rep(1, nrow(quantiles))
-                                   both <- cbind(quantiles, aesthetics)
-                                   quantile_grob <- GeomPath$draw_panel(both, ...)
-                                   ggplot2:::ggname("geom_split_violin", grid::grobTree(GeomPolygon$draw_panel(newdata, ...), quantile_grob))
-                                 }
-                                 else {
-                                   ggplot2:::ggname("geom_split_violin", GeomPolygon$draw_panel(newdata, ...))
-                                 }
-                               })
-    
-    geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", position = "identity", ..., 
-                                  draw_quantiles = NULL, trim = TRUE, scale = "area", na.rm = FALSE, 
-                                  show.legend = NA, inherit.aes = TRUE) {
-      layer(data = data, mapping = mapping, stat = stat, geom = GeomSplitViolin, 
-            position = position, show.legend = show.legend, inherit.aes = inherit.aes, 
-            params = list(trim = trim, scale = scale, draw_quantiles = draw_quantiles, na.rm = na.rm, ...))
-    }
-  }
+  # { # custom split violin
+  #   GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin, 
+  #                              draw_group = function(self, data, ..., draw_quantiles = NULL) {
+  #                                data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
+  #                                grp <- data[1, "group"]
+  #                                newdata <- plyr::arrange(transform(data, x = if (grp %% 2 == 1) xminv else xmaxv), if (grp %% 2 == 1) y else -y)
+  #                                newdata <- rbind(newdata[1, ], newdata, newdata[nrow(newdata), ], newdata[1, ])
+  #                                newdata[c(1, nrow(newdata) - 1, nrow(newdata)), "x"] <- round(newdata[1, "x"])
+  #                                
+  #                                if (length(draw_quantiles) > 0 & !scales::zero_range(range(data$y))) {
+  #                                  stopifnot(all(draw_quantiles >= 0), all(draw_quantiles <=
+  #                                                                            1))
+  #                                  quantiles  <- ggplot2:::create_quantile_segment_frame(data, draw_quantiles)
+  #                                  aesthetics <- data[rep(1, nrow(quantiles)), setdiff(names(data), c("x", "y")), drop = FALSE]
+  #                                  aesthetics$alpha <- rep(1, nrow(quantiles))
+  #                                  both <- cbind(quantiles, aesthetics)
+  #                                  quantile_grob <- GeomPath$draw_panel(both, ...)
+  #                                  ggplot2:::ggname("geom_split_violin", grid::grobTree(GeomPolygon$draw_panel(newdata, ...), quantile_grob))
+  #                                }
+  #                                else {
+  #                                  ggplot2:::ggname("geom_split_violin", GeomPolygon$draw_panel(newdata, ...))
+  #                                }
+  #                              })
+  #   
+  #   geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", position = "identity", ..., 
+  #                                 draw_quantiles = NULL, trim = TRUE, scale = "area", na.rm = FALSE, 
+  #                                 show.legend = NA, inherit.aes = TRUE) {
+  #     layer(data = data, mapping = mapping, stat = stat, geom = GeomSplitViolin, 
+  #           position = position, show.legend = show.legend, inherit.aes = inherit.aes, 
+  #           params = list(trim = trim, scale = scale, draw_quantiles = draw_quantiles, na.rm = na.rm, ...))
+  #   }
+  # }
   
   { # custom split violin 2
     GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin,
@@ -221,7 +241,7 @@
   
   common_alpha = 0.4
   
-  full_df %>% 
+  p6 <- full_df %>% 
     ggplot() +
     annotate("rect",
              xmin = age_min, xmax = age_max,
@@ -260,11 +280,10 @@
     labs(x = "Age",
          y = "Final grade",
          title = "Comparison males and females' grades against age")
-    
   
-    # geom_boxplot(width=0.3)
-  
-  
+  # ggsave(file="ilia/pics/png/6.png", plot=p6, width=8, height=6)
+  # ggsave(file="ilia/pics/svg/6.svg", plot=p6, width=8, height=6)
+  save_plot(path="ilia/pics/png/6.png", plot=p6)
 }
 
 { # Let's have a look at dependence of failures and absences
