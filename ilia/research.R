@@ -273,6 +273,58 @@ full_df %>%  # importan one
     scale_fill_manual(values=grades_colours) +
     scale_y_continuous(trans = 'log10')
 
+{ # a try to visualize three variable at the same time
+  full_df %>% 
+    ggplot(aes(x=age %>% as.factor(),  y=G3, fill=gender)) +
+    geom_dotplot(binaxis = "y", 
+                 stackdir = "center", 
+                 position = "dodge",
+                 dotsize = 0.2, binwidth = 0.5)
+    
+  full_df %>% 
+    ggplot(aes(x=age %>% as.factor(),  y=G3, fill=gender)) +
+    geom_violin(position=position_dodge(1))
+    
+  full_df %>% 
+    group_by(age, Dalc) %>% 
+    summarise(
+      Walc_n = n(),
+      G3_median = median(G3),
+    ) %>% 
+    ggplot(aes(x=age,  y=G3_median, color=Dalc)) +
+    geom_line()
+  
+  
+  { # research over facet_grid
+    library(RColorBrewer)
+    colours = brewer.pal(9, 'RdYlGn')[9:1]
+    
+    full_df %>% 
+      ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+      geom_count() + 
+      scale_size(range = c(3, 20)) +
+      scale_color_manual(values=colours) +
+      theme_bw() +
+      theme(axis.text.x = element_blank(),
+            axis.ticks.x = element_blank(),
+            panel.spacing.x=unit(0.5, "lines")) +
+      facet_grid(. ~ goout, switch="both") +
+      labs(x = "Goout",
+           size = "")
+    }
+  
+    
+    
+    geom_jitter(aes(colour = Salc))
+  
+    geom_dotplot(binaxis = "y", 
+                 stackdir = "center", 
+                 position = "dodge",
+                 dotsize = 0.09, binwidth = 0.5)
+  
+  
+}
+
 
 
 
