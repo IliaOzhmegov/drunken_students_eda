@@ -177,7 +177,7 @@ p8 <- full_df %>%
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
-  theme(legend.position = c(0.9, 0.3), 
+  theme(legend.position = c(0.9, 0.6), 
         legend.box = "vertical", 
         legend.key.size = unit(0.2, "cm")) 
 p8
@@ -216,7 +216,7 @@ p10 <- full_df %>%
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
-  theme(legend.position = c(0.9, 0.3), 
+  theme(legend.position = c(0.9, 0.6), 
         legend.box = "vertical",
         legend.key.size = unit(0.2, "cm")) 
 p10
