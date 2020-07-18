@@ -358,3 +358,368 @@ How does age and gender affect on success?
 Result: the majority of students are in C and D areas, besides there is no difference
 between males and females, but after the age of 18 the distribution is completely different 
 and we do not have a solid explanation for that.
+
+# Exploration of possible effects on students’ alcohol consumption
+
+In this section we explore possible factors that could be linked to the level of alcohol consumption among portugese students. We will take a look at the students’ gender, the Area where they live, their family size and student’s leisure time, and see if any of these change depending on the part of the week - whether it’s a regular weekday or a weekend.
+
+## The role of gender and age in students’ alcohol consumption
+
+First, we wanted to find out whether a gender plays a role in a level of students’ alcohol consumption, by taking age and time of the week into account.
+
+```{r}
+{
+  
+  p1 <- full_df %>% 
+ggplot(aes(x=age, y=Dalc, color=gender))+
+  geom_jitter()+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), 
+                      name="Gender", 
+                      labels=c("Female", "Male"))+
+  theme_bw()+
+  xlab("Age")+
+  ylab("Alcohol consumption")+
+  ggtitle("Weekday alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
+p1
+
+}
+
+```
+
+Result:  we can observe that quite a few males of all given ages consume larger levels of alcohol during the week. And females have a tendency to stay away from alcohol on the weekdays.
+
+This is how it changes during the weekend.
+
+```{r}
+{
+  
+p2 <- full_df %>% 
+ggplot(aes(x=age, y=Walc, color=gender))+
+  geom_jitter()+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), 
+                      name="Gender", 
+                      labels=c("Female", "Male"))+
+  theme_bw()+
+  xlab("Age")+
+  ylab("Alcohol consumption")+
+  ggtitle("Weekend alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
+p2
+
+}
+
+```
+
+Result: as can be seen from the above plot, some more females start to drink a little more on the weekends. As well as some more males, regardless of the age. 
+Age doesn’t really play a role in students’ alcohol consumption levels. But the gender does. And again, the time of the week is a significant factor - there is a clear evidence that more students consume higher levels of alcohol on the weekends.
+
+## Exploration of students’ background and alcohol consumption
+
+Let’s explore if the area where students reside impacts their alcohol consumption. Students were categorized by address: Urban and Rural.
+
+```{r}
+{
+  
+# Daily alcohol consumption
+p3 <- full_df %>% 
+  group_by(address, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=address))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per Area, %")+
+  ggtitle("Weekday alcohol consumption \ndepending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Weekend alcohol consumption
+p4 <- full_df %>% 
+  group_by(address, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=address))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per Area, %")+
+  ggtitle("Weekend alcohol consumption \ndepending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Arrange plots side-by-side
+grid.arrange(p3, p4, ncol=2)
+
+}
+
+```
+
+Result: this figure shows that when it comes to moderate amounts of alcohol consumption, the percentage of students in rural areas tend to drink slightly more than students from urban areas. And this is for both times of the week: weekdays and weekends.
+
+Next, let’s explore the students’ family sizes. Again, students were split into two groups: students of large families of more than 3 family members and of the smaller families of 3 or less people.
+
+```{r}
+{
+  
+# Daily alcohol consumption
+p5 <- full_df %>% 
+  group_by(famsize, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=famsize))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('> 3', '≤ 3'))+
+  labs(fill = "Family size")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per family size, %")+
+  ggtitle("Weekday alcohol consumption \nper students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Weekend alcohol consumption
+p6 <- full_df %>% 
+  group_by(famsize, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=famsize))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('> 3', '≤ 3'))+
+  labs(fill = "Family size")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per family size, %")+
+  ggtitle("Weekend alcohol consumption \nper students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Arrange plots side-by-side
+grid.arrange(p5, p6, ncol=2)
+
+}
+
+```
+
+Result: students from smaller families consume a bit higher levels of alcohol, especially on the weekends.
+
+## The effect of students’ leisure time on alcohol consumption
+
+In this subsection we take a closer look at students’ free time and the time when they go out, and how it affects their alcohol consumption.
+
+```{r}
+{
+  
+p7 <- full_df %>% 
+  ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+  geom_count() + 
+  scale_size(range = c(3, 15)) +
+  scale_color_manual(values=colours_9, 
+                     name="Total \nalcohol \nconsumption") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        panel.spacing.x=unit(0.5, "lines")) +
+  facet_grid(. ~ goout, switch="both") +
+  labs(x = "Goout",
+       size = "")+
+  xlab("Go Out Time")+
+  ylab("Free Time")+
+  ggtitle("Alcohol consumption depending on students' free time and go out time")+
+  theme(plot.title = element_text(hjust = 0.5))
+p7
+
+}
+
+```
+
+Result: we can observe a general trend that the more free time students have and the more they go out, the more alcohol they tend to consume.
+
+Let’s explore this in more detail, by looking separately at students’ free time, go out time and part of the week (weekday or weekend).
+
+```{r}
+{
+  
+# Free time during weekdays
+p8 <- full_df %>% 
+  group_by(freetime, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Dalc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Greens")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Free time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical", 
+        legend.key.size = unit(0.2, "cm")) 
+
+# Free time on the weekends
+p9 <- full_df %>% 
+  group_by(freetime, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Walc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Greens")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Free time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekend alcohol consumption \ndepending on students' free time") +
+  theme(legend.position="none") 
+
+# Go out time during weekdays
+p10 <- full_df %>% 
+  group_by(goout, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Dalc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Oranges")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Go out time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical", 
+        legend.key.size = unit(0.2, "cm"))
+
+# Go out time on the weekends
+p11 <- full_df %>% 
+  group_by(goout, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Walc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Oranges")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Go out time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekend alcohol consumption \ndepending students' go out time") +
+  theme(legend.position="none") 
+
+# Arrange plots
+grid.arrange(p8, p9, p10, p11, nrow=2, ncol=2)
+
+}
+
+```
+
+Result: when students have some free time during the week, that doesn’t necessarily mean that they drink more (top left green figure). In fact, as can be observed, there is very low to medium alcohol consumption for all levels of free time during the weekdays.
+But when students go out - their alcohol consumption increases (bottom left orange figure). Especially on the weekends when students have more free time and they go out a lot more - they generally tend to consume more alcohol in higher levels (two right figures colored as green and orange).
+
+## The relationship between alcohol consumption and final grades by gender
+
+Let’s take another look at the students’ final grades and the level of their alcohol consumption by gender and time of the week.
+
+```{r}
+{
+  
+p12 <- full_df %>% 
+  ggplot(aes(x=Dalc %>% as.factor(),  y=G3, fill=gender)) +
+  geom_dotplot(binaxis = "y", 
+               stackdir = "center", 
+               position = "dodge",
+               dotsize = 0.3, binwidth = 0.5)+
+  theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Female', 'Male'))+
+  xlab("Alcohol consumption")+
+  ylab("Final Grade")+
+  ggtitle("Grades by gender and weekday alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
+p12
+
+}
+
+```
+
+Result: both males and females tend to have better grades when they don’t consume much alcohol during the week. Although, as was explored in part 4.1, we can’t make a clear connection between low alcohol consumption and good grades. However, we observe that some males consume larger amounts of alcohol while having average and below average grades.
+
+Weekend alcohol consumption and final grades by gender.
+
+```{r}
+{
+  
+p13 <- full_df %>% 
+  ggplot(aes(x=Walc %>% as.factor(),  y=G3, fill=gender)) +
+  geom_dotplot(binaxis = "y", 
+               stackdir = "center", 
+               position = "dodge",
+               dotsize = 0.3, binwidth = 0.5)+
+  theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Female', 'Male'))+
+  xlab("Alcohol consumption")+
+  ylab("Final Grade")+
+  ggtitle("Grades by gender and weekend alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
+p13
+
+}
+
+```
+
+Result: weekend alcohol consumption doesn’t seem to have a significant effect on students' grades. This time, more of both genders increase their alcohol consumption.
+
+# Conclusion
+
+The aim of this exploratory data analysis was to find out what has the most significant effect on students’ success and to explore the possible effects on students’ alcohol consumption.
+
+The first part of this project focused on students’ grades as the measure of their success in the school. We saw that there is a weak correlation between final grades and alcohol consumption. We can conclude that alcohol consumption has an effect on students’ success only to some very limited degree. It’s important to note that correlation does not mean a causation. 
+
+We also explored that part of the week plays a very important role when it comes to the level of students’ alcohol consumption. We saw this in every part of our analysis, that students consume higher levels of alcohol on the weekends.
+Students of both genders had about the same grades on average. So male and female students in our dataset were equally successful in school in terms of grades.
+Age didn’t seem to play a significant role as well.
+
+In the second part of our analysis, we explored possible factors that could affect students’ alcohol consumption. We found out that students’ gender, their family size and area where they live could potentially affect the level of students’ alcohol consumption, but we didn’t see a big impact.
+
+Our research showed that female students tend to consume lower amounts of alcohol compared to their fellow male students, especially during the week. 
+Also we explored that there is a slight relationship between the students’ background, particularly the area where they live and their family size, and the amount of alcohol they consume.
+And our analysis showed that when students have free time and especially when they go out -  they increase their alcohol consumption. This effect can be clearly observed on the weekends.
+
+We can conclude that our exploratory data analysis was successful. We have answered the questions that we asked ourselves at the beginning of the research. 
+
+We also have learned a lot while working on this project:
+
+* use R packages such as: ggplot2, magrittr, dplyr and tidyverse
+* create plots with more than 2 variables
+* how to work with only nominal/discrete variables
+* create violin plots, mosaic plots, jitter plots and others
+* work remotely as a team
+* build a research pipeline with github
+* create an html/pdf reports
+
+We have faced some challenges as well. In particular, working remotely as a team was a learning curve. We faced some timing, technical and organizational issues that we have successfully overcome. 
+
+Overall, this was a challenging and yet very interesting project. We achieved our goals and are pleased with the results.
+

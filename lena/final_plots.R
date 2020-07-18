@@ -30,7 +30,6 @@ save_plot(path="lena/pics/png/1.png", plot=p1)
 
 # Jitter plot: Walc, Age, sex -- reversed
 p2 <- full_df %>% 
-
 ggplot(aes(x=age, y=Walc, color=gender))+
   geom_jitter()+
   scale_colour_manual(values=c("#F8766D", "#00BFC4"), name="Gender", labels=c("Female", "Male"))+
@@ -62,7 +61,7 @@ p3 <- full_df %>%
   theme(plot.title = element_text(hjust = 0.5))
 p3
 
-#Walc
+# Walc
 p4 <- full_df %>% 
   group_by(address, Walc) %>% 
   summarise(count=n()) %>% 
@@ -80,8 +79,7 @@ p4 <- full_df %>%
   theme(plot.title = element_text(hjust = 0.5))
 
 p4
-# Arrange plots
-# Side-by-side
+# Arrange plots side-by-side
 
 p<-grid.arrange(p3, p4, ncol=2)
 
@@ -178,8 +176,10 @@ p8 <- full_df %>%
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption depending on students' free time") +
-  theme(legend.position = c(0.9, 0.72), legend.box = "vertical") 
+  ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical", 
+        legend.key.size = unit(0.2, "cm")) 
 p8
 
 p9 <- full_df %>% 
@@ -195,7 +195,7 @@ p9 <- full_df %>%
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption depending on students' free time") +
+  ggtitle("Weekend alcohol consumption \ndepending on students' free time") +
   theme(legend.position="none") 
 p9
 
@@ -215,8 +215,10 @@ p10 <- full_df %>%
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption depending students' go out time") +
-  theme(legend.position = c(0.9, 0.3), legend.box = "vertical") 
+  ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical",
+        legend.key.size = unit(0.2, "cm")) 
 p10
 
 p11 <- full_df %>% 
@@ -232,7 +234,7 @@ p11 <- full_df %>%
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption depending students' go out time") +
+  ggtitle("Weekend alcohol consumption \ndepending students' go out time") +
   theme(legend.position="none") 
 p11
 
