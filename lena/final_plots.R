@@ -14,28 +14,34 @@ library(ggmosaic)
 source("common/load_functions.R")
 
 # Jitter plot: Dalc, Age, sex -- reversed
-full_df %>% 
+plot1 <- full_df %>% 
 ggplot(aes(x=age, y=Dalc, color=gender))+
   geom_jitter()+
-  scale_colour_manual(values=c("#ff7f50", "#468499"), name="Gender", labels=c("Female", "Male"))+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), name="Gender", labels=c("Female", "Male"))+
   theme_bw()+
   xlab("Age")+
   ylab("Alcohol consumption")+
   ggtitle("Weekday alcohol consumption per Age and Gender")+
   theme(plot.title = element_text(hjust = 0.5))
+plot1
 
-save_plot(path="lena/plots/png/1.png", plot=pl1)
+save_plot(path="lena/plots/png/plot1.png", plot=plot1)
+save_plot(path="lena/plots/svg/plot1.svg", plot=plot1)
 
 # Jitter plot: Walc, Age, sex -- reversed
-full_df %>% 
+plot2 <- full_df %>% 
 ggplot(aes(x=age, y=Walc, color=gender))+
   geom_jitter()+
-  scale_colour_manual(values=c("#ff7f50", "#468499"), name="Gender", labels=c("Female", "Male"))+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), name="Gender", labels=c("Female", "Male"))+
   theme_bw()+
   xlab("Age")+
   ylab("Alcohol consumption")+
   ggtitle("Weekend alcohol consumption per Age and Gender")+
   theme(plot.title = element_text(hjust = 0.5))
+plot2
+
+save_plot(path="lena/plots/png/plot2.png", plot=plot2)
+save_plot(path="lena/plots/svg/plot2.svg", plot=plot2)
 
 
 # Percentage Address bar plot
@@ -75,7 +81,11 @@ df2
 
 # Arrange plots
 # Side-by-side
-grid.arrange(df1, df2, ncol=2)
+plot3 <- grid.arrange(df1, df2, ncol=2)
+plot3
+
+save_plot(path="lena/plots/png/plot3.png", plot=plot3)
+save_plot(path="lena/plots/svg/plot3.svg", plot=plot3)
 
 
 ## Bar plot. % of students of different fam. sizes and alc. consumption.
