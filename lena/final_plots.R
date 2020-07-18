@@ -14,7 +14,11 @@ library(ggmosaic)
 source("common/load_functions.R")
 
 # Jitter plot: Dalc, Age, sex -- reversed
+<<<<<<< HEAD
 plot1 <- full_df %>% 
+=======
+p <- full_df %>% 
+>>>>>>> 3298ad02dade318a298930afb9ffa4443cd76097
 ggplot(aes(x=age, y=Dalc, color=gender))+
   geom_jitter()+
   scale_colour_manual(values=c("#F8766D", "#00BFC4"), name="Gender", labels=c("Female", "Male"))+
@@ -23,6 +27,7 @@ ggplot(aes(x=age, y=Dalc, color=gender))+
   ylab("Alcohol consumption")+
   ggtitle("Weekday alcohol consumption per Age and Gender")+
   theme(plot.title = element_text(hjust = 0.5))
+<<<<<<< HEAD
 plot1
 
 save_plot(path="lena/plots/png/plot1.png", plot=plot1)
@@ -30,6 +35,13 @@ save_plot(path="lena/plots/svg/plot1.svg", plot=plot1)
 
 # Jitter plot: Walc, Age, sex -- reversed
 plot2 <- full_df %>% 
+=======
+p
+save_plot(path="lena/pics/png/1.png", plot=p)
+
+# Jitter plot: Walc, Age, sex -- reversed
+p <- full_df %>% 
+>>>>>>> 3298ad02dade318a298930afb9ffa4443cd76097
 ggplot(aes(x=age, y=Walc, color=gender))+
   geom_jitter()+
   scale_colour_manual(values=c("#F8766D", "#00BFC4"), name="Gender", labels=c("Female", "Male"))+
@@ -43,14 +55,16 @@ plot2
 save_plot(path="lena/plots/png/plot2.png", plot=plot2)
 save_plot(path="lena/plots/svg/plot2.svg", plot=plot2)
 
+p
+save_plot(path="lena/pics/png/2.png", plot=p)
 
 # Percentage Address bar plot
 # Dalc
-df1 <- full_df %>% 
+p3 <- full_df %>% 
   group_by(address, Dalc) %>% 
   summarise(count=n()) %>% 
-  mutate(perc=count/sum(count))
-df1 <- ggplot(df1, aes(x=factor(Dalc), y = perc*100, fill=address))+
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=address))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
@@ -59,15 +73,16 @@ df1 <- ggplot(df1, aes(x=factor(Dalc), y = perc*100, fill=address))+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
   ggtitle("Weekday alcohol consumption depending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
-df1
+p3
 
 #Walc
-df2 <- full_df %>% 
+  p4 <- full_df %>% 
   group_by(address, Walc) %>% 
   summarise(count=n()) %>% 
-  mutate(perc=count/sum(count))
-df2 <- ggplot(df2, aes(x=factor(Walc), y = perc*100, fill=address))+
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=address))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_manual(values=c("#F8766D", "#00BFC4"), labels = c('Rural', 'Urban'))+
@@ -76,74 +91,81 @@ df2 <- ggplot(df2, aes(x=factor(Walc), y = perc*100, fill=address))+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
   ggtitle("Weekend alcohol consumption depending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
-df2
 
+p4
 # Arrange plots
 # Side-by-side
+<<<<<<< HEAD
 plot3 <- grid.arrange(df1, df2, ncol=2)
 plot3
 
 save_plot(path="lena/plots/png/plot3.png", plot=plot3)
 save_plot(path="lena/plots/svg/plot3.svg", plot=plot3)
 
+=======
+p<-grid.arrange(p3, p4, ncol=2)
+save_plot(path="lena/pics/png/3.png", plot=p)
+>>>>>>> 3298ad02dade318a298930afb9ffa4443cd76097
 
 ## Bar plot. % of students of different fam. sizes and alc. consumption.
 ## Daily alc. consumption
-df3 <- full_df %>% 
+p5 <- full_df %>% 
   group_by(famsize, Dalc) %>% 
   summarise(count=n()) %>% 
-  mutate(perc=count/sum(count))
-df3 <- ggplot(df3, aes(x=factor(Dalc), y = perc*100, fill=famsize))+
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=famsize))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
-                    labels = c('Greater than 3', 'Less or equal to 3'))+
+                    labels = c('> 3', '≤ 3'))+
   labs(fill = "Family size")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
   ggtitle("Weekday alcohol consumption per students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
-df3
+p5
 
 # Bar plot. % of students of different fam. sizes and alc. consumption.
 ## Weekend alc. consumption
-df4 <- full_df %>% 
+p6 <- full_df %>% 
   group_by(famsize, Walc) %>% 
   summarise(count=n()) %>% 
-  mutate(perc=count/sum(count))
-df4 <- ggplot(df4, aes(x=factor(Walc), y = perc*100, fill=famsize))+
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=famsize))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
-                    labels = c('Greater than 3', 'Less or equal to 3'))+
+                    labels = c('> 3', '≤ 3'))+
   labs(fill = "Family size")+
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
   ggtitle("Weekend alcohol consumption per students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
-df4
+p6
 
 # Arrange plots
 # Side-by-side
-grid.arrange(df3, df4, ncol=2)
+p <- grid.arrange(p5, p6, ncol=2)
 
+save_plot(path="lena/pics/png/4.png", plot=p)
 
 
 
 ## Overall plot: Free time/ Go out time vs Salc
 
 # research over facet_grid
-library(RColorBrewer)
-colours = brewer.pal(9, 'RdYlGn')[9:1]
 
-full_df %>% 
+p <- full_df %>% 
   ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
   geom_count() + 
   scale_size(range = c(3, 15)) +
-  scale_color_manual(values=colours, name="Total \nalcohol \nconsumption") +
+  scale_color_manual(values=colours_9, name="Total \nalcohol \nconsumption") +
   theme_bw() +
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
@@ -156,16 +178,17 @@ full_df %>%
   ggtitle("Alcohol consumption depending on students' free time and go out time")+
   theme(plot.title = element_text(hjust = 0.5))
 
+save_plot(path="lena/pics/png/5.png", plot=p)
 
 
 
 ## Free time:
 
-df5 <- full_df %>% 
+p6 <- full_df %>% 
   group_by(freetime, Dalc) %>% 
   summarise(count=n()) %>% 
-  mutate(count=count)
-df5 <- ggplot(df5, aes(x=factor(freetime), y = count, fill=Dalc))+
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Dalc))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_brewer(palette="Greens")+
@@ -174,14 +197,15 @@ df5 <- ggplot(df5, aes(x=factor(freetime), y = count, fill=Dalc))+
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption depending on students' free time")
-df5
+  ggtitle("Weekday alcohol consumption depending on students' free time") +
+  theme(legend.position = c(0.9, 0.72), legend.box = "vertical") 
+p6
 
-df6 <- full_df %>% 
+p7 <- full_df %>% 
   group_by(freetime, Walc) %>% 
   summarise(count=n()) %>% 
-  mutate(count=count)
-df6 <- ggplot(df6, aes(x=factor(freetime), y = count, fill=Walc))+
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Walc))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_brewer(palette="Greens")+
@@ -190,17 +214,18 @@ df6 <- ggplot(df6, aes(x=factor(freetime), y = count, fill=Walc))+
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption depending on students' free time")
-df6
+  ggtitle("Weekend alcohol consumption depending on students' free time") +
+  theme(legend.position="none") 
+p7
 
 
 
 # Go out time
-df7 <- full_df %>% 
+p8 <- full_df %>% 
   group_by(goout, Dalc) %>% 
   summarise(count=n()) %>% 
-  mutate(count=count)
-df7 <- ggplot(df7, aes(x=factor(goout), y = count, fill=Dalc))+
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Dalc))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_brewer(palette="Oranges")+
@@ -209,14 +234,15 @@ df7 <- ggplot(df7, aes(x=factor(goout), y = count, fill=Dalc))+
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption depending students' go out time")
-df7
+  ggtitle("Weekday alcohol consumption depending students' go out time") +
+  theme(legend.position = c(0.9, 0.3), legend.box = "vertical") 
+p8
 
-df8 <- full_df %>% 
+p9 <- full_df %>% 
   group_by(goout, Walc) %>% 
   summarise(count=n()) %>% 
-  mutate(count=count)
-df8 <- ggplot(df8, aes(x=factor(goout), y = count, fill=Walc))+
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Walc))+
   geom_bar(stat = "identity", position = "dodge")+
   ylim(0,100)+
   scale_fill_brewer(palette="Oranges")+
@@ -225,14 +251,14 @@ df8 <- ggplot(df8, aes(x=factor(goout), y = count, fill=Walc))+
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption depending students' go out time")
-df8
+  ggtitle("Weekend alcohol consumption depending students' go out time") +
+  theme(legend.position="none") 
+p9
 
 # Arrange plots
 
-grid.arrange(df5, df6, df7, df8, nrow=2, ncol=2)
-
-
+p <- grid.arrange(p6, p7, p8, p9, nrow=2, ncol=2)
+save_plot(path="lena/pics/png/6.png", plot=p, w=13, h=7.8)
 
 
 #### Other dot plot: Final grade, gender, Dalc/Walc ###
