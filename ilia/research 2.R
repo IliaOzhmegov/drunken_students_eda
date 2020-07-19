@@ -9,8 +9,7 @@
   # result: during weekEND consumption is higher
   
   
-  mdf <- reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0)
-  p <- mdf %>% 
+  p <- reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
     group_by(variable, value) %>% 
     summarise(n=n()) %>% 
     mutate(
