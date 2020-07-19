@@ -154,7 +154,6 @@ p7 <- full_df %>%
   ylab("Free Time")+
   ggtitle("Alcohol consumption depending on students' free time and go out time")+
   theme(plot.title = element_text(hjust = 0.5))
-
 p7
 
 save_plot(path="lena/pics/png/5.png", plot=p7)
@@ -176,10 +175,9 @@ p8 <- full_df %>%
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
-  theme(legend.position = c(0.9, 0.6), 
-        legend.box = "vertical", 
-        legend.key.size = unit(0.2, "cm")) 
+  ggtitle("Weekday alcohol consumption depending on students' free time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical") 
 p8
 
 p9 <- full_df %>% 
@@ -195,7 +193,7 @@ p9 <- full_df %>%
   xlab("Free time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption \ndepending on students' free time") +
+  ggtitle("Weekend alcohol consumption depending on students' free time") +
   theme(legend.position="none") 
 p9
 
@@ -215,10 +213,9 @@ p10 <- full_df %>%
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
-  theme(legend.position = c(0.9, 0.6), 
-        legend.box = "vertical",
-        legend.key.size = unit(0.2, "cm")) 
+  ggtitle("Weekday alcohol consumption depending students' go out time") +
+  theme(legend.position = c(0.9, 0.3), 
+        legend.box = "vertical")
 p10
 
 p11 <- full_df %>% 
@@ -234,13 +231,14 @@ p11 <- full_df %>%
   xlab("Go out time")+
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
-  ggtitle("Weekend alcohol consumption \ndepending students' go out time") +
+  ggtitle("Weekend alcohol consumption depending students' go out time") +
   theme(legend.position="none") 
 p11
 
 # Arrange plots
 
 p <- grid.arrange(p8, p9, p10, p11, nrow=2, ncol=2)
+
 
 save_plot(path="lena/pics/png/6.png", plot=p, w=13, h=7.8)
 
