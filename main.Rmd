@@ -27,6 +27,7 @@ output:
 # knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
 knitr::opts_chunk$set(message=FALSE, warning = FALSE, echo = TRUE)
 knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
+knitr::opts_chunk$set(fig.width=10, fig.height=6) 
 
 ```
 
@@ -35,7 +36,6 @@ knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
 
 source("common/load_data.R")
 source("common/load_functions.R")
-# df <- readRDS("data/student-full.rds")
 ```
 
 The data were obtained in a survey of students math and Portuguese language courses in secondary school. It contains a lot of interesting social, gender and study information about students.
@@ -82,7 +82,7 @@ the variables taken from the school reports.
 require(pander)
 panderOptions('table.split.table', Inf)
 panderOptions('table.alignment.default', 'left')
-set.caption("Table 1: data after all the preprocessing stages")
+set.caption("Table 1: The preprocessed student related variables")
 my.data <- "
 Attribute | Description | Domain
 school | student's school | binary: 'GP' - Gabriel Pereira or 'MS' - Mousinho da Silveira
@@ -103,7 +103,7 @@ failures | number of past class failures | numeric: n if 1<=n<3, else 4
 schoolsup | extra educational support | binary: yes or no
 famsup | family educational support | binary: yes or no
 subject* | taken course subject | nominal: Math or Portuguese
-paid | extra paid classes within the course subject | Math or Portuguese (binary: yes or no)
+paid | extra paid classes within the course subject | binary: yes or no
 activities | extra-curricular activities | binary: yes or no
 nursery | attended nursery school | binary: yes or no
 higher | wants to take higher education | binary: yes or no
@@ -114,7 +114,7 @@ freetime | free time after school | numeric: from 1 - very low to 5 - very high
 goout | going out with friends | numeric: from 1 - very low to 5 - very high
 Dalc | workday alcohol consumption | numeric: from 1 - very low to 5 - very high
 Walc | weekend alcohol consumption | numeric: from 1 - very low to 5 - very high
-Salc* | sum of alcohol consumption | numeric: from 2 - extremely low to 5 - extremely high
+Salc* | sum of alcohol consumption | numeric: from 2 - extremely low to 10 - extremely high
 health | current health status | numeric: from 1 - very bad to 5 - very good
 absences | number of school absences | numeric: from 0 to 93
 G1 | first period grade | numeric: from 0 to 20
@@ -141,8 +141,8 @@ The labeled with `*` attributes were added during the current research.
 
 Let us have a look at alcohol consumption and compare it during weekday and weekend.
 
-```{r, fig.cap = "Figure 1: foobar"}
-  reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
+```{r, fig.cap = "Figure 1: Comparison alcohol consumption during weekend and weekday"}
+    reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
     group_by(variable, value) %>% 
     summarise(n=n()) %>% 
     mutate(
@@ -151,14 +151,12 @@ Let us have a look at alcohol consumption and compare it during weekday and week
     ggplot(aes(x=value, y=n)) +
     geom_bar(aes(fill = variable),stat = "identity", position = "dodge") +
     theme_bw() +
-    scale_fill_manual(values = matlab.colors[1:2],
-                      name   = "Weektype", 
-                      labels = c("Weekday", "Weekend")) +
-    theme(legend.position = c(0.85, 0.85), legend.box = "vertical") +
-    labs(y = "Number of students", 
-         x = "Alcohol consumption", 
-         title = "Comparison alcohol consumption during weekend and weekday")
-
+    scale_fill_manual(values=matlab.colors[1:2],
+                      name = "Weektype", labels = c("Weekday", "Weekend")) +
+    theme(legend.position = c(0.9, 0.85), legend.box = "vertical") +
+    labs(y = "Number of students", x = "Alcohol consumption", 
+         title = "Comparison alcohol consumption during weekend and weekday") +
+    theme(plot.title = element_text(hjust = 0.5))
 ```
 The result is clear, during weekend consumption is higher than during weekdays.
 
