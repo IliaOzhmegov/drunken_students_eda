@@ -487,7 +487,7 @@ p3 <- full_df %>%
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
-  ggtitle("Weekday alcohol consumption \ndepending on the Area")+
+  ggtitle("Weekday alcohol consumption depending on the Area")+
   theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
 
@@ -505,7 +505,7 @@ p4 <- full_df %>%
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per Area, %")+
-  ggtitle("Weekend alcohol consumption \ndepending on the Area")+
+  ggtitle("Weekend alcohol consumption depending on the Area")+
   theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
 
@@ -537,7 +537,7 @@ p5 <- full_df %>%
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
-  ggtitle("Weekday alcohol consumption \nper students' family size")+
+  ggtitle("Weekday alcohol consumption per students' family size")+
   theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
 
@@ -555,7 +555,7 @@ p6 <- full_df %>%
   theme_bw()+
   xlab("Alcohol consumption")+
   ylab("Population of students per family size, %")+
-  ggtitle("Weekend alcohol consumption \nper students' family size")+
+  ggtitle("Weekend alcohol consumption per students' family size")+
   theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
   theme(plot.title = element_text(hjust = 0.5))
 
@@ -620,9 +620,9 @@ p8 <- full_df %>%
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
-  theme(legend.position = c(0.9, 0.6), 
-        legend.box = "vertical", 
-        legend.key.size = unit(0.1, "cm")) 
+  theme(legend.position = c(0.9, 0.5), 
+        legend.box = "vertical",
+        legend.key.size = unit(0.1, 'cm'))
 
 # Free time on the weekends
 p9 <- full_df %>% 
@@ -656,9 +656,9 @@ p10 <- full_df %>%
   ylab("Number of students")+
   labs(fill = "Alcohol \nConsumption")+
   ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
-  theme(legend.position = c(0.9, 0.6), 
-        legend.box = "vertical", 
-        legend.key.size = unit(0.1, "cm"))
+  theme(legend.position = c(0.9, 0.5), 
+        legend.box = "vertical",
+        legend.key.size = unit(0.1, 'cm'))
 
 # Go out time on the weekends
 p11 <- full_df %>% 
