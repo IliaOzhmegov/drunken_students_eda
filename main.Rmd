@@ -3,6 +3,13 @@ title: "EDA of Alcohol Consumption among Students"
 author: Ilia Ozhmegov, Olena Horyn
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
+  pdf_document:
+    latex_engine: xelatex
+    df_print: kable
+    highlight: pygments
+    number_section: true
+    toc: yes
+    fig_caption: true
   html_document:
     df_print: paged
     highlight: pygments
@@ -13,13 +20,6 @@ output:
     toc: yes
     fig_caption: true
     theme: cosmo
-  pdf_document:
-    latex_engine: xelatex
-    df_print: kable
-    highlight: pygments
-    number_section: true
-    toc: yes
-    fig_caption: true
 ---
 
 ```{r Setting template options, include=FALSE}
@@ -142,8 +142,8 @@ We will highlight only major points in the data preprocessing part:
 
 * renaming variable 'sex' to 'gender'
 * adding variable 'Salc' which is just a sum of 'Walc' and 'Dalc'
-* replacing numbers by words in such variables as 'Salc', 'Walc', 'Dalc',
-  'famrel', 'freetime', 'goout', 'health', 'Medu', 'Fedu'
+* replacing numbers with categorical values in such variables as ‘Salc’, 
+  ‘Walc’, ‘Dalc’, ‘famrel’, ‘freetime’, ‘goout’, ‘health’, ‘Medu’, ‘Fedu’
 * adding variable 'subject'
 * adding variable 'G3_d' which is a discrete representation of the final
   grade ('G3')
@@ -156,28 +156,30 @@ following way:
 * to find out what variables affect success most significantly
 * to find out what variables affect alcohol consumption most significantly
 
-Unfortunately, in term of the university work we will not cover all variables, but
-only some of them due to the ordinary lack of time. So we will focus on the following 
-questions:
+Unfortunately, in terms of the university work we will not cover all variables
+due to the ordinary lack of time. So we will only focus on some of them. We will
+attempt to answer the following questions:
 
-+ Does Alcohol Affect Success?
-+ What is the most drunk period of the week? (workdays/weekend?)
-+ What is classes can be found in the dataset in terms of alcohol consumption and grades? 
-+ Are there influence on grades of the age and gender?
-+ Does it make sense to apply correlation on categorical variables?
++ What part of the week corresponds to the highest consumption of alcohol?
++ Does alcohol affect success?
++ Is it possible to determine certain groups of students by their alcohol consumption and grades? 
 
-+ Who drinks more: males or females? (by gender)
-+ Who drinks more? (by age)
++ Do age and gender influence the grades?
++ Does it make sense to apply correlation to categorical variables?
+
++ Who drinks more: males or females?
++ Which age group consumes more alcohol?
 + Does the area where students reside impact their alcohol consumption? (by Urban or Rural area)
 + Does their family size impact their alcohol consumption? (> 3 or < 3 ppl)
-+ How does leisure (free time after school, going out with friends, romantic relationships) effect alcohol consumption?
++ How does leisure (free time after school, going out with friends) effect alcohol consumption?
 
 # Brief introduction into alcohol consumption
 
-Before diving deeper we will introduce you alcohol consumption and compare 
-it during weekday and weekend.
+Before diving deeper, let us start with an overview of alcohol consumption and 
+compare it depending on a weekday or a weekend.
 
-```{r, fig.cap = "Figure 1: Comparison alcohol consumption during weekend and weekday"}
+
+```{r, fig.cap = "Figure 1: Comparison of alcohol consumption during weekend and weekday"}
     reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
     group_by(variable, value) %>% 
     summarise(n=n()) %>% 
@@ -192,17 +194,17 @@ it during weekday and weekend.
     theme(legend.position = c(0.9, 0.85), legend.box = "vertical") +
     labs(y = "Number of students", 
          x = "Alcohol consumption", 
-         title = "Comparison alcohol consumption during weekend and weekday") +
+         title = "Comparison of alcohol consumption during weekend and weekday") +
     theme(plot.title = element_text(hjust = 0.5))
 ```
-Besides a clear clear conclusion that 
+Besides a clear conclusion that 
 during weekend consumption is higher than during weekdays,
 the majority of the students have a low alcohol consumption.
 
 # Exploration of possible effects on students’ success
 
-Under the success we mean high grades at least for now. Later we will
-provide more accurate definition in terms of our work.
+Under the success we mean high grades at least for now.
+When referring to success, we mean high grades, at least for now.
 
 Though basically there is categorical data and there is not much sense to obtain
 a correlation between final grade and all other variables, we still want to have 
@@ -233,9 +235,9 @@ a glance at it and make sure that our assumption is adequate.
 
 ```
 
-Result: in general there is a poor dependence between variables and 
-final grade, but it is important to remind that all variable are categorical, 
-but `failures` and `absences` (`failures` is not fully continuous). Also, 
+Result: in general there is a poor dependence between variables and final grade,
+but it is important to remember that all variables are categorical, except for 
+`failures` and `absences` (`failures` are not quite continuous). Also, 
 we highlighted the alcohol consumption variables to show that there is 
 no clear linear dependence. 
   
@@ -245,9 +247,9 @@ no clear linear dependence.
 Simple presentation of grades before diving deeper to show the quantity of
 the students divided into different success groups.
 
-We will consider as successful only students with grades from "C" to "A" and 
+We will consider as 'successful' only students with grades from "C" to "A" and 
 as unsuccessful with grades "F" and "D". As Portuguese educational system uses 
-numeric marks from 0 to 20, we needed to transform it into  the five-level 
+numeric marks from 0 to 20, we needed to transform them into  the five-level 
 classification system (Table 2).
 
 ```{r table-2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
@@ -303,7 +305,7 @@ pander(df, style = 'rmarkdown')
   
 }
 ```
-As you can seen the amount of students in both groups is almost the same.
+As can be seen the amount of students in both groups is almost the same.
 
 
 Let us have a look directly at dependence between Grades and Alcohol consumption.
@@ -358,9 +360,9 @@ point can be seen more vividly in the following figure.
 Result: you can clearly see that among low alcohol consumption students the amount of 
 successful students is approximately the same as less successful students.
 
-## Dependence between Grades and such variables as gender and age
+## Dependence between Grades and variables such as gender and age
 
-How does age and gender affect on success?
+How does age and gender affect students' success?
 
 ```{r, fig.cap = "Figure 6: Comparison males and females' grades against age"}
 {
