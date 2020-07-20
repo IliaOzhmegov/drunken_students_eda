@@ -38,9 +38,11 @@ source("common/load_data.R")
 source("common/load_functions.R")
 ```
 
+# Introduction
+
 The data were obtained in a survey of students math and Portuguese language courses in secondary school. It contains a lot of interesting social, gender and study information about students.
 
-# Student Data
+## Student Data
 
 In Portugal, the secondary education consists of 3 years of schooling, preceding 
 9 years of basic education and followed by higher education. Most of the students join the public and free education system. There are several
@@ -131,15 +133,49 @@ pander(df, style = 'rmarkdown')
 
 The labeled with `*` attributes were added during the current research.
 
-# Main Goals
+## Data Preparation
 
-* to find what affects on success the most significantly
-* to find what affects on alcohol consumption the most significantly
+All the details can be found on [github page](https://github.com/ElijahOzhmegov/drunken_students_eda)
+of our project. Also details about data preprocessing can be found [here](https://github.com/ElijahOzhmegov/drunken_students_eda/blob/master/common/load_data.R).
 
+We will highlight only major points in the data preprocessing part:
+
+* renaming variable 'sex' to 'gender'
+* adding variable 'Salc' which is just a sum of 'Walc' and 'Dalc'
+* replacing numbers by words in such variables as 'Salc', 'Walc', 'Dalc',
+  'famrel', 'freetime', 'goout', 'health', 'Medu', 'Fedu'
+* adding variable 'subject'
+* adding variable 'G3_d' which is a discrete representation of the final
+  grade ('G3')
+
+## Main Goals
+
+In terms of Exploratory Data Analysis our main goals can be formulated in the 
+following way:
+
+* to find out what variables affect success most significantly
+* to find out what variables affect alcohol consumption most significantly
+
+Unfortunately, in term of the university work we will not cover all variables, but
+only some of them due to the ordinary lack of time. So we will focus on the following 
+questions:
+
++ Does Alcohol Affect Success?
++ What is the most drunk period of the week? (workdays/weekend?)
++ What is classes can be found in the dataset in terms of alcohol consumption and grades? 
++ Are there influence on grades of the age and gender?
++ Does it make sense to apply correlation on categorical variables?
+
++ Who drinks more: males or females? (by gender)
++ Who drinks more? (by age)
++ Does the area where students reside impact their alcohol consumption? (by Urban or Rural area)
++ Does their family size impact their alcohol consumption? (> 3 or < 3 ppl)
++ How does leisure (free time after school, going out with friends, romantic relationships) effect alcohol consumption?
 
 # Brief introduction into alcohol consumption
 
-Let us have a look at alcohol consumption and compare it during weekday and weekend.
+Before diving deeper we will introduce you alcohol consumption and compare 
+it during weekday and weekend.
 
 ```{r, fig.cap = "Figure 1: Comparison alcohol consumption during weekend and weekday"}
     reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
@@ -154,18 +190,25 @@ Let us have a look at alcohol consumption and compare it during weekday and week
     scale_fill_manual(values=matlab.colors[1:2],
                       name = "Weektype", labels = c("Weekday", "Weekend")) +
     theme(legend.position = c(0.9, 0.85), legend.box = "vertical") +
-    labs(y = "Number of students", x = "Alcohol consumption", 
+    labs(y = "Number of students", 
+         x = "Alcohol consumption", 
          title = "Comparison alcohol consumption during weekend and weekday") +
     theme(plot.title = element_text(hjust = 0.5))
 ```
-The result is clear, during weekend consumption is higher than during weekdays.
+Besides a clear clear conclusion that 
+during weekend consumption is higher than during weekdays,
+the majority of the students have a low alcohol consumption.
 
-# What affects the most on success
+# Exploration of possible effects on students’ success
 
-Though basically we have categorical data we still want to have a look at
-correlation between final grade and all others variables
+Under the success we mean high grades at least for now. Later we will
+provide more accurate definition in terms of our work.
 
-```{r}
+Though basically there is categorical data and there is not much sense to obtain
+a correlation between final grade and all other variables, we still want to have 
+a glance at it and make sure that our assumption is adequate.
+
+```{r, fig.cap = "Figure 2: Final Grade Correlation"}
 
 { 
   int_df <- lapply(full_df, as.integer)
@@ -181,7 +224,10 @@ correlation between final grade and all others variables
     scale_fill_manual(values = matlab.colors[1:2]) +
     theme_bw() +
     theme(legend.position="none") +
-    labs(y = "Variable", x = "|Correlation|", title = "Final Grade Correlation")
+    labs(y = "Variable", 
+         x = "|Correlation|", 
+         title = "Final Grade Correlation") +
+    theme(plot.title = element_text(hjust = 0.5))
   
 }
 
@@ -201,18 +247,28 @@ the students divided into different success groups.
 
 We will consider as successful only students with grades from "C" to "A" and 
 as unsuccessful with grades "F" and "D". As Portuguese educational system uses 
-numeric marks from 0 to 20, we need to transform it into  the five-level 
-classification system.
+numeric marks from 0 to 20, we needed to transform it into  the five-level 
+classification system (Table 2).
 
-| Original | 5-level |
-| :----: | :-----: |
-| [16,20] | A |
-| [14,16) | B |
-| [12,14) | C |
-| [10,12) | D |
-| [0, 10) | F |
+```{r table-2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+panderOptions('table.alignment.default', 'left')
+set.caption("Table 2: The five-level classification system")
+my.data <- "
+ | I | II | III | IV | V
+Country | (excellent/very good) | (good) | (satisfactory) | (sufficient) | (fail)
+Portugal/France | 16-20 | 14-15 | 12-13 | 10-11 | 0-9
+Ireland/USA | A | B | C | D | F
+"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
 
-```{r}
+```{r, fig.cap = "Figure 3: Final Grade Distribution"}
 {  ddf <- full_df %>% 
     mutate(
       success = ifelse(G3_d == 'F' | G3_d == 'D', 'No', 'Yes'),
@@ -226,8 +282,9 @@ classification system.
     theme(legend.position="none") +
     scale_fill_manual(values=matlab.colors[2:1]) +
     labs(y = "Number of students", 
-         x = "Final Grade (Descrete)", 
-         title = "Final Grade Descrete Distribution")
+         x = "Final Grade (Discrete)", 
+         title = "Final Grade Discrete Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
     
   p2 <- ddf %>% 
     ggplot(aes(x=success, fill=success)) +
@@ -238,7 +295,8 @@ classification system.
                      labels=c("Low", "High")) +
     labs(y = "Number of students", 
          x = "Final Grade (Binary)", 
-         title = "Final Grade Binary Distribution")
+         title = "Final Grade Binary Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
   
   grid.arrange(p1, p2, nrow=1)
   
@@ -250,7 +308,7 @@ As you can seen the amount of students in both groups is almost the same.
 
 Let us have a look directly at dependence between Grades and Alcohol consumption.
 
-```{r}
+```{r, fig.cap = "Figure 4: Final Grade (Discrete) Distribution"}
 {
 
   class_df = full_df %>% 
@@ -266,9 +324,10 @@ Let us have a look directly at dependence between Grades and Alcohol consumption
     scale_color_manual(values=matlab.colors[c(2, 3, 4, 1)]) +
     theme_bw() +
     theme(legend.position="none") +
-    labs(y = "Final Grade (Descrete)", 
+    labs(y = "Final Grade (Discrete)", 
          x = "Alcohol consumption", 
-         title = "Final period grade")
+         title = "Final period grade") +
+    theme(plot.title = element_text(hjust = 0.5))
   
 }
 ```
@@ -276,7 +335,7 @@ Result: decent grades are much less frequent among high alcohol consumption Stud
 also there is no dependence between low alcohol consumption and decent grades. The last 
 point can be seen more vividly in the following figure.
   
-```{r}
+```{r, fig.cap = "Figure 5: Final Grade (Discrete) Mosaic"}
   class_df %>% 
     mutate(
       failure   = ifelse( s_class %% 2 == 1, 'High', 'Low'),
@@ -291,7 +350,8 @@ point can be seen more vividly in the following figure.
     theme(legend.position="none") +
     labs(x = "The amount of alcohol consumption",
          y = "Final Grade (Binary)",
-         title = "Final period grade")
+         title = "Final period grade") +
+    theme(plot.title = element_text(hjust = 0.5))
 
 ```
 
@@ -302,53 +362,47 @@ successful students is approximately the same as less successful students.
 
 How does age and gender affect on success?
 
-```{r}
+```{r, fig.cap = "Figure 6: Comparison males and females' grades against age"}
 {
   
   age_min = (full_df$age - 0.5) %>% min() %>% as.factor()
   age_max = (full_df$age + 0.5) %>% max() %>% as.factor()
+
+  age_min = rep(age_min, 5)
+  age_max = rep(age_max, 5)
   
-  common_alpha = 0.4
+  y_min = c(0, 10, 12, 14, 16)
+  y_max = c(y_min[2:5], 20)
+  
+  common_alpha = rep(0.4, 5)
+  
+  nstudents = full_df %>% 
+     group_by(G3_d) %>% 
+     summarise(n=n())
+  
+  y_text = (y_min + y_max)/2
+  grades = c('F', 'D', 'C', 'B', 'A')
+  l_text = rep('', 5)
+  for(i in 1:5) l_text[i] = glue::glue("{grades[i]}-students\n area ({nstudents$n[6-i]})")
+  
   
   full_df %>% 
     ggplot() +
     annotate("rect",
              xmin = age_min, xmax = age_max,
-             ymin = 0,  ymax = 10, fill = colours_5[[5]],
-             alpha = common_alpha
-    ) +
-    annotate("rect",
-             xmin = age_min, xmax = age_max,
-             ymin = 10, ymax = 12, fill = colours_5[[4]],
-             alpha = common_alpha
-    ) +
-    annotate("rect",
-             xmin = age_min, xmax = age_max,
-             ymin = 12, ymax = 14, fill = colours_5[[3]],
-             alpha = common_alpha
-    ) +
-    annotate("rect",
-             xmin = age_min, xmax = age_max,
-             ymin = 14, ymax = 16, fill = colours_5[[2]],
-             alpha = common_alpha
-    ) +
-    annotate("rect",
-             xmin = age_min, xmax = age_max,
-             ymin = 16, ymax = 20, fill = colours_5[[1]],
+             ymin = y_min,   ymax = y_max, 
+             fill = colours_5[5:1],
              alpha = common_alpha
     ) +
     geom_split_violin(aes(x=age %>% as.factor(),  y=G3, fill=gender),
                       draw_quantiles = c(0.5)) +
-    scale_fill_manual(values=alpha(matlab.colors[2:1], 0.8)) +
+    scale_fill_manual(values=alpha(c('#D3D3D3', '#808080'), 0.8)) +
     theme_bw() +
-    annotate("text", x = "22", y = 5,  label = "F-students\n area") +
-    annotate("text", x = "22", y = 11, label = "D-students\n area") +
-    annotate("text", x = "22", y = 13, label = "C-students\n area") +
-    annotate("text", x = "22", y = 15, label = "B-students\n area") +
-    annotate("text", x = "22", y = 18, label = "A-students\n area") +
+    annotate("text", x = "22", y = y_text,  label = l_text) +
     labs(x = "Age",
          y = "Final grade",
-         title = "Comparison males and females' grades against age")
+         title = "Comparison males and females' grades against age") +
+    theme(plot.title = element_text(hjust = 0.5))
   
 }
 ```

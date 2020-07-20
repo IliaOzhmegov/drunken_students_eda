@@ -1,0 +1,777 @@
+---
+title: "EDA of Alcohol Consumption among Students"
+author: Ilia Ozhmegov, Olena Horyn
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  html_document:
+    df_print: paged
+    highlight: pygments
+    fontsize: 11pt
+    number_section: true
+    toc_depth: 2
+    toc_float: true
+    toc: yes
+    fig_caption: true
+    theme: cosmo
+  pdf_document:
+    latex_engine: xelatex
+    df_print: kable
+    highlight: pygments
+    number_section: true
+    toc: yes
+    fig_caption: true
+---
+
+```{r Setting template options, include=FALSE}
+
+# knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
+knitr::opts_chunk$set(message=FALSE, warning = FALSE, echo = TRUE)
+knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
+knitr::opts_chunk$set(fig.width=10, fig.height=6) 
+
+```
+
+
+```{r Loading libraries, include=FALSE}
+
+source("common/load_data.R")
+source("common/load_functions.R")
+```
+
+# Introduction
+
+The data were obtained in a survey of students math and Portuguese language courses in secondary school. It contains a lot of interesting social, gender and study information about students.
+
+## Student Data
+
+In Portugal, the secondary education consists of 3 years of schooling, preceding 
+9 years of basic education and followed by higher education. Most of the students join the public and free education system. There are several
+courses (e.g. Sciences and Technologies, Visual Arts)
+that share core subjects such as the Portuguese Language and Mathematics. Like several other countries
+(e.g. France or Venezuela), a 20-point grading scale is
+used, where 0 is the lowest grade and 20 is the perfect
+score. During the school year, students are evaluated
+in three periods and the last evaluation (G3 of Table 1)
+corresponds to the final grade.
+
+This study will consider data collected during the 2005-
+2006 school year from two public schools, from the Alentejo region of Portugal. Although there has been a trend
+for an increase of Information Technology investment
+from the Government, the majority of the Portuguese
+public school information systems are very poor, relying mostly on paper sheets (which was the current case).
+Hence, the database was built from two sources: school
+reports, based on paper sheets and including few attributes (i.e. the three period grades and number of
+school absences); and questionnaires, used to complement the previous information. Original researches designed the latter
+with closed questions (i.e. with predefined options) related to several demographic (e.g. mother’s education,
+family income), social/emotional (e.g. alcohol consumption) (Pritchard and Wilson 2003) and school related
+(e.g. number of past class failures) variables that were
+expected to affect student performance. The questionnaire was reviewed by school professionals and tested on
+a small set of 15 students in order to get a feedback. The
+final version contained 37 questions in a single A4 sheet
+and it was answered in class by 788 students. Latter,
+111 answers were discarded due to lack of identification
+details (necessary for merging with the school reports).
+Finally, the data was integrated into two datasets related to Mathematics (with 395 examples) and the Portuguese language (649 records) classes.
+
+During the original preprocessing stage, some features were discarded due to the lack of discriminative value. For instance, few respondents answered about their family
+income (probably due to privacy issues), while almost
+100% of the students live with their parents and have a
+personal computer at home. The remaining attributes
+are shown in Table 1, where the last four rows denote
+the variables taken from the school reports.
+
+```{r table-simple, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+panderOptions('table.alignment.default', 'left')
+set.caption("Table 1: The preprocessed student related variables")
+my.data <- "
+Attribute | Description | Domain
+school | student's school | binary: 'GP' - Gabriel Pereira or 'MS' - Mousinho da Silveira
+gender | student's gender | binary: 'F' - female or 'M' - male
+age | student's age | numeric: from 15 to 22
+address | student's home address type | binary: 'U' - urban or 'R' - rural
+famsize | family size | binary: 'LE3' - less or equal to 3 or 'GT3' - greater than 3
+Pstatus | parent's cohabitation status | binary: 'T' - living together or 'A' - apart
+Medu | mother's education | numeric: 0 - none, 1 - primary education (4th grade, 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education)
+Fedu | father's education | numeric: 0 - none, 1 - primary education (4th grade, 2 – 5th to 9th grade, 3 – secondary education or 4 – higher education)
+Mjob | mother's job | nominal: 'teacher', 'health' care related, civil 'services' (e.g. administrative or police, 'at_home' or 'other')
+Fjob | father's job | nominal: 'teacher', 'health' care related, civil 'services' (e.g. administrative or police, 'at_home' or 'other')
+reason | reason to choose this school | nominal: close to 'home', school 'reputation', 'course' preference or 'other'
+guardian | student's guardian | nominal: 'mother', 'father' or 'other'
+traveltime | home to school travel time | numeric: 1 - 1 hour
+studytime | weekly study time | numeric: 1 - 10 hours
+failures | number of past class failures | numeric: n if 1<=n<3, else 4
+schoolsup | extra educational support | binary: yes or no
+famsup | family educational support | binary: yes or no
+subject* | taken course subject | nominal: Math or Portuguese
+paid | extra paid classes within the course subject | binary: yes or no
+activities | extra-curricular activities | binary: yes or no
+nursery | attended nursery school | binary: yes or no
+higher | wants to take higher education | binary: yes or no
+internet | Internet access at home | binary: yes or no
+romantic | with a romantic relationship | binary: yes or no
+famrel | quality of family relationships | numeric: from 1 - very bad to 5 - excellent
+freetime | free time after school | numeric: from 1 - very low to 5 - very high
+goout | going out with friends | numeric: from 1 - very low to 5 - very high
+Dalc | workday alcohol consumption | numeric: from 1 - very low to 5 - very high
+Walc | weekend alcohol consumption | numeric: from 1 - very low to 5 - very high
+Salc* | sum of alcohol consumption | numeric: from 2 - extremely low to 10 - extremely high
+health | current health status | numeric: from 1 - very bad to 5 - very good
+absences | number of school absences | numeric: from 0 to 93
+G1 | first period grade | numeric: from 0 to 20
+G2 | second period grade | numeric: from 0 to 20
+G3 | final grade | numeric: from 0 to 20, output target
+G3_d* | final grade | nominal: from A to F, output target*
+"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+The labeled with `*` attributes were added during the current research.
+
+## Data Preparation
+
+All the details can be found on [github page](https://github.com/ElijahOzhmegov/drunken_students_eda)
+of our project. Also details about data preprocessing can be found [here](https://github.com/ElijahOzhmegov/drunken_students_eda/blob/master/common/load_data.R).
+
+We will highlight only major points in the data preprocessing part:
+
+* renaming variable 'sex' to 'gender'
+* adding variable 'Salc' which is just a sum of 'Walc' and 'Dalc'
+* replacing numbers by words in such variables as 'Salc', 'Walc', 'Dalc',
+  'famrel', 'freetime', 'goout', 'health', 'Medu', 'Fedu'
+* adding variable 'subject'
+* adding variable 'G3_d' which is a discrete representation of the final
+  grade ('G3')
+
+## Main Goals
+
+In terms of Exploratory Data Analysis our main goals can be formulated in the 
+following way:
+
+* to find out what variables affect success most significantly
+* to find out what variables affect alcohol consumption most significantly
+
+Unfortunately, in term of the university work we will not cover all variables, but
+only some of them due to the ordinary lack of time. So we will focus on the following 
+questions:
+
++ Does Alcohol Affect Success?
++ What is the most drunk period of the week? (workdays/weekend?)
++ What is classes can be found in the dataset in terms of alcohol consumption and grades? 
++ Are there influence on grades of the age and gender?
++ Does it make sense to apply correlation on categorical variables?
+
++ Who drinks more: males or females? (by gender)
++ Who drinks more? (by age)
++ Does the area where students reside impact their alcohol consumption? (by Urban or Rural area)
++ Does their family size impact their alcohol consumption? (> 3 or < 3 ppl)
++ How does leisure (free time after school, going out with friends, romantic relationships) effect alcohol consumption?
+
+# Brief introduction into alcohol consumption
+
+Before diving deeper we will introduce you alcohol consumption and compare 
+it during weekday and weekend.
+
+```{r, fig.cap = "Figure 1: Comparison alcohol consumption during weekend and weekday"}
+    reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
+    group_by(variable, value) %>% 
+    summarise(n=n()) %>% 
+    mutate(
+      value = factor(value, levels = c("Very Low", "Low", "Medium", "High", "Very High")) 
+    ) %>% 
+    ggplot(aes(x=value, y=n)) +
+    geom_bar(aes(fill = variable),stat = "identity", position = "dodge") +
+    theme_bw() +
+    scale_fill_manual(values=matlab.colors[1:2],
+                      name = "Weektype", labels = c("Weekday", "Weekend")) +
+    theme(legend.position = c(0.9, 0.85), legend.box = "vertical") +
+    labs(y = "Number of students", 
+         x = "Alcohol consumption", 
+         title = "Comparison alcohol consumption during weekend and weekday") +
+    theme(plot.title = element_text(hjust = 0.5))
+```
+Besides a clear clear conclusion that 
+during weekend consumption is higher than during weekdays,
+the majority of the students have a low alcohol consumption.
+
+# Exploration of possible effects on students’ success
+
+Under the success we mean high grades at least for now. Later we will
+provide more accurate definition in terms of our work.
+
+Though basically there is categorical data and there is not much sense to obtain
+a correlation between final grade and all other variables, we still want to have 
+a glance at it and make sure that our assumption is adequate.
+
+```{r, fig.cap = "Figure 2: Final Grade Correlation"}
+
+{ 
+  int_df <- lapply(full_df, as.integer)
+  n = length(int_df)
+  
+  c = rep(0, n)
+  for(i in 1:n) c[i] = cor(int_df$G3, int_df[[i]]) %>% abs()
+
+  data.frame(correlation = c, name = colnames(full_df))  %>% 
+    filter(!str_detect(name, "^G")) %>% 
+    ggplot(aes(x = correlation, y = reorder(name, correlation))) + 
+    geom_bar(stat = "identity", aes(fill = str_detect(name, "alc$"))) +
+    scale_fill_manual(values = matlab.colors[1:2]) +
+    theme_bw() +
+    theme(legend.position="none") +
+    labs(y = "Variable", 
+         x = "|Correlation|", 
+         title = "Final Grade Correlation") +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+}
+
+```
+
+Result: in general there is a poor dependence between variables and 
+final grade, but it is important to remind that all variable are categorical, 
+but `failures` and `absences` (`failures` is not fully continuous). Also, 
+we highlighted the alcohol consumption variables to show that there is 
+no clear linear dependence. 
+  
+
+## Closer look at dependence between Grades and alcohol consumption
+
+Simple presentation of grades before diving deeper to show the quantity of
+the students divided into different success groups.
+
+We will consider as successful only students with grades from "C" to "A" and 
+as unsuccessful with grades "F" and "D". As Portuguese educational system uses 
+numeric marks from 0 to 20, we needed to transform it into  the five-level 
+classification system (Table 2).
+
+```{r table-2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+panderOptions('table.alignment.default', 'left')
+set.caption("Table 2: The five-level classification system")
+my.data <- "
+ | I | II | III | IV | V
+Country | (excellent/very good) | (good) | (satisfactory) | (sufficient) | (fail)
+Portugal/France | 16-20 | 14-15 | 12-13 | 10-11 | 0-9
+Ireland/USA | A | B | C | D | F
+"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+```{r, fig.cap = "Figure 3: Final Grade Distribution"}
+{  ddf <- full_df %>% 
+    mutate(
+      success = ifelse(G3_d == 'F' | G3_d == 'D', 'No', 'Yes'),
+      G3_d = factor(G3_d, levels = c('F', 'D', 'C', 'B', 'A'))
+      )  
+    
+  p1 <- ddf %>% 
+    ggplot(aes(x=G3_d, fill=success)) +
+    geom_bar(position = "dodge") +
+    theme_bw() +
+    theme(legend.position="none") +
+    scale_fill_manual(values=matlab.colors[2:1]) +
+    labs(y = "Number of students", 
+         x = "Final Grade (Discrete)", 
+         title = "Final Grade Discrete Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
+    
+  p2 <- ddf %>% 
+    ggplot(aes(x=success, fill=success)) +
+    geom_bar(position = "dodge") +
+    scale_fill_manual(values=matlab.colors[2:1]) +
+    theme_bw() +
+    scale_x_discrete(breaks=c("No","Yes"),
+                     labels=c("Low", "High")) +
+    labs(y = "Number of students", 
+         x = "Final Grade (Binary)", 
+         title = "Final Grade Binary Distribution") +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+  grid.arrange(p1, p2, nrow=1)
+  
+  
+}
+```
+As you can seen the amount of students in both groups is almost the same.
+
+
+Let us have a look directly at dependence between Grades and Alcohol consumption.
+
+```{r, fig.cap = "Figure 4: Final Grade (Discrete) Distribution"}
+{
+
+  class_df = full_df %>% 
+    mutate(
+      s_class = ifelse(G3 < 12, 1, 2),
+      s_class = s_class + ifelse(as.numeric(Salc) < 5, 0, 2),
+      G3_d = factor(G3_d, levels = c('F', 'D', 'C', 'B', 'A'))
+      ) 
+  
+  class_df %>% 
+    ggplot(aes(x=Salc, G3_d)) +
+    geom_jitter(aes(colour = as.factor(s_class))) + 
+    scale_color_manual(values=matlab.colors[c(2, 3, 4, 1)]) +
+    theme_bw() +
+    theme(legend.position="none") +
+    labs(y = "Final Grade (Discrete)", 
+         x = "Alcohol consumption", 
+         title = "Final period grade") +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+}
+```
+Result: decent grades are much less frequent among high alcohol consumption Students, 
+also there is no dependence between low alcohol consumption and decent grades. The last 
+point can be seen more vividly in the following figure.
+  
+```{r, fig.cap = "Figure 5: Final Grade (Discrete) Mosaic"}
+  class_df %>% 
+    mutate(
+      failure   = ifelse( s_class %% 2 == 1, 'High', 'Low'),
+      addiction = ifelse( s_class > 3, 'High', 'Low'),
+      failure   = factor(failure,   levels = c('Low', 'High')),
+      addiction = factor(addiction, levels = c('Low', 'High'))
+    ) %>% 
+    ggplot() +
+    geom_mosaic(aes(x=product(failure, addiction), fill=failure), na.rm = TRUE) +
+    scale_fill_manual(values=matlab.colors[2:1]) +
+    theme_bw() +
+    theme(legend.position="none") +
+    labs(x = "The amount of alcohol consumption",
+         y = "Final Grade (Binary)",
+         title = "Final period grade") +
+    theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+Result: you can clearly see that among low alcohol consumption students the amount of 
+successful students is approximately the same as less successful students.
+
+## Dependence between Grades and such variables as gender and age
+
+How does age and gender affect on success?
+
+```{r, fig.cap = "Figure 6: Comparison males and females' grades against age"}
+{
+  
+  age_min = (full_df$age - 0.5) %>% min() %>% as.factor()
+  age_max = (full_df$age + 0.5) %>% max() %>% as.factor()
+
+  age_min = rep(age_min, 5)
+  age_max = rep(age_max, 5)
+  
+  y_min = c(0, 10, 12, 14, 16)
+  y_max = c(y_min[2:5], 20)
+  
+  common_alpha = rep(0.4, 5)
+  
+  nstudents = full_df %>% 
+     group_by(G3_d) %>% 
+     summarise(n=n())
+  
+  y_text = (y_min + y_max)/2
+  grades = c('F', 'D', 'C', 'B', 'A')
+  l_text = rep('', 5)
+  for(i in 1:5) l_text[i] = glue::glue("{grades[i]}-students\n area ({nstudents$n[6-i]})")
+  
+  
+  full_df %>% 
+    ggplot() +
+    annotate("rect",
+             xmin = age_min, xmax = age_max,
+             ymin = y_min,   ymax = y_max, 
+             fill = colours_5[5:1],
+             alpha = common_alpha
+    ) +
+    geom_split_violin(aes(x=age %>% as.factor(),  y=G3, fill=gender),
+                      draw_quantiles = c(0.5)) +
+    scale_fill_manual(values=alpha(c('#D3D3D3', '#808080'), 0.8)) +
+    theme_bw() +
+    annotate("text", x = "22", y = y_text,  label = l_text) +
+    labs(x = "Age",
+         y = "Final grade",
+         title = "Comparison males and females' grades against age") +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+}
+```
+
+Result: the majority of students are in C and D areas, besides there is no difference
+between males and females, but after the age of 18 the distribution is completely different 
+and we do not have a solid explanation for that.
+
+# Exploration of possible effects on students’ alcohol consumption
+
+In this section we explore possible factors that could be linked to the level of alcohol consumption among portugese students. We will take a look at the students’ gender, the Area where they live, their family size and student’s leisure time, and see if any of these change depending on the part of the week - whether it’s a regular weekday or a weekend.
+
+## The role of gender and age in students’ alcohol consumption
+
+First, we wanted to find out whether a gender plays a role in a level of students’ alcohol consumption, by taking age and time of the week into account.
+
+```{r}
+{
+  
+  p1 <- full_df %>% 
+ggplot(aes(x=age, y=Dalc, color=gender))+
+  geom_jitter()+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), 
+                      name="Gender", 
+                      labels=c("Female", "Male"))+
+  theme_bw()+
+  xlab("Age")+
+  ylab("Alcohol consumption")+
+  ggtitle("Weekday alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
+p1
+
+}
+
+```
+
+Result:  we can observe that quite a few males of all given ages consume larger levels of alcohol during the week. And females have a tendency to stay away from alcohol on the weekdays.
+
+This is how it changes during the weekend.
+
+```{r}
+{
+  
+p2 <- full_df %>% 
+ggplot(aes(x=age, y=Walc, color=gender))+
+  geom_jitter()+
+  scale_colour_manual(values=c("#F8766D", "#00BFC4"), 
+                      name="Gender", 
+                      labels=c("Female", "Male"))+
+  theme_bw()+
+  xlab("Age")+
+  ylab("Alcohol consumption")+
+  ggtitle("Weekend alcohol consumption per Age and Gender")+
+  theme(plot.title = element_text(hjust = 0.5))
+p2
+
+}
+
+```
+
+Result: as can be seen from the above plot, some more females start to drink a little more on the weekends. As well as some more males, regardless of the age. 
+Age doesn’t really play a role in students’ alcohol consumption levels. But the gender does. And again, the time of the week is a significant factor - there is a clear evidence that more students consume higher levels of alcohol on the weekends.
+
+## Exploration of students’ background and alcohol consumption
+
+Let’s explore if the area where students reside impacts their alcohol consumption. Students were categorized by address: Urban and Rural.
+
+```{r}
+{
+  
+# Daily alcohol consumption
+p3 <- full_df %>% 
+  group_by(address, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=address))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per Area, %")+
+  ggtitle("Weekday alcohol consumption \ndepending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Weekend alcohol consumption
+p4 <- full_df %>% 
+  group_by(address, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=address))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Rural', 'Urban'))+
+  labs(fill = "Area")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per Area, %")+
+  ggtitle("Weekend alcohol consumption \ndepending on the Area")+
+  theme(legend.position = c(0.9, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Arrange plots side-by-side
+grid.arrange(p3, p4, ncol=2)
+
+}
+
+```
+
+Result: this figure shows that when it comes to moderate amounts of alcohol consumption, the percentage of students in rural areas tend to drink slightly more than students from urban areas. And this is for both times of the week: weekdays and weekends.
+
+Next, let’s explore the students’ family sizes. Again, students were split into two groups: students of large families of more than 3 family members and of the smaller families of 3 or less people.
+
+```{r}
+{
+  
+# Daily alcohol consumption
+p5 <- full_df %>% 
+  group_by(famsize, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Dalc), y = perc*100, fill=famsize))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('> 3', '≤ 3'))+
+  labs(fill = "Family size")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per family size, %")+
+  ggtitle("Weekday alcohol consumption \nper students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Weekend alcohol consumption
+p6 <- full_df %>% 
+  group_by(famsize, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(perc=count/sum(count)) %>% 
+  ggplot(aes(x=factor(Walc), y = perc*100, fill=famsize))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('> 3', '≤ 3'))+
+  labs(fill = "Family size")+
+  theme_bw()+
+  xlab("Alcohol consumption")+
+  ylab("Population of students per family size, %")+
+  ggtitle("Weekend alcohol consumption \nper students' family size")+
+  theme(legend.position = c(0.82, 0.9), legend.box = "vertical") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+# Arrange plots side-by-side
+grid.arrange(p5, p6, ncol=2)
+
+}
+
+```
+
+Result: students from smaller families consume a bit higher levels of alcohol, especially on the weekends.
+
+## The effect of students’ leisure time on alcohol consumption
+
+In this subsection we take a closer look at students’ free time and the time when they go out, and how it affects their alcohol consumption.
+
+```{r}
+{
+  
+p7 <- full_df %>% 
+  ggplot(aes(y=freetime, x=Salc, color=Salc, group=freetime)) +
+  geom_count() + 
+  scale_size(range = c(3, 15)) +
+  scale_color_manual(values=colours_9, 
+                     name="Total \nalcohol \nconsumption") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank(),
+        panel.spacing.x=unit(0.5, "lines")) +
+  facet_grid(. ~ goout, switch="both") +
+  labs(x = "Goout",
+       size = "")+
+  xlab("Go Out Time")+
+  ylab("Free Time")+
+  ggtitle("Alcohol consumption depending on students' free time and go out time")+
+  theme(plot.title = element_text(hjust = 0.5))
+p7
+
+}
+
+```
+
+Result: we can observe a general trend that the more free time students have and the more they go out, the more alcohol they tend to consume.
+
+Let’s explore this in more detail, by looking separately at students’ free time, go out time and part of the week (weekday or weekend).
+
+```{r}
+{
+  
+# Free time during weekdays
+p8 <- full_df %>% 
+  group_by(freetime, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Dalc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Greens")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Free time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekday alcohol consumption \ndepending on students' free time") +
+  theme(legend.position = c(0.9, 0.6), 
+        legend.box = "vertical", 
+        legend.key.size = unit(0.1, "cm")) 
+
+# Free time on the weekends
+p9 <- full_df %>% 
+  group_by(freetime, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(freetime), y = count, fill=Walc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Greens")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Free time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekend alcohol consumption \ndepending on students' free time") +
+  theme(legend.position="none") 
+
+# Go out time during weekdays
+p10 <- full_df %>% 
+  group_by(goout, Dalc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Dalc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Oranges")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Go out time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekday alcohol consumption \ndepending students' go out time") +
+  theme(legend.position = c(0.9, 0.6), 
+        legend.box = "vertical", 
+        legend.key.size = unit(0.1, "cm"))
+
+# Go out time on the weekends
+p11 <- full_df %>% 
+  group_by(goout, Walc) %>% 
+  summarise(count=n()) %>% 
+  mutate(count=count) %>% 
+  ggplot(aes(x=factor(goout), y = count, fill=Walc))+
+  geom_bar(stat = "identity", position = "dodge")+
+  ylim(0,100)+
+  scale_fill_brewer(palette="Oranges")+
+  coord_flip()+
+  theme_bw()+
+  xlab("Go out time")+
+  ylab("Number of students")+
+  labs(fill = "Alcohol \nConsumption")+
+  ggtitle("Weekend alcohol consumption \ndepending students' go out time") +
+  theme(legend.position="none") 
+
+# Arrange plots
+grid.arrange(p8, p9, p10, p11, nrow=2, ncol=2)
+
+}
+
+```
+
+Result: when students have some free time during the week, that doesn’t necessarily mean that they drink more (top left green figure). In fact, as can be observed, there is very low to medium alcohol consumption for all levels of free time during the weekdays.
+But when students go out - their alcohol consumption increases (bottom left orange figure). Especially on the weekends when students have more free time and they go out a lot more - they generally tend to consume more alcohol in higher levels (two right figures colored as green and orange).
+
+## The relationship between alcohol consumption and final grades by gender
+
+Let’s take another look at the students’ final grades and the level of their alcohol consumption by gender and time of the week.
+
+```{r}
+{
+  
+p12 <- full_df %>% 
+  ggplot(aes(x=Dalc %>% as.factor(),  y=G3, fill=gender)) +
+  geom_dotplot(binaxis = "y", 
+               stackdir = "center", 
+               position = "dodge",
+               dotsize = 0.3, binwidth = 0.5)+
+  theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Female', 'Male'))+
+  xlab("Alcohol consumption")+
+  ylab("Final Grade")+
+  ggtitle("Grades by gender and weekday alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
+p12
+
+}
+
+```
+
+Result: both males and females tend to have better grades when they don’t consume much alcohol during the week. Although, as was explored in part 4.1, we can’t make a clear connection between low alcohol consumption and good grades. However, we observe that some males consume larger amounts of alcohol while having average and below average grades.
+
+Weekend alcohol consumption and final grades by gender.
+
+```{r}
+{
+  
+p13 <- full_df %>% 
+  ggplot(aes(x=Walc %>% as.factor(),  y=G3, fill=gender)) +
+  geom_dotplot(binaxis = "y", 
+               stackdir = "center", 
+               position = "dodge",
+               dotsize = 0.3, binwidth = 0.5)+
+  theme_bw()+
+  labs(fill = "Gender")+
+  scale_fill_manual(values=c("#F8766D", "#00BFC4"), 
+                    labels = c('Female', 'Male'))+
+  xlab("Alcohol consumption")+
+  ylab("Final Grade")+
+  ggtitle("Grades by gender and weekend alcohol consumption")+
+  theme(plot.title = element_text(hjust = 0.5))
+p13
+
+}
+
+```
+
+Result: weekend alcohol consumption doesn’t seem to have a significant effect on students' grades. This time, more of both genders increase their alcohol consumption.
+
+# Conclusion
+
+The aim of this exploratory data analysis was to find out what has the most significant effect on students’ success and to explore the possible effects on students’ alcohol consumption.
+
+The first part of this project focused on students’ grades as the measure of their success in the school. We saw that there is a weak correlation between final grades and alcohol consumption. We can conclude that alcohol consumption has an effect on students’ success only to some very limited degree. It’s important to note that correlation does not mean a causation. 
+
+We also explored that part of the week plays a very important role when it comes to the level of students’ alcohol consumption. We saw this in every part of our analysis, that students consume higher levels of alcohol on the weekends.
+Students of both genders had about the same grades on average. So male and female students in our dataset were equally successful in school in terms of grades.
+Age didn’t seem to play a significant role as well.
+
+In the second part of our analysis, we explored possible factors that could affect students’ alcohol consumption. We found out that students’ gender, their family size and area where they live could potentially affect the level of students’ alcohol consumption, but we didn’t see a big impact.
+
+Our research showed that female students tend to consume lower amounts of alcohol compared to their fellow male students, especially during the week. 
+Also we explored that there is a slight relationship between the students’ background, particularly the area where they live and their family size, and the amount of alcohol they consume.
+And our analysis showed that when students have free time and especially when they go out -  they increase their alcohol consumption. This effect can be clearly observed on the weekends.
+
+We can conclude that our exploratory data analysis was successful. We have answered the questions that we asked ourselves at the beginning of the research. 
+
+We also have learned a lot while working on this project:
+
+* use R packages such as: ggplot2, magrittr, dplyr and tidyverse
+* create plots with more than 2 variables
+* how to work with only nominal/discrete variables
+* create violin plots, mosaic plots, jitter plots and others
+* work remotely as a team
+* build a research pipeline with github
+* create an html/pdf reports
+
+We have faced some challenges as well. In particular, working remotely as a team was a learning curve. We faced some timing, technical and organizational issues that we have successfully overcome. 
+
+Overall, this was a challenging and yet very interesting project. We achieved our goals and are pleased with the results.
+
