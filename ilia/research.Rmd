@@ -1,9 +1,9 @@
 ---
-title: "EDA of Alcohol Consumption among Students"
-author: Ilia Ozhmegov, Olena Horyn
+title: "Data Visualization - individual report"
+author: Ilia Ozhmegov
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
-  html_document:
+  bookdown::html_document2:
     df_print: paged
     highlight: pygments
     fontsize: 11pt
@@ -11,7 +11,7 @@ output:
     toc_depth: 2
     toc_float: true
     toc: yes
-    fig_caption: true
+    fig_caption: yes
     theme: cosmo
   pdf_document:
     latex_engine: xelatex
@@ -24,98 +24,255 @@ output:
 
 ```{r Setting template options, include=FALSE}
 
-# knitr::opts_chunk$set(message=TRUE, warning = TRUE, echo = TRUE)
 knitr::opts_chunk$set(message=FALSE, warning = FALSE, echo = TRUE)
 knitr::opts_chunk$set(fig.show = "hold", fig.align = "center")
+knitr::opts_chunk$set(fig.width=10, fig.height=6) 
 
 ```
 
 
 ```{r Loading libraries, include=FALSE}
-
-# library(aider)
-library(tidyverse)
 setwd('..')
-source("load_data.R")
-
-matlab = tibble(blue='#1F77B4', orange='#FF7F0E')
+source("common/load_data.R")
+source("common/load_functions.R")
 
 ```
-# Introduction 
+# Introduction {-#Introduction}
 
-Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text.  Introduction text. 
+This report was created to explain one single plot out of the [group report](http://htmlpreview.github.io/?https://raw.githubusercontent.com/ElijahOzhmegov/drunken_students_eda/master/EDA_Ilia_Lena.html
+).
 
-# Data Preparation
 
-It is done in `load_data.R` file.
+# The Violin Plot
 
-# Correlation Bar Plot
+As the data preparation part was covered in the previously mentioned report, we will show you 
+the graph and will explain intricate features in the following sections. The graph can be seen
+below.
 
-Text.
 
-```{r}
-  int_df <- lapply(full_df, as.integer)
-  n = length(int_df)
+```{r, fig.cap = "Comparison males and females' grades against age"}
+{
   
-  c = rep(0, n)
-  for(i in 1:n) c[i] = cor(int_df$G3, int_df[[i]]) %>% abs()
+  age_min = (full_df$age - 0.5) %>% min() %>% as.factor()
+  age_max = (full_df$age + 0.5) %>% max() %>% as.factor()
 
-  cor_df = data.frame(correlation=c, name=colnames(full_df)) 
+  age_min = rep(age_min, 5)
+  age_max = rep(age_max, 5)
   
-  cor_df %>% 
-    filter(!str_detect(name, "^G")) %>% 
-    ggplot(aes(x=correlation, y=reorder(name, correlation))) + 
-    geom_bar(stat="identity", aes(fill=str_detect(name, "alc$"))) +
-    scale_fill_manual(values = c(matlab$blue, matlab$orange) ) +
-    theme_bw() +
-    theme(legend.position="none") +
-    labs(y = "Variable", x = "Correlation", title = "Final Grade Correlation")
-```
-
-# A closer look at alcohol consumption
-
-Здесь могла быть ваша реклама. Здесь могла быть ваша реклама. Здесь могла быть ваша реклама. 
-
-```{r}
-
-full_df %>% 
-  ggplot(aes(x=Salc, y=G3, fill=Salc)) +
-  geom_boxplot() +
-  theme_bw() +
-  theme(legend.position="none") +
-  # scale_fill_manual(values=grades_colours) +
-  xlab("Alcohol Consumption") +
-  ylab("Grade") +
-  ggtitle("Final period grade")
-
-```
-
-
-
-
-```{r}
-
-full_df %>% 
-  ggplot(aes(x= Salc, y=G3, fill=Salc)) +
-  geom_violin() +
-  theme_bw() +
-  theme(legend.position="none") +
-  # scale_fill_manual(values=grades_colours)
-  labs(y = "Final Grade", x = "Alcohol consumption", title = "Final period grade")
-```
-
-
-```{r}
+  y_min = c(0, 10, 12, 14, 16)
+  y_max = c(y_min[2:5], 20)
+  
+  common_alpha = rep(0.4, 5)
+  
+  nstudents = full_df %>% 
+     group_by(G3_d) %>% 
+     summarise(n=n())
+  
+  y_text = (y_min + y_max)/2
+  grades = c('F', 'D', 'C', 'B', 'A')
+  l_text = rep('', 5)
+  for(i in 1:5) l_text[i] = glue::glue("{grades[i]}-students\n area ({nstudents$n[6-i]})")
+  
+  
   full_df %>% 
-    ggplot(aes(x=Salc, G3_d)) +
-    geom_jitter(aes(colour = Salc)) + 
+    ggplot() +
+    annotate("rect",
+             xmin = age_min, xmax = age_max,
+             ymin = y_min,   ymax = y_max, 
+             fill = colours_5[5:1],
+             alpha = common_alpha
+    ) +
+    geom_split_violin(aes(x=age %>% as.factor(),  y=G3, fill=gender),
+                      draw_quantiles = c(0.5)) +
+    scale_fill_manual(values=alpha(c('#D3D3D3', '#808080'), 0.8)) +
     theme_bw() +
-    theme(legend.position="none") +
-    geom_hline(yintercept='C',      color = "black") + 
-    geom_vline(xintercept='Medium', color = "black") +
-    labs(y = "Final Grade (Descrete)", x = "Alcohol consumption", title = "Final period grade")
+    annotate("text", x = "22", y = y_text,  label = l_text) +
+    labs(x = "Age",
+         y = "Final grade",
+         title = "Comparison males and females' grades against age") +
+    theme(plot.title = element_text(hjust = 0.5))
+  
+}
 ```
 
-Here clearly seen that there is extreamly poor dependece between alcohol 
-consumption and decent grades. However, the conditional probability to have 
-decent grade is little bit higher when alcohol consumption is not `High$`.
+This visual displays the distribution for each age and gender group. Abscissa 
+corresponds to the age group, whereas ordinate is final grade. Also, 
+different grade areas - from F-students area (red) to A-students area
+(green) are highlighted. Although, in the original report bar chart with 
+student final grade distribution was presented, the number of students 
+in each grade group was featured again as a number in the brackets.
+
+# Explanation part
+
+## What
+
+This figure conveys a few important messages:
+
+* there is no difference between grades of males and females
+* two the biggest grade group are places in D and F areas
+* almost all the medians across age groups are in D area, except a few which are in C area
+
+## For whom
+
+This particular visualization can be useful for heads of researched schools. 
+Since it can allow them to track students' grades and correct educational 
+program to help students achieve a better scores in the future.
+
+## Why
+
+This type of visualization was chosen due to the need to show the distributions 
+for a lot of age and gender groups at the same time in a compact way. Unfortunately,
+there was not a big range for choice and any alternatives could be less representative. 
+(dot plot, two violin plots, bar chart, histogram and etc.)
+
+## How
+
+The rendering of the graph can be divided into two parts: background and foreground.
+At the beginning of this work a color convention was accepted which applies to 
+the range of 5 and 9 categories and in the current case the range of 5 colors was
+used regarding to the grades areas.
+
+The color choice for the gender groups was dictated during peer-review to reduce 
+distraction on the colours.
+
+### Background
+
+In the background were drawn colored rectangles and corresponding labels. However,
+their drawing required some data preparation:
+
+```{r background}
+  # rectangles
+  age_min = (full_df$age - 0.5) %>% min() %>% as.factor()
+  age_max = (full_df$age + 0.5) %>% max() %>% as.factor()
+
+  age_min = rep(age_min, 5)
+  age_max = rep(age_max, 5)
+  
+  y_min = c(0, 10, 12, 14, 16)
+  y_max = c(y_min[2:5], 20)
+  
+  common_alpha = rep(0.4, 5)
+  
+  # labels
+  nstudents = full_df %>% 
+     group_by(G3_d) %>% 
+     summarise(n=n())
+  
+  y_text = (y_min + y_max)/2
+  grades = c('F', 'D', 'C', 'B', 'A')
+  l_text = rep('', 5)
+  for(i in 1:5) l_text[i] = glue::glue("{grades[i]}-students\n area ({nstudents$n[6-i]})")
+
+```
+
+As `ggplot2::annotate` function can take a vector at once, we provided the vector to draw 5
+rectangles and their labels. As can be seen horizontal margins `age_min` and `age_max` were 
+taken a little wider than needed and after that were transformed to factor values, because
+later `geom_split_violin` will use factorized abciss axis. Then vertical margins `age_min` 
+and `age_max` were chosen accordingly the second table from the group report. The value of 
+alpha was chosen empirically so as the grid behind rectangles is seen.
+
+The pipe is used to get the amount of students in each discrete grade group. Then positions 
+for the labels were got via the mean between margins for each grade area. At the last two 
+lines a vector of labels was gotten with a `glue` function.
+
+
+### Foreground
+
+In the foreground the most important part is a violin plot itself, as the `ggplot2` package
+does not have function `geom_split_violin`, so we have to create it or invent from the scratch.
+Luckily, we manage to find solution on `stackoverflow`:
+
+```{r foreground}
+{ # custom split violin, enhanced 2020.07.03
+  GeomSplitViolin <- ggproto("GeomSplitViolin", 
+                              GeomViolin,
+   draw_group = function(self, data, ..., draw_quantiles = NULL) {
+     # Original function by Jan Gleixner (@jan-glx)
+     # Adjustments by Wouter van der Bijl (@Axeman) 
+     # and Ilia Ozhmegov (@ElijahOzhmegov)
+     data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
+     grp  <- data[1, "group"]
+     
+     newdata <- plyr::arrange(transform(data, x = if (grp %% 2 == 1) xminv else xmaxv), if (grp %% 2 == 1) y else -y)
+     newdata <- rbind(newdata[1, ], newdata, newdata[nrow(newdata), ], newdata[1, ])
+     newdata[c(1, nrow(newdata) - 1, nrow(newdata)), "x"] <- round(newdata[1, "x"])
+     
+     if (length(draw_quantiles) > 0 & !scales::zero_range(range(data$y))) {
+       stopifnot(all(draw_quantiles >= 0), all(draw_quantiles <= 1))
+       quantiles  <- create_quantile_segment_frame(data, draw_quantiles, split = TRUE, grp = grp)
+       aesthetics <- data[rep(1, nrow(quantiles)), setdiff(names(data), c("x", "y")), drop = FALSE]
+       aesthetics$alpha <- rep(1, nrow(quantiles))
+       both <- cbind(quantiles, aesthetics)
+       quantile_grob <- GeomPath$draw_panel(both, ...)
+       ggplot2:::ggname("geom_split_violin", grid::grobTree(GeomPolygon$draw_panel(newdata, ...), quantile_grob))
+     }
+     else {
+       ggplot2:::ggname("geom_split_violin", GeomPolygon$draw_panel(newdata, ...))
+     }
+   }
+   
+  )
+  
+  create_quantile_segment_frame <- function(data, draw_quantiles, split = FALSE, grp = NULL) {
+    dens <- cumsum(data$density) / sum(data$density)
+    ecdf <- stats::approxfun(dens, data$y)
+    ys <- ecdf(draw_quantiles)
+    violin.xminvs <- (stats::approxfun(data$y, data$xminv))(ys)
+    violin.xmaxvs <- (stats::approxfun(data$y, data$xmaxv))(ys)
+    violin.xs <- (stats::approxfun(data$y, data$x))(ys)
+    if (grp %% 2 == 0) {
+      data.frame(
+        x = ggplot2:::interleave(violin.xs, violin.xmaxvs),
+        y = rep(ys, each = 2), group = rep(ys, each = 2)
+      )
+    } else {
+      data.frame(
+        x = ggplot2:::interleave(violin.xminvs, violin.xs),
+        y = rep(ys, each = 2), group = rep(ys, each = 2)
+      )
+    }
+  }
+  
+  geom_split_violin <- function(mapping = NULL, data = NULL, stat = "ydensity", position = "identity", ..., 
+                                draw_quantiles = NULL, trim = TRUE, scale = "area", na.rm = FALSE, 
+                                show.legend = NA, inherit.aes = TRUE) {
+    layer(data = data, mapping = mapping, stat = stat, geom = GeomSplitViolin, position = position, 
+          show.legend = show.legend, inherit.aes = inherit.aes, 
+          params = list(trim = trim, scale = scale, draw_quantiles = draw_quantiles, na.rm = na.rm, ...))
+  } 
+}
+```
+
+First of all, let us express appreciation to **Jan Gleixner (jan-glx)** and 
+**Wouter van der Bijl (Axeman)** for contribution in this work and providing
+the solution for `geom_split_violin` function.
+
+
+As explanation only this single function will consume too much time, we will highlight only main points here:
+* `GeomSplitViolin` is responsible for drawing the violin plots
+* `create_quantile_segment_frame` is responsible for rendering quantile lines
+* `geom_split_violin` is a wrapper for both of them
+
+
+### Miscellaneous 
+
+* `scale_fill_manual` is used to change a default colours to the grey ones.
+* `theme_bw` is used to change a default gray theme to the black and white one,
+  because it looks better on white paper or white html page
+* `labs` is used to change x, y and title values to desired ones
+* `theme(plot.title = element_text(hjust = 0.5))` is used to make a title in the center 
+  above the plot (according to the accepted convention for titles in the work)
+* legend is placed outside of the plot not to overload more the graph
+
+# Conclusion {-#Conclusion}
+
+This project and Data Visualization course have taught us many useful and necessary 
+skills on creating informative, elegant, and at the same time complex visualizations. 
+
+Personally, I have improved my knowledge of R tools and libraries. And I have learned 
+how OOP can be used in R,
+how to lead and guide a team, 
+how to organize a research pipeline, 
+why a peer-review is so important.
+
