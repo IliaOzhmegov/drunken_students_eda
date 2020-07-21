@@ -3,6 +3,16 @@ title: "EDA of Alcohol Consumption among Students"
 author: Ilia Ozhmegov, Olena Horyn
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
+  bookdown::html_document2:
+    df_print: paged
+    highlight: pygments
+    fontsize: 11pt
+    number_section: true
+    toc_depth: 2
+    toc_float: true
+    toc: yes
+    fig_caption: yes
+    theme: cosmo
   html_document:
     df_print: paged
     highlight: pygments
@@ -13,13 +23,6 @@ output:
     toc: yes
     fig_caption: yes
     theme: cosmo
-  pdf_document:
-    latex_engine: xelatex
-    df_print: kable
-    highlight: pygments
-    number_section: true
-    toc: yes
-    fig_caption: true
 ---
 
 ```{r Setting template options, include=FALSE}
@@ -40,11 +43,11 @@ source("common/load_data.R")
 source("common/load_functions.R")
 ```
 
-# Introduction
+# Introduction {-#Introduction}
 
 The data were obtained in a survey of students math and Portuguese language courses in secondary school. It contains a lot of interesting social, gender and study information about students.
 
-## Student Data
+## Student Data {-#Student-Data}
 
 In Portugal, the secondary education consists of 3 years of schooling, preceding 
 9 years of basic education and followed by higher education. Most of the students join the public and free education system. There are several
@@ -135,7 +138,7 @@ pander(df, style = 'rmarkdown')
 
 The labeled with `*` attributes were added during the current research.
 
-## Data Preparation
+## Data Preparation {-#Data-Preparation}
 
 All the details can be found on [github page](https://github.com/ElijahOzhmegov/drunken_students_eda)
 of our project. Also details about data preprocessing can be found [here](https://github.com/ElijahOzhmegov/drunken_students_eda/blob/master/common/load_data.R).
@@ -150,7 +153,7 @@ We will highlight only major points in the data preprocessing part:
 * adding variable 'G3_d' which is a discrete representation of the final
   grade ('G3')
 
-## Main Goals
+## Main Goals {-#Main-Goals}
 
 In terms of Exploratory Data Analysis our main goals can be formulated in the 
 following way:
@@ -181,7 +184,7 @@ Before diving deeper, let us start with an overview of alcohol consumption and
 compare it depending on a weekday or a weekend.
 
 
-```{r, fig.cap = "Figure 1: Comparison of alcohol consumption during weekend and weekday"}
+```{r, fig.cap = "Comparison of alcohol consumption during weekend and weekday"}
     reshape2::melt(full_df[,c('Dalc','Walc')],id.vars = 0) %>% 
     group_by(variable, value) %>% 
     summarise(n=n()) %>% 
@@ -212,7 +215,7 @@ Though basically there is categorical data and there is not much sense to obtain
 a correlation between final grade and all other variables, we still want to have 
 a glance at it and make sure that our assumption is adequate.
 
-```{r, fig.cap = "Figure 2: Final Grade Correlation"}
+```{r, fig.cap = "Final Grade Correlation"}
 
 { 
   int_df <- lapply(full_df, as.integer)
@@ -272,7 +275,7 @@ row.names(df)<-NULL
 pander(df, style = 'rmarkdown')
 ```
 
-```{r, fig.cap = "Figure 3: Final Grade Distribution"}
+```{r, fig.cap = "Final Grade Distribution"}
 {  ddf <- full_df %>% 
     mutate(
       success = ifelse(G3_d == 'F' | G3_d == 'D', 'No', 'Yes'),
@@ -312,7 +315,7 @@ As can be seen the amount of students in both groups is almost the same.
 
 Let us have a look directly at dependence between Grades and Alcohol consumption.
 
-```{r, fig.cap = "Figure 4: Final Grade (Discrete) Distribution"}
+```{r, fig.cap = "Final Grade (Discrete) Distribution"}
 {
 
   class_df = full_df %>% 
@@ -339,7 +342,7 @@ Result: decent grades are much less frequent among high alcohol consumption Stud
 also there is no dependence between low alcohol consumption and decent grades. The last 
 point can be seen more vividly in the following figure.
   
-```{r, fig.cap = "Figure 5: Final Grade (Discrete) Mosaic"}
+```{r, fig.cap = "Final Grade (Discrete) Mosaic"}
   class_df %>% 
     mutate(
       failure   = ifelse( s_class %% 2 == 1, 'High', 'Low'),
@@ -366,7 +369,7 @@ successful students is approximately the same as less successful students.
 
 How does age and gender affect students' success?
 
-```{r, fig.cap = "Figure 6: Comparison males and females' grades against age"}
+```{r, fig.cap = "Comparison males and females' grades against age"}
 {
   
   age_min = (full_df$age - 0.5) %>% min() %>% as.factor()
@@ -423,7 +426,7 @@ In this section we explore possible factors that could be linked to the level of
 
 First, we wanted to find out whether a gender plays a role in a level of students’ alcohol consumption, by taking age and time of the week into account.
 
-```{r, fig.cap = "Figure 7: Weekday alcohol consumption per Age and Gender"}
+```{r, fig.cap = "Weekday alcohol consumption per Age and Gender"}
 {
   
   p1 <- full_df %>% 
@@ -447,7 +450,7 @@ Result:  we can observe that quite a few males of all given ages consume larger 
 
 This is how it changes during the weekend.
 
-```{r, fig.cap = "Figure 8: Weekend alcohol consumption per Age and Gender"}
+```{r, fig.cap = "Weekend alcohol consumption per Age and Gender"}
 {
   
 p2 <- full_df %>% 
@@ -474,7 +477,7 @@ Age doesn’t really play a role in students’ alcohol consumption levels. But 
 
 Let’s explore if the area where students reside impacts their alcohol consumption. Students were categorized by address: Urban and Rural.
 
-```{r, fig.cap = "Figure 9: Weekday alcohol consumption depending on the Area"}
+```{r, fig.cap = "Weekday alcohol consumption depending on the Area"}
 {
   
 # Daily alcohol consumption
@@ -524,7 +527,7 @@ Result: this figure shows that when it comes to moderate amounts of alcohol cons
 
 Next, let’s explore the students’ family sizes. Again, students were split into two groups: students of large families of more than 3 family members and of the smaller families of 3 or less people.
 
-```{r, fig.cap = "Figure 10: Alcohol consumption per students' family size"}
+```{r, fig.cap = "Alcohol consumption per students' family size"}
 {
   
 # Daily alcohol consumption
@@ -576,7 +579,7 @@ Result: students from smaller families consume a bit higher levels of alcohol, e
 
 In this subsection we take a closer look at students’ free time and the time when they go out, and how it affects their alcohol consumption.
 
-```{r, fig.cap = "Figure 11: Alcohol consumption depending on students' free time and go out time"}
+```{r, fig.cap = "Alcohol consumption depending on students' free time and go out time"}
 {
   
 p7 <- full_df %>% 
@@ -606,7 +609,7 @@ Result: we can observe a general trend that the more free time students have and
 
 Let’s explore this in more detail, by looking separately at students’ free time, go out time and part of the week (weekday or weekend).
 
-```{r, fig.cap = "Figure 12: Alcohol consumption depending on students' free time and go out time"}
+```{r, fig.cap = "Alcohol consumption depending on students' free time and go out time"}
 {
   
 # Free time during weekdays
@@ -695,7 +698,7 @@ But when students go out - their alcohol consumption increases (bottom left oran
 
 Let’s take another look at the students’ final grades and the level of their alcohol consumption by gender and time of the week.
 
-```{r, fig.cap = "Figure 13: Grades by gender and weekday alcohol consumption"}
+```{r, fig.cap = "Grades by gender and weekday alcohol consumption"}
 {
   
 p12 <- full_df %>% 
@@ -722,7 +725,7 @@ Result: both males and females tend to have better grades when they don’t cons
 
 Weekend alcohol consumption and final grades by gender.
 
-```{r, fig.cap = "Figure 14: Grades by gender and weekend alcohol consumption"}
+```{r, fig.cap = "Grades by gender and weekend alcohol consumption"}
 {
   
 p13 <- full_df %>% 
@@ -747,7 +750,7 @@ p13
 
 Result: weekend alcohol consumption doesn’t seem to have a significant effect on students' grades. This time, more of both genders increase their alcohol consumption.
 
-# Conclusion
+# Conclusion {-#Conclusion}
 
 The aim of this exploratory data analysis was to find out what has the most significant effect on students’ success and to explore the possible effects on students’ alcohol consumption.
 
@@ -779,3 +782,11 @@ We have faced some challenges as well. In particular, working remotely as a team
 
 Overall, this was a challenging and yet very interesting project. We achieved our goals and are pleased with the results.
 
+# Resources {-#Resources}
+
+1. P. Cortez and A. Silva. Using Data Mining to Predict Secondary School Student 
+   Performance. In A. Brito and J. Teixeira Eds., Proceedings of 5th FUture BUsiness 
+   TEChnology Conference (FUBUTEC 2008) pp. 5-12, Porto, Portugal, April, 2008, 
+   EUROSIS, ISBN 978-9077381-39-7. [link](https://www.researchgate.net/profile/Paulo_Cortez3/publication/228780408_Using_data_mining_to_predict_secondary_school_student_performance/links/0fcfd510a4efaa10b0000000/Using-data-mining-to-predict-secondary-school-student-performance.pdf)
+
+2. [Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance#)
